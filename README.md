@@ -20,14 +20,13 @@
 2023-02-11 => ui변경 모두 완료//  table modal창 축소 // 회원가입 문자인증 기능 추가 // 회원정보수정 진입 시 비밀번호 체크 페이지 및 기능 구현<br>
 2023-02-12 => 회원정보수정 내 회원탈퇴기능 완료 // 1대1문의 로그인 후 회사명 자동 value값 적용 + SMS,EMAIL 답변유형 클릭시 회원정보 자동적용구현 + 로그인 중 회사로고 적용
 ALL COMPLETE!!!!!!! 끝...<br><br>
-<br>
+
 # 🎉Distribute Start🎊<br>
 2023-02-13 => http Front(S3),Express(ec2) 완료(11:23) => Front(React) S3=> CloudFront => 리액트 https완료(16:12), Express Https설정 be delayed=> Route53 Hosting문제 + Load Balancer Port 지정 트러블슈팅(21:57 퇴근)<br><br>
 2023-02-14 => Express https설정완료(ec2=>Load Balancer 사용)-cookie 이상없음(01:30)=> S3 버킷 업로드 => CloudFront cache(24hr update)=> Invalidation진행 => React,Express Https Deployment completed(14:13) (❁´◡`❁) <br><br>
 캡쳐(gitUpload예정), 화면,앱 기능기획서 작성(Portfolio Update)
-
 #
-#🔮 Modify & Update
+# 🔮 Modify & Update <br>
 2023-02-14 => React 반응형으로 Desktop, Tablet, Phone으로 나눠 media쿼리 사용=> Home 화면(로그인 전 후), NaviBar(로그인 전 후), Footer => 기본 구성들 작업완료(23:38)
 오늘은 일찍자야지...<br>
 
