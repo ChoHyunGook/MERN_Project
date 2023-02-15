@@ -1,10 +1,9 @@
-import {Grid} from "@mui/material";
 import Button from "@mui/material/Button";
 import React from "react";
-import {checkSMSAuthNum} from "../../../../../api";
+import {checkSMSAuthNum} from "../../../../../../api";
 
 
-export default function OnSubmitService(props){
+export default function OnSubmitMobile(props){
 
     const { Name, Phone, signNum, setRes } = props
 
@@ -40,10 +39,9 @@ export default function OnSubmitService(props){
 
     return(
         <>
-            <Grid item xs={1}/>
-            <Grid item xs={10}>
+
                 <Button
-                    style={{height:45}}
+                    style={{width:250,height:45}}
                     type="submit"
                     variant="contained"
                     fullWidth
@@ -52,7 +50,6 @@ export default function OnSubmitService(props){
                 >
                     아이디찾기
                 </Button>
-            </Grid>
         </>
     )
 

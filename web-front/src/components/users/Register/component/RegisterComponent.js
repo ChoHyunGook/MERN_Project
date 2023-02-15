@@ -9,17 +9,14 @@ import RegisterLogo from "./Logo/RegisterLogo";
 import {exclusiveTokenCheck, termsCheck} from "../../../../api";
 import RequiredTerms from "../../RequiredService/main/RequiredTerms";
 import background from "../../../../images/bg_yellow_flower_field.jpg";
+import {Desktop, Mobile, Tablet} from "../../../../containers/Responsive/responsive";
 
 
 export default function RegisterComponent(props){
 
-    const theme = createTheme();
+    const {CheckCompany,srcAddress}=props
 
-    const {name, setName, userid, setUserId, password, setPassword, PwConfirm, setPwConfirm,
-        phone, setPhone, NameMessage, setNameMessage, EmailMessage, setEmailMessage, PwMessage,
-        setPwMessage, PwConfirmMessage, setPwConfirmMessage, PhoneMessage, setPhoneMessage,setIsName, setIsEmail,
-        setIsPw, setIsPwConfirm,setIsPhone, setRes, CheckCompany, srcAddress,company,setCompany,CompanyList,authNum,
-        setAuthNum,isName,isEmail,isPw,isPwConfirm,isPhone,isAuthNum,isSendAuth,setIsAuthNum,setIsSendAuth }=props
+    const theme = createTheme();
 
 
     //약관동의 체크
@@ -64,108 +61,247 @@ export default function RegisterComponent(props){
     return (
         <>
             <div style={{backgroundImage:`url(${background})`, width:'auto', height:'auto',paddingBottom:140}}>
-            {isTerms ? (
-                <div style={{
-                    display: 'flex',
-                    flexDirection: "column",
-                    alignItems: "center"
-                }}><br/>
-                <div className="signup-wrapper">
-                    <ThemeProvider theme={theme}>
-                        <Container component="main" maxWidth="xl">
-                            <CssBaseline/>
-                                {isExclusive ? (
-                                    <Box
-                                        sx={{
-                                            display: 'flex',
-                                            flexDirection: 'column',
-                                            alignItems: 'center',
-                                            backgroundColor: 'white',
-                                            height: '850px',
-                                            width: 'auto',
-                                            borderRadius: '0.5rem',
-                                            border:1,
-                                            borderColor:'grey.500'
-                                        }}
-                                    ><br/>
-                                    <RegisterLogo srcAddress={srcAddress}/>
-                                        <img alt="No Images" src="images/img_logo_main.png"
-                                             style={{
-                                                 display: 'flex',
-                                                 alignItems: "center",
-                                                 width: "220px"
-                                             }}/><br/>
-                                        <Typography component="h3" variant="h7">
-                                            회원가입
-                                        </Typography>
-                                        <Divider color="#696969" sx={{height: 2, width: '420px',marginTop:1}}></Divider>
+                <Desktop>
+                    {isTerms ? (
+                        <div style={{
+                            display: 'flex',
+                            flexDirection: "column",
+                            alignItems: "center"
+                        }}><br/>
+                            <div className="signup-wrapper">
+                                <ThemeProvider theme={theme}>
+                                    <Container component="main" maxWidth="xl">
+                                        <CssBaseline/>
+                                        {isExclusive ? (
+                                            <Box
+                                                sx={{
+                                                    display: 'flex',
+                                                    flexDirection: 'column',
+                                                    alignItems: 'center',
+                                                    backgroundColor: 'white',
+                                                    height: '850px',
+                                                    width: '450px',
+                                                    borderRadius: '0.5rem',
+                                                    border:1,
+                                                    borderColor:'grey.500'
+                                                }}
+                                            ><br/>
+                                                <RegisterLogo srcAddress={srcAddress}/>
+                                                <img alt="No Images" src="images/img_logo_main.png"
+                                                     style={{
+                                                         display: 'flex',
+                                                         alignItems: "center",
+                                                         width: "220px"
+                                                     }}/><br/>
+                                                <Typography component="h3" variant="h7">
+                                                    회원가입
+                                                </Typography>
+                                                <Divider color="#696969" sx={{height: 2, width: '400px',marginTop:1}}></Divider><br/>
 
-                                        <RegisterService name={name} setName={setName} userid={userid} setUserId={setUserId} password={password}
-                                                         setPassword={setPassword} PwConfirm={PwConfirm} setPwConfirm={setPwConfirm}
-                                                         phone={phone} setPhone={setPhone} NameMessage={NameMessage} setNameMessage={setNameMessage}
-                                                         EmailMessage={EmailMessage} setEmailMessage={setEmailMessage} PwMessage={PwMessage}
-                                                         setPwMessage={setPwMessage} PwConfirmMessage={PwConfirmMessage}
-                                                         setPwConfirmMessage={setPwConfirmMessage} PhoneMessage={PhoneMessage}
-                                                         setPhoneMessage={setPhoneMessage} setIsName={setIsName} setIsEmail={setIsEmail}
-                                                         setIsPw={setIsPw} setIsPwConfirm={setIsPwConfirm} setIsPhone={setIsPhone}
-                                                         setRes={setRes} CheckCompany={CheckCompany} isExclusive={isExclusive}
-                                                         company={company} setCompany={setCompany} CompanyList={CompanyList}
-                                                         authNum={authNum} setAuthNum={setAuthNum} isName={isName} isEmail={isEmail}
-                                                         isPw={isPw} isPwConfirm={isPwConfirm}
-                                                         isPhone={isPhone} isAuthNum={isAuthNum} isSendAuth={isSendAuth}
-                                                         setIsAuthNum={setIsAuthNum} setIsSendAuth={setIsSendAuth}/>
+                                                <RegisterService CheckCompany={CheckCompany} isExclusive={isExclusive}/>
 
-                                    </Box>
+                                            </Box>
 
-                                ):(
-                                        <Box
-                                            sx={{
-                                                marginTop: 1,
-                                                display: 'flex',
-                                                flexDirection: 'column',
-                                                alignItems: 'center',
-                                                backgroundColor: 'white',
-                                                height: '820px',
-                                                width: 'auto',
-                                                borderRadius: '0.5rem',
-                                                border:1,
-                                                borderColor:'grey.500'
-                                            }}
-                                        ><br/><br/>
-                                            <img alt="No Images" src="images/img_logo_main.png"
-                                                 style={{
-                                                     display: 'flex',
-                                                     alignItems: "center",
-                                                     width: "250px",
-                                                 }}/><br/>
-                                            <Typography component="h3" variant="h7">
-                                                회원가입
-                                            </Typography><br/>
-                                            <Divider color="#696969" sx={{height: 2, width: '420px'}}></Divider>
+                                        ):(
+                                            <Box
+                                                sx={{
+                                                    marginTop: 1,
+                                                    display: 'flex',
+                                                    flexDirection: 'column',
+                                                    alignItems: 'center',
+                                                    backgroundColor: 'white',
+                                                    height: '820px',
+                                                    width: '450px',
+                                                    borderRadius: '0.5rem',
+                                                    border:1,
+                                                    borderColor:'grey.500'
+                                                }}
+                                            ><br/><br/>
+                                                <img alt="No Images" src="images/img_logo_main.png"
+                                                     style={{
+                                                         display: 'flex',
+                                                         alignItems: "center",
+                                                         width: "250px",
+                                                     }}/><br/>
+                                                <Typography component="h3" variant="h7">
+                                                    회원가입
+                                                </Typography><br/>
+                                                <Divider color="#696969" sx={{height: 2, width: '400px'}}></Divider><br/>
 
-                                            <RegisterService name={name} setName={setName} userid={userid} setUserId={setUserId} password={password}
-                                                             setPassword={setPassword} PwConfirm={PwConfirm} setPwConfirm={setPwConfirm}
-                                                             phone={phone} setPhone={setPhone} NameMessage={NameMessage} setNameMessage={setNameMessage}
-                                                             EmailMessage={EmailMessage} setEmailMessage={setEmailMessage} PwMessage={PwMessage}
-                                                             setPwMessage={setPwMessage} PwConfirmMessage={PwConfirmMessage}
-                                                             setPwConfirmMessage={setPwConfirmMessage} PhoneMessage={PhoneMessage}
-                                                             setPhoneMessage={setPhoneMessage} setIsName={setIsName} setIsEmail={setIsEmail}
-                                                             setIsPw={setIsPw} setIsPwConfirm={setIsPwConfirm} setIsPhone={setIsPhone}
-                                                             setRes={setRes} CheckCompany={CheckCompany} isExclusive={isExclusive}
-                                                             company={company} setCompany={setCompany} CompanyList={CompanyList}
-                                                             authNum={authNum} setAuthNum={setAuthNum} isName={isName} isEmail={isEmail}
-                                                             isPw={isPw} isPwConfirm={isPwConfirm} isPhone={isPhone} isAuthNum={isAuthNum}
-                                                             isSendAuth={isSendAuth} setIsAuthNum={setIsAuthNum} setIsSendAuth={setIsSendAuth}/>
+                                                <RegisterService CheckCompany={CheckCompany} isExclusive={isExclusive}/>
 
-                                        </Box>
-                                )}
-                        </Container>
-                    </ThemeProvider>
-                </div>
-                </div>
-            ):(
-                <RequiredTerms />
-            )}
+                                            </Box>
+                                        )}
+                                    </Container>
+                                </ThemeProvider>
+                            </div>
+                        </div>
+                    ):(
+                        <RequiredTerms />
+                    )}
+                </Desktop>
+
+
+                <Tablet>
+                    {isTerms ? (
+                        <div style={{
+                            display: 'flex',
+                            flexDirection: "column",
+                            alignItems: "center"
+                        }}><br/>
+                            <div className="signup-wrapper">
+                                <ThemeProvider theme={theme}>
+                                    <Container component="main" maxWidth="xl">
+                                        <CssBaseline/>
+                                        {isExclusive ? (
+                                            <Box
+                                                sx={{
+                                                    display: 'flex',
+                                                    flexDirection: 'column',
+                                                    alignItems: 'center',
+                                                    backgroundColor: 'white',
+                                                    height: '850px',
+                                                    width: '400px',
+                                                    borderRadius: '0.5rem',
+                                                    border:1,
+                                                    borderColor:'grey.500'
+                                                }}
+                                            ><br/>
+                                                <RegisterLogo srcAddress={srcAddress}/>
+                                                <img alt="No Images" src="images/img_logo_main.png"
+                                                     style={{
+                                                         display: 'flex',
+                                                         alignItems: "center",
+                                                         width: "220px"
+                                                     }}/><br/>
+                                                <Typography component="h3" variant="h7">
+                                                    회원가입
+                                                </Typography>
+                                                <Divider color="#696969" sx={{height: 2, width: '420px',marginTop:1}}></Divider><br/>
+
+                                                <RegisterService CheckCompany={CheckCompany} isExclusive={isExclusive}/>
+
+                                            </Box>
+
+                                        ):(
+                                            <Box
+                                                sx={{
+                                                    marginTop: 1,
+                                                    display: 'flex',
+                                                    flexDirection: 'column',
+                                                    alignItems: 'center',
+                                                    backgroundColor: 'white',
+                                                    height: '820px',
+                                                    width: '400px',
+                                                    borderRadius: '0.5rem',
+                                                    border:1,
+                                                    borderColor:'grey.500'
+                                                }}
+                                            ><br/><br/>
+                                                <img alt="No Images" src="images/img_logo_main.png"
+                                                     style={{
+                                                         display: 'flex',
+                                                         alignItems: "center",
+                                                         width: "250px",
+                                                     }}/><br/>
+                                                <Typography component="h3" variant="h7">
+                                                    회원가입
+                                                </Typography><br/>
+                                                <Divider color="#696969" sx={{height: 2, width: '350px'}}></Divider><br/>
+
+                                                <RegisterService CheckCompany={CheckCompany} isExclusive={isExclusive}/>
+
+                                            </Box>
+                                        )}
+                                    </Container>
+                                </ThemeProvider>
+                            </div>
+                        </div>
+                    ):(
+                        <RequiredTerms />
+                    )}
+                </Tablet>
+                <Mobile>
+                    {isTerms ? (
+                        <div style={{
+                            display: 'flex',
+                            flexDirection: "column",
+                            alignItems: "center"
+                        }}><br/>
+                            <div className="signup-wrapper">
+                                <ThemeProvider theme={theme}>
+                                    <Container component="main" maxWidth="xl">
+                                        <CssBaseline/>
+                                        {isExclusive ? (
+                                            <Box
+                                                component= 'form'
+                                                sx={{
+                                                    display: 'flex',
+                                                    flexDirection: 'column',
+                                                    alignItems: 'center',
+                                                    backgroundColor: 'white',
+                                                    height: '950px',
+                                                    width: '350px',
+                                                    borderRadius: '0.5rem',
+                                                    border:1,
+                                                    borderColor:'grey.500'
+                                                }}
+                                            ><br/>
+                                                <RegisterLogo srcAddress={srcAddress}/>
+                                                <img alt="No Images" src="images/img_logo_main.png"
+                                                     style={{
+                                                         display: 'flex',
+                                                         alignItems: "center",
+                                                         width: "220px"
+                                                     }}/><br/>
+                                                <Typography component="h3" variant="h7">
+                                                    회원가입
+                                                </Typography>
+                                                <Divider color="#696969" sx={{height: 2, width: '300px',marginTop:1}}></Divider><br/>
+
+                                                <RegisterService CheckCompany={CheckCompany} isExclusive={isExclusive}/>
+
+                                            </Box>
+
+                                        ):(
+                                            <Box
+
+                                                sx={{
+                                                    marginTop: 1,
+                                                    display: 'flex',
+                                                    flexDirection: 'column',
+                                                    alignItems: 'center',
+                                                    backgroundColor: 'white',
+                                                    height: '950px',
+                                                    width: '350px',
+                                                    borderRadius: '0.5rem',
+                                                    border:1,
+                                                    borderColor:'grey.500'
+                                                }}
+                                            ><br/><br/>
+                                                <img alt="No Images" src="images/img_logo_main.png"
+                                                     style={{
+                                                         display: 'flex',
+                                                         alignItems: "center",
+                                                         width: "250px",
+                                                     }}/><br/>
+                                                <Typography component="h3" variant="h7">
+                                                    회원가입
+                                                </Typography><br/>
+                                                <Divider color="#696969" sx={{height: 2, width: '300px'}}></Divider><br/>
+
+                                                <RegisterService CheckCompany={CheckCompany} isExclusive={isExclusive}/>
+
+                                            </Box>
+                                        )}
+                                    </Container>
+                                </ThemeProvider>
+                            </div>
+                        </div>
+                    ):(
+                        <RequiredTerms />
+                    )}
+                </Mobile>
             </div>
         </>
 

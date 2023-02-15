@@ -1,8 +1,8 @@
-import {FormHelperText, Grid} from "@mui/material";
+import {FormHelperText} from "@mui/material";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import React from "react";
-import {sendFindIdSMS} from "../../../../../api";
+import {sendFindIdSMS} from "../../../../../../api";
 import styled from "styled-components";
 
 
@@ -11,9 +11,10 @@ const FormHelperTextsBLUE = styled(FormHelperText)`
   padding-left: 16px;
   font-weight: 700 !important;
   color: #0f27d9 !important;
+  margin-top: 15px;
 `;
 
-export default function AuthNumService(props){
+export default function AuthNumMobile(props){
 
     const { Phone, Name, setSign, setSignNum, sign, signNum } = props
 
@@ -40,15 +41,14 @@ export default function AuthNumService(props){
 
     return(
         <>
-            <Grid item xs={2}>
                 <Button
                     value={sign}
                     type="submit"
                     variant="outlined"
                     sx={{
                         marginTop: 2,
-                        width: '90px',
-                        height: '55px',
+                        width: '250px',
+                        height: '45px',
                         border: 3,
                         "&.MuiButton-root:hover": {
                             color: '#008DDC',
@@ -62,28 +62,17 @@ export default function AuthNumService(props){
                 >
                     인증받기
                 </Button>
-            </Grid>
-            <Grid item xs={1}/>
 
-            <Grid item xs={12}/>
-
-            <Grid item xs={1}/>
-            <Grid item xs={10}>
                 <TextField
-                    fullWidth
+                    sx={{width:250, marginTop:2}}
                     label="인증번호"
                     value={signNum}
                     type="text"
                     onChange={onChangeSignHandler}
                 />
-            </Grid>
-            <Grid item xs={1}/>
 
-            <Grid item xs={1}/>
-            <Grid item xs={10}>
                 <FormHelperTextsBLUE>{sign}</FormHelperTextsBLUE><br/>
-            </Grid>
-            <Grid item xs={1}/>
+
         </>
     )
 }

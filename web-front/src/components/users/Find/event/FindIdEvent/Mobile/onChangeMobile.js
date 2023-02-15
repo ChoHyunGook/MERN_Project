@@ -1,9 +1,8 @@
-import {Grid} from "@mui/material";
 import TextField from "@mui/material/TextField";
 import React from "react";
 
 
-export default function OnChangeService(props){
+export default function OnChangeMobile(props){
 
     const {setName, setPhone, setPhoneMessage, setIsPhone, Name, Phone, PhoneMessage}  = props
 
@@ -36,26 +35,20 @@ export default function OnChangeService(props){
 
     return(
         <>
-            <Grid item xs={1}/>
-            <Grid item xs={10}>
                 <TextField
                     value={Name}
                     margin="normal"
                     required
-                    fullWidth
+                    sx={{width:250, marginTop:2}}
                     label="이름"
                     name="name"
                     autoComplete="name"
                     autoFocus
                     onChange={onNameHandler}
                 />
-            </Grid>
-            <Grid item xs={1}/>
 
-            <Grid item xs={1}/>
-            <Grid item xs={7.5}>
                 <TextField
-                    fullWidth
+                    sx={{width:250, marginTop:2}}
                     value={Phone}
                     margin="normal"
                     required
@@ -65,7 +58,7 @@ export default function OnChangeService(props){
                     error={PhoneMessage === '올바른 형식이 아닙니다.' || false}
                     onChange={addHyphen}
                 />
-            </Grid>
+
         </>
     )
 }

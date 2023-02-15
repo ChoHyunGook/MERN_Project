@@ -22,11 +22,11 @@ export default function BeforeLoginPhone(props){
                     alignItems: "center",paddingLeft:50,flexDirection:"column"}}>
                     <div className="jumbotron">
                         <div className="font-background">
-                            <img alt="No images" src="images/texst_slogan.png" style={{
+                            <img alt="No images" src="images/text_slogan.png" style={{
                                 marginTop:40,
                                 display: 'flex',
                                 alignItems:"center",
-                                width:'400px',
+                                width:'420px',
                                 height:'80px',
                                 paddingBottom:'10px'
                             }} />

@@ -67,7 +67,7 @@ function JoinAgreePage(){
 
 
     return(
-        <div>
+        <>
             <Layout>
             {isLogin ? (
                 window.location.replace('/')
@@ -76,7 +76,7 @@ function JoinAgreePage(){
                                             srcAddress={srcAddress}/>
                 )}
             </Layout>
-        </div>
+        </>
     )
 }
 

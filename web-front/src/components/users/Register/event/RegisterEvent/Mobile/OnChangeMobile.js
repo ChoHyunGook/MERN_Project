@@ -1,17 +1,17 @@
 import {Button, FormHelperText, Grid, TextField, Typography} from "@mui/material";
 import React, {useState} from "react";
 import styled from "styled-components";
-import {sendJoinSMS} from "../../../../../api";
+import {sendJoinSMS} from "../../../../../../api";
 
 
 const FormHelperTextsRED = styled(FormHelperText)`
   width: 100%;
-  padding-left: 16px;
+  padding-left: 30px;
   font-weight: 700 !important;
   color: #d32f2f !important;
 `;
 
-export default function OnChangeEvent(props){
+export default function OnChangeMobile(props){
 
     const {name, setName, userid, setUserId, password, setPassword, PwConfirm, setPwConfirm,
         phone, setPhone, NameMessage, setNameMessage, EmailMessage, setEmailMessage, PwMessage,
@@ -130,19 +130,11 @@ export default function OnChangeEvent(props){
 
     return(
         <>
-            <Grid item xs={1}/>
-            <Grid item xs={10}>
-                <FormHelperTextsRED></FormHelperTextsRED>
-            </Grid>
-            <Grid item xs={1}/>
-
-            <Grid item xs={1}/>
-            <Grid item xs={10}>
                 <TextField
                     autoFocus
                     value={name}
                     required
-                    fullWidth
+                    sx={{width:300, margin:1}}
                     id="name"
                     name="name"
                     label="이름"
@@ -150,41 +142,24 @@ export default function OnChangeEvent(props){
                     error={NameMessage === '이름을 두 글자 이상 입력하세요!' || false}
                 />
 
-            </Grid>
-            <Grid item xs={1}/>
-
-            <Grid item xs={1}/>
-            <Grid item xs={10}>
                 <FormHelperTextsRED>{NameMessage}</FormHelperTextsRED>
-            </Grid>
-            <Grid item xs={1}/>
 
-            <Grid item xs={1}/>
-            <Grid item xs={10}>
                 <TextField
                     required
                     value={userid}
-                    fullWidth
+                    sx={{width:300, margin:1}}
                     type="email"
                     onChange={onChangeEmail}
                     name="userid"
                     label="이메일 주소"
                     error={EmailMessage === '이메일의 형식이 올바르지 않습니다!' || false}
                 />
-            </Grid>
-            <Grid item xs={1}/>
 
-            <Grid item xs={1}/>
-            <Grid item xs={10}>
                 <FormHelperTextsRED>{EmailMessage}</FormHelperTextsRED>
-            </Grid>
-            <Grid item xs={1}/>
 
-            <Grid item xs={1}/>
-            <Grid item xs={10}>
                 <TextField
                     required
-                    fullWidth
+                    sx={{width:300, margin:1}}
                     type="password"
                     onChange={onChangePassword}
                     value={password}
@@ -192,20 +167,13 @@ export default function OnChangeEvent(props){
                     label="비밀번호 (숫자+영문자+특수문자 8자리 이상)"
                     error={PwMessage === '숫자+영문자+특수문자 조합으로 8자리 이상 입력해주세요!' || false}
                 />
-            </Grid>
-            <Grid item xs={1}/>
 
-            <Grid item xs={1}/>
-            <Grid item xs={10}>
                 <FormHelperTextsRED>{PwMessage}</FormHelperTextsRED>
-            </Grid>
-            <Grid item xs={1}/>
 
-            <Grid item xs={1}/>
-            <Grid item xs={10}>
+
                 <TextField
                     required
-                    fullWidth
+                    sx={{width:300, margin:1}}
                     value={PwConfirm}
                     onChange={onChangePasswordConfirm}
                     type="password"
@@ -213,38 +181,29 @@ export default function OnChangeEvent(props){
                     label="비밀번호 재입력"
                     error={PwConfirmMessage === '비밀번호가 일치하지 않습니다.' || false}
                 />
-            </Grid>
-            <Grid item xs={1}/>
 
-            <Grid item xs={1}/>
-            <Grid item xs={10}>
                 <FormHelperTextsRED>{PwConfirmMessage}</FormHelperTextsRED>
-            </Grid>
-            <Grid item xs={1}/>
 
-            <Grid item xs={1}/>
-            <Grid item xs={7}>
                 <TextField
                     required
                     value={phone}
-                    fullWidth
+                    sx={{width:300, margin:1}}
                     type="text"
                     onChange={addHyphen}
                     name="phone"
                     label="전화번호( - 빼고 기입)"
                     error={PhoneMessage === '핸드폰 번호를 입력해 주세요!' || false}
                 />
-            </Grid>
-            <Grid item xs={3}>
+
                 <Button
                     onClick={sendAuthSMS}
                     variant="outlined"
                     type="submit"
                     size="medium"
                     sx={{
-                        marginTop:0,
-                        width:'120px',
-                        height:'58px',
+                        marginTop:1,
+                        width: 300,
+                        height:'50px',
                         border:3,
                         "&.MuiButton-root:hover":{
                             color:'#008DDC',
@@ -258,30 +217,21 @@ export default function OnChangeEvent(props){
                         인증받기
                     </Typography>
                 </Button>
-            </Grid>
-            <Grid item xs={1}/>
 
-            <Grid item xs={1}/>
-            <Grid item xs={10}>
+
                 <FormHelperTextsRED>{PhoneMessage}</FormHelperTextsRED>
-            </Grid>
-            <Grid item xs={1}/>
 
-            <Grid item xs={1}/>
-            <Grid item xs={10}>
                 <TextField
                     disabled={isSendAuth === false}
                     value={authNum}
                     required
-                    fullWidth
+                    sx={{width:300, margin:1}}
                     id="sign"
                     name="sign"
                     label="인증번호"
                     onChange={onChangeAuthNum}
                 />
 
-            </Grid>
-            <Grid item xs={1}/>
 
         </>
     )

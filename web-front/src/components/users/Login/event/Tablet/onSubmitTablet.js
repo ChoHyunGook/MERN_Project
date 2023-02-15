@@ -1,9 +1,9 @@
 import Button from "@mui/material/Button";
 import * as React from "react";
-import {login} from "../../../../api";
+import {login} from "../../../../../api";
 
 
-export default function OnSubmitService(props){
+export default function OnSubmitTablet(props){
 
     const { userid, password, setRes  } = props
 
@@ -30,11 +30,11 @@ export default function OnSubmitService(props){
             <Button
                 disabled={userid.length<11 || password.length<8}
                 type="submit"
-                fullWidth
                 variant="contained"
                 sx={{ mt: 5, mb: 1,
                     justifyContent: 'center',
                     alignItems: 'center',
+                    width:300
                 }}
                 size="large"
                 onClick={onSubmitHandler}

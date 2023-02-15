@@ -1,6 +1,6 @@
 import background from "../../../images/bg_yellow_flower_field.jpg";
-import ContactEmail from "../service/ContactEmail";
 import React from "react";
+import ContactEmailService from "../service/ContactEmailService";
 
 
 export default function CustomerComponent(){
@@ -10,7 +10,9 @@ export default function CustomerComponent(){
         <>
             <div style={{backgroundImage: `url(${background})`,width:'100%',height:'100%'}}>
                 <div style={{alignItems: "center", display: "flex", flexDirection: "column"}}>
-                    <ContactEmail/>
+                    <div style={{paddingTop:60,paddingBottom:200}}>
+                     <ContactEmailService />
+                    </div>
                 </div>
             </div>
         </>

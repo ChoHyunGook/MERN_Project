@@ -1,9 +1,9 @@
-import {register} from "../../../../../api";
+import {register} from "../../../../../../api";
 import {Button, FormControl, Grid} from "@mui/material";
 import React from "react";
 
 
-export default function OnSubmitService(props){
+export default function OnSubmitMobile(props){
 
     const {name,  userid,  password,  phone, authNum, CheckCompany, company, isExclusive, setRes,
         isName,isEmail,isPw,isPwConfirm,isPhone,isAuthNum,isSendAuth}=props
@@ -58,10 +58,8 @@ export default function OnSubmitService(props){
 
     return(
         <>
-            <Grid item xs={1}/>
-            <Grid item xs={10}>
                 {isExclusive ? (
-                    <FormControl sx={{width: 416}}>
+                    <FormControl sx={{width: 300}}>
                         <Button
                             fullWidth
                             type="submit"
@@ -78,7 +76,7 @@ export default function OnSubmitService(props){
                         </Button>
                     </FormControl>
                 ):(
-                    <FormControl sx={{width: 416}}>
+                    <FormControl sx={{width: 300}}>
                         <Button
                             fullWidth
                             type="submit"
@@ -96,8 +94,6 @@ export default function OnSubmitService(props){
                     </FormControl>
                 )}
 
-            </Grid>
-            <Grid item xs={1}/>
         </>
     )
 }

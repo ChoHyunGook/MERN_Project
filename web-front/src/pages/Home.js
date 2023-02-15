@@ -2,22 +2,15 @@ import React, {useEffect, useState} from "react";
 import {authHomeCheck, signAllCheck} from "../api";
 import AfterLoginDesktop from "./components/Desktop/AfterLoginDesktop";
 import BeforeLoginDesktop from "./components/Desktop/BeforeLoginDesktop";
-import {createTheme, ThemeProvider} from "@mui/material/styles";
+import {createTheme} from "@mui/material/styles";
 import Layout from "../containers/main/Layout";
 import AuthHome from "../components/auth/authHome";
-import {useMediaQuery} from "react-responsive";
-import background from "../images/bg_index.png";
-import {Typography} from "@mui/material";
-import LgHelloService from "./services/lgHelloService";
-import LgUService from "./services/lgUService";
-import S1Service from "./services/s1Service";
-import RaemianService from "./services/raemianService";
-import CowayService from "./services/cowayService";
 import BeforeLoginTablet from "./components/Tablet/BeforeLoginTablet";
 import AfterLoginTablet from "./components/Tablet/AfterLoginTablet";
-import BeforeLoginPhone from "./components/Phone/BeforeLoginPhone";
-import AfterLoginPhone from "./components/Phone/AfterLoginPhone";
+import BeforeLoginPhone from "./components/Mobile/BeforeLoginPhone";
+import AfterLoginPhone from "./components/Mobile/AfterLoginPhone";
 import styled from "styled-components";
+import {Desktop,Tablet,Mobile} from "../containers/Responsive/responsive";
 
 const theme = createTheme({
     typography: {
@@ -78,20 +71,6 @@ export default function Home(){
         }catch (err){
         }
     },[])
-
-
-    const Desktop = ({ children }) => {
-        const isDesktop = useMediaQuery({ minWidth: 992 })
-        return isDesktop ? children : null
-    }
-    const Tablet = ({ children }) => {
-        const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 })
-        return isTablet ? children : null
-    }
-    const Mobile = ({ children }) => {
-        const isMobile = useMediaQuery({ maxWidth: 767 })
-        return isMobile ? children : null
-    }
 
 
 

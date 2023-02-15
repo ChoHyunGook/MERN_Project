@@ -6,61 +6,10 @@ import Layout from "../../../../containers/main/Layout";
 
 function RegisterPage() {
 
-    //기본
-    const [name, setName] = useState("");
-    const [userid, setUserId] = useState("");
-    const [password, setPassword] = useState("");
-    const [PwConfirm, setPwConfirm] = useState("");
-    const [phone, setPhone] = useState("");
-    const [company, setCompany] = useState("");
-    const [authNum, setAuthNum] = useState('')
-    const CompanyList = ["Blaubit","Samsung S1","RAEMIAN","THE WAVE","LG U+","ETCETRA", "Samsung C&T", "LG HelloVision","Coway"]
-
-
-    //메세지
-    const [NameMessage, setNameMessage] = useState("")
-    const [EmailMessage, setEmailMessage] = useState("")
-    const [PwMessage, setPwMessage] = useState("")
-    const [PwConfirmMessage, setPwConfirmMessage] =useState("")
-    const [PhoneMessage, setPhoneMessage] = useState("")
-
-
-    //상태관리
-    const [isName, setIsName] = useState(false)
-    const [isEmail, setIsEmail] = useState(false)
-    const [isPw, setIsPw] = useState(false)
-    const [isPwConfirm, setIsPwConfirm] = useState(false)
-    const [isPhone,setIsPhone] = useState(false)
-    const [isAuthNum, setIsAuthNum]= useState(false)
-    const [isSendAuth, setIsSendAuth]= useState(false)
-
-
-    const [res, setRes] = useState('')
 
     const [CheckCompany, setCheckCompany] = useState('')
     const [srcAddress,setSrcAddress] =useState('')
 
-
-    //로그인 체크
-
-    const [isLogin, setIsLogin]=useState(false)
-    const [user,setUser]=useState({})
-
-    useEffect(() => {
-        try{
-            signCheck()
-                .then((res)=>{
-                    if(res.status === 200){
-                        setIsLogin(true);
-                        setUser(res.data)
-                    }
-                })
-                .catch((err)=>{
-                })
-
-        }catch (err){
-        }
-    }, [])
 
 
     useEffect(() => {
@@ -109,6 +58,28 @@ function RegisterPage() {
     }, [])
 
 
+    //로그인 체크
+
+    const [isLogin, setIsLogin]=useState(false)
+    const [user,setUser]=useState({})
+
+    useEffect(() => {
+        try{
+            signCheck()
+                .then((res)=>{
+                    if(res.status === 200){
+                        setIsLogin(true);
+                        setUser(res.data)
+                    }
+                })
+                .catch((err)=>{
+                })
+
+        }catch (err){
+        }
+    }, [])
+
+
 
     return (
         <>
@@ -116,19 +87,7 @@ function RegisterPage() {
             {isLogin ? (
                 window.location.replace('/')
                 ):(
-                    <RegisterComponent name={name} setName={setName} userid={userid} setUserId={setUserId} password={password}
-                                       setPassword={setPassword} PwConfirm={PwConfirm} setPwConfirm={setPwConfirm}
-                                       phone={phone} setPhone={setPhone} NameMessage={NameMessage} setNameMessage={setNameMessage}
-                                       EmailMessage={EmailMessage} setEmailMessage={setEmailMessage} PwMessage={PwMessage}
-                                       setPwMessage={setPwMessage} PwConfirmMessage={PwConfirmMessage}
-                                       setPwConfirmMessage={setPwConfirmMessage} PhoneMessage={PhoneMessage}
-                                       setPhoneMessage={setPhoneMessage} setIsName={setIsName} setIsEmail={setIsEmail}
-                                       setIsPw={setIsPw} setIsPwConfirm={setIsPwConfirm} setIsPhone={setIsPhone}
-                                       setRes={setRes} CheckCompany={CheckCompany} srcAddress={srcAddress}
-                                       company={company} setCompany={setCompany} CompanyList={CompanyList}
-                                       authNum={authNum} setAuthNum={setAuthNum} isName={isName} isEmail={isEmail}
-                                       isPw={isPw} isPwConfirm={isPwConfirm} isPhone={isPhone} isAuthNum={isAuthNum}
-                                       isSendAuth={isSendAuth} setIsAuthNum={setIsAuthNum} setIsSendAuth={setIsSendAuth}/>
+                    <RegisterComponent CheckCompany={CheckCompany} srcAddress={srcAddress}/>
 
                 )}
             </Layout>

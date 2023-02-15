@@ -1,9 +1,14 @@
-import { Grid} from "@mui/material";
-import Box from "@mui/material/Box";
 import React from "react";
-import OnChangeService from "../../event/FindIdEvent/onChangeService";
-import AuthNumService from "../../event/FindIdEvent/authNumService";
-import OnSubmitService from "../../event/FindIdEvent/onSubmitService";
+import OnChangeDesktop from "../../event/FindIdEvent/Desktop/onChangeDesktop";
+import AuthNumDesktop from "../../event/FindIdEvent/Desktop/authNumDesktop";
+import OnSubmitDesktop from "../../event/FindIdEvent/Desktop/onSubmitDesktop";
+import {Desktop, Mobile, Tablet} from "../../../../../containers/Responsive/responsive";
+import OnChangeTablet from "../../event/FindIdEvent/Tablet/onChangeTablet";
+import AuthNumTablet from "../../event/FindIdEvent/Tablet/authNumTablet";
+import OnSubmitTablet from "../../event/FindIdEvent/Tablet/onSubmitTablet";
+import OnChangeMobile from "../../event/FindIdEvent/Mobile/onChangeMobile";
+import AuthNumMobile from "../../event/FindIdEvent/Mobile/authNumMobile";
+import OnSubmitMobile from "../../event/FindIdEvent/Mobile/onSubmitMobile";
 
 
 export default function FindIdService(props){
@@ -14,20 +19,37 @@ export default function FindIdService(props){
 
     return(
         <>
-            <Box component="form"  noValidate sx={{ mt: 1 }} >
-                <Grid container spacing={1}>
 
-                    <OnChangeService setName={setName} setPhone={setPhone} PhoneMessage={PhoneMessage}
-                                     setPhoneMessage={setPhoneMessage} setIsPhone={setIsPhone} Name={Name}
-                                     Phone={Phone} />
+            <Desktop>
+                <OnChangeDesktop setName={setName} setPhone={setPhone} PhoneMessage={PhoneMessage}
+                                 setPhoneMessage={setPhoneMessage} setIsPhone={setIsPhone} Name={Name}
+                                 Phone={Phone} />
+                <AuthNumDesktop Phone={Phone} Name={Name} setSign={setSign} setSignNum={setSignNum} sign={sign}
+                                signNum={signNum}/>
+                <OnSubmitDesktop Name={Name} Phone={Phone} signNum={signNum} setRes={setRes}/>
+            </Desktop>
 
-                    <AuthNumService Phone={Phone} Name={Name} setSign={setSign} setSignNum={setSignNum} sign={sign}
-                                    signNum={signNum}/>
 
-                    <OnSubmitService Name={Name} Phone={Phone} signNum={signNum} setRes={setRes}/>
+            <Tablet>
+                <OnChangeTablet setName={setName} setPhone={setPhone} PhoneMessage={PhoneMessage}
+                                 setPhoneMessage={setPhoneMessage} setIsPhone={setIsPhone} Name={Name}
+                                 Phone={Phone} />
+                <AuthNumTablet Phone={Phone} Name={Name} setSign={setSign} setSignNum={setSignNum} sign={sign}
+                                signNum={signNum}/>
+                <OnSubmitTablet Name={Name} Phone={Phone} signNum={signNum} setRes={setRes}/>
+            </Tablet>
 
-                </Grid>
-            </Box>
+
+            <Mobile>
+                <OnChangeMobile setName={setName} setPhone={setPhone} PhoneMessage={PhoneMessage}
+                                setPhoneMessage={setPhoneMessage} setIsPhone={setIsPhone} Name={Name}
+                                Phone={Phone} />
+                <AuthNumMobile Phone={Phone} Name={Name} setSign={setSign} setSignNum={setSignNum} sign={sign}
+                               signNum={signNum}/>
+                <OnSubmitMobile Name={Name} Phone={Phone} signNum={signNum} setRes={setRes}/>
+            </Mobile>
+
+
         </>
     )
 }

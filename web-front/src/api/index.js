@@ -68,3 +68,5 @@ export const sendEditPasswordSMS = sendEditPasswordSMSRequest => axios.post(`${p
 //auth--삭제예정
 export const authHomeCheck = ()=> axios.get(`${process.env.REACT_APP_LOCALSERVER}/auth/authHomeCheck`,{withCredentials:true})
 export const authLogin = authLoginRequest => axios.post(`${process.env.REACT_APP_LOCALSERVER}/auth/authLogin`,authLoginRequest,{withCredentials:true})
+
+export const authLogout = () => axios.get(`${process.env.REACT_APP_LOCALSERVER}/auth/authLogout`,{withCredentials:true})

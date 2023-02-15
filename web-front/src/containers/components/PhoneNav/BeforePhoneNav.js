@@ -10,7 +10,7 @@ import {  Button } from 'antd';
 
 export default function BeforePhoneNav(props){
 
-    const { MobileHome,MobileLogoImg,MobileNavTop,toggleChange,toggleBar,toggleMenu,styles}=props
+    const { MobileHome,MobileLogoImg,MobileNavTop,toggleChange,toggleBar,toggleMenu,styles,onSubmit,onSubmitNavJoin}=props
 
     return(
         <>
@@ -32,12 +32,16 @@ export default function BeforePhoneNav(props){
                         <ListItemText primary="고객센터" />
                     </ListItemButton>
                     <Divider light />
-                    <ListItemButton components='a' href='/agreeRegister'>
+                    <ListItemButton onClick={onSubmitNavJoin}>
                         <ListItemText primary="회원가입" />
                     </ListItemButton>
                     <Divider light />
                     <ListItemButton components='a' href='/login'>
                         <ListItemText primary="로그인" />
+                    </ListItemButton>
+                    <Divider light />
+                    <ListItemButton onClick={onSubmit}>
+                        <ListItemText primary="관리자 로그아웃" />
                     </ListItemButton>
                 </List>}
         </>

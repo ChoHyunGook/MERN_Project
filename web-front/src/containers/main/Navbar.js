@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {logout, signCheck} from "../../api";
+import {authLogout, logout, signAllCheck, signCheck} from "../../api";
 import React, {useEffect, useState} from "react"
 import AfterDesktopNav from "../components/DesktopNav/AfterDesktopNav";
 import BeforeDesktopNav from "../components/DesktopNav/BeforeDesktopNav";
@@ -8,7 +8,7 @@ import BeforeTabletNav from "../components/TabletNav/BeforeTabletNav";
 import AfterTabletNav from "../components/TabletNav/AfterTabletNav";
 import BeforePhoneNav from "../components/PhoneNav/BeforePhoneNav";
 import AfterPhoneNav from "../components/PhoneNav/AfterPhoneNav";
-
+import {Desktop,Tablet,Mobile} from "../Responsive/responsive";
 
 const Common = styled.div`
     display: flex;
@@ -58,7 +58,7 @@ const TabletLogoImg = styled.img`
 `
 
 const MobileLogoImg = styled.img`
-    width:250px;
+    width:200px;
 `
 
 
@@ -73,9 +73,8 @@ const Contlor = styled.a`
     text-decoration: none;
     color: black;
   padding-right: 30px;
-  
-  
 `
+
 
 const NavTop = styled.div`
   display: flex;
@@ -104,26 +103,12 @@ const MobileNavTop = styled.div`
 
 const styles = {
     width: '100%',
-    maxWidth: 360,
-    bgcolor: 'background.paper',
+    maxWidth: '180px',
+    bgcolor: '#f0f4fa',
     float: 'right',
+    position:'sticky'
 };
 
-
-
-
-const Desktop = ({ children }) => {
-    const isDesktop = useMediaQuery({ minWidth: 992 })
-    return isDesktop ? children : null
-}
-const Tablet = ({ children }) => {
-    const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 })
-    return isTablet ? children : null
-}
-const Mobile = ({ children }) => {
-    const isMobile = useMediaQuery({ maxWidth: 767 })
-    return isMobile ? children : null
-}
 
 
 
@@ -180,6 +165,37 @@ export default function Navbar(){
 
     }
 
+    const [isAuthLogout,setIsAuthLogout]=useState('')
+
+    const onSubmit = (e)=>{
+        e.preventDefault()
+        authLogout()
+            .then((res)=>{
+                setIsAuthLogout(res.data)
+                alert('관리자 로그아웃 완료')
+                window.location.replace('/')
+            })
+            .catch((err)=>{
+                alert(err.response.data)
+            })
+    }
+
+    const onSubmitNavJoin = (e)=>{
+        e.preventDefault()
+        signAllCheck()
+            .then((res)=>{
+                if(res.status === 200){
+                    setIsLogin(true);
+                    setUser(res.data)
+                }
+            })
+            .catch((err)=>{
+                console.log(err)
+            })
+        window.location.replace('/agreeRegister')
+    }
+
+
 
     return(
         <>
@@ -189,7 +205,7 @@ export default function Navbar(){
                                      ContlorBox={ContlorBox} Contlor={Contlor} logoutButton={logoutButton} />
                 ):(
                     <BeforeDesktopNav Home={Home} LogoImg={LogoImg} Common={Common}
-                                      ContlorBox={ContlorBox} Contlor={Contlor} />
+                                      ContlorBox={ContlorBox} Contlor={Contlor} onSubmit={onSubmit} onSubmitNavJoin={onSubmitNavJoin} />
                 )}
             </Desktop>
 
@@ -201,7 +217,7 @@ export default function Navbar(){
                 ):(
                     <BeforeTabletNav TabletHome={TabletHome} TabletLogoImg={TabletLogoImg} NavTop={NavTop}
                                      toggleChange={toggleChange} toggleBar={toggleBar}
-                                     toggleMenu={toggleMenu} styles={styles} />
+                                     toggleMenu={toggleMenu} styles={styles} onSubmit={onSubmit} onSubmitNavJoin={onSubmitNavJoin}/>
                     )}
             </Tablet>
 
@@ -213,7 +229,7 @@ export default function Navbar(){
                 ):(
                     <BeforePhoneNav MobileHome={MobileHome} MobileLogoImg={MobileLogoImg} MobileNavTop={MobileNavTop}
                                     toggleChange={toggleChange} toggleBar={toggleBar} toggleMenu={toggleMenu}
-                                    styles={styles} />
+                                    styles={styles} onSubmit={onSubmit} onSubmitNavJoin={onSubmitNavJoin}/>
                     )}
             </Mobile>
 

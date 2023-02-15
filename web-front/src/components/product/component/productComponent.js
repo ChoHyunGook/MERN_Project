@@ -1,30 +1,26 @@
 import React from "react";
+import {Desktop,Tablet, Mobile} from "../../../containers/Responsive/responsive";
+import ProductDesktop from "./Desktop/productDesktop";
+import ProductTablet from "./Tablet/productTablet";
+import ProductMobile from "./Mobile/productMobile";
 
 
 export default function ProductComponent(){
 
     return(
         <>
-            <div style={{display: 'flex',
-                flexDirection: "column",
-                alignItems: "center",paddingBottom:200,backgroundColor:'white'}}>
-                <div style={{alignItems:"center",display:"flex",paddingTop:150}}>
-                    <img alt="No Images" src="images/doorbell_hard.png"
-                         style={{
-                             width:1000
-                         }}/>
+            <Desktop>
+                <ProductDesktop />
+            </Desktop>
 
-                    <img alt="No Images" src="images/doorbell_text.png"
-                         style={{paddingLeft:20,
-                             width:300
-                         }}/>
-                    <img alt="No Images" src="images/doorbell_point.png"
-                         style={{
-                             width:500
-                         }}/>
-                </div>
+            <Tablet>
+                <ProductTablet />
+            </Tablet>
 
-            </div>
+            <Mobile>
+                <ProductMobile />
+            </Mobile>
+
         </>
     )
 }
