@@ -1,9 +1,9 @@
-import {changePasswordPage} from "../../../../../api";
+import {changePasswordPage} from "../../../../../../api";
 import {Grid} from "@mui/material";
 import Button from "@mui/material/Button";
 
 
-export default function OnSubmitService(props){
+export default function OnSubmitTablet(props){
 
     const { signNum, userid, setRes}=props
 
@@ -27,19 +27,15 @@ export default function OnSubmitService(props){
 
     return(
         <>
-            <Grid item xs={1}/>
-            <Grid item xs={10}>
-                <Button
-                    style={{height:45}}
-                    type="submit"
-                    variant="contained"
-                    disabled={signNum.length<6 || false}
-                    fullWidth
-                    onClick={checkSignHandler}
-                >
-                    다음
-                </Button>
-            </Grid>
+            <Button
+                sx={{height:45,width:320,marginTop:2}}
+                type="submit"
+                variant="contained"
+                disabled={signNum.length<6 || false}
+                onClick={checkSignHandler}
+            >
+                다음
+            </Button>
         </>
     )
 

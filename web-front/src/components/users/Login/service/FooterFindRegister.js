@@ -5,11 +5,6 @@ import {Desktop, Mobile, Tablet} from "../../../../containers/Responsive/respons
 
 export default function FooterFindRegister(){
 
-    const onFindId = (e)=>{
-        e.preventDefault()
-        window.location.href('/findId')
-    }
-
 
 
     return(
@@ -24,7 +19,7 @@ export default function FooterFindRegister(){
                             alignItems: 'center',
                             width:"120px"}}
                         size="small"
-                        onClick={onFindId}
+                        href='/findId'
                         style={{backgroundColor:"white"}}
                     >
                         아이디찾기

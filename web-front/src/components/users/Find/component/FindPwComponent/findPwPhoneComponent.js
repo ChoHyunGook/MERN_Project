@@ -1,16 +1,10 @@
 import background from "../../../../../images/bg_yellow_flower_field.jpg";
-import {createTheme, ThemeProvider} from "@mui/material/styles";
-import Container from "@mui/material/Container";
-import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import FindPwPhoneService from "../../service/FindPw/findPwPhoneService";
+import {Desktop, Mobile, Tablet} from "../../../../../containers/Responsive/responsive";
 
-
-
-
-const theme = createTheme();
 
 export default function FindPwPhoneComponent(props){
 
@@ -21,16 +15,14 @@ export default function FindPwPhoneComponent(props){
 
     return(
         <>
+            <div style={{backgroundImage: `url(${background})`,}}>
             <div style={{
-                backgroundImage: `url(${background})`,
                 display: 'flex',
                 flexDirection: "column",
                 alignItems: "center",
                 paddingBottom:300
             }}><br/>
-            <ThemeProvider theme={theme}>
-                <Container component="main" maxWidth="xs">
-                    <CssBaseline/>
+                <Desktop>
                     <Box
                         sx={{
                             marginTop: 10,
@@ -38,8 +30,8 @@ export default function FindPwPhoneComponent(props){
                             flexDirection: 'column',
                             alignItems: 'center',
                             backgroundColor: 'white',
-                            height: '550px',
-                            width: '450px',
+                            height: '620px',
+                            width: '520px',
                             borderRadius: '0.5rem'
                         }}
                     ><br/>
@@ -47,12 +39,12 @@ export default function FindPwPhoneComponent(props){
                              style={{
                                  display: 'flex',
                                  alignItems: "center",
-                                 width: "250px"
-                             }}/><br/>
-                        <Typography component="h3" variant="h7" sx={{paddingBottom:1}}>
+                                 width: "300px"
+                             }}/><br/><br/>
+                        <Typography component="h3" variant="h7" sx={{paddingBottom:4}}>
                             핸드폰으로 비밀번호 찾기
                         </Typography><br/>
-                        <Divider color="#696969" sx={{height: 2, width: '400px'}}></Divider><br/>
+                        <Divider color="#696969" sx={{height: 2, width: '420px'}}></Divider><br/>
 
                         <FindPwPhoneService Email={Email} setEmail={setEmail} Phone={Phone} setPhone={setPhone}
                                             signNum={signNum} setSignNum={setSignNum} setEmailMessage={setEmailMessage}
@@ -61,8 +53,77 @@ export default function FindPwPhoneComponent(props){
                                             setIsPhone={setIsPhone} setRes={setRes}/>
 
                     </Box>
-                </Container>
-            </ThemeProvider>
+                </Desktop>
+
+                <Tablet>
+                    <Box
+                        sx={{
+                            marginTop: 10,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            backgroundColor: 'white',
+                            height: '600px',
+                            width: '400px',
+                            borderRadius: '0.5rem'
+                        }}
+                    ><br/>
+                        <img alt="No Images" src="images/img_logo_main.png"
+                             style={{
+                                 display: 'flex',
+                                 alignItems: "center",
+                                 width: "250px",
+                                 paddingBottom:20
+                             }}/><br/>
+                        <Typography component="h3" variant="h7" sx={{paddingBottom:3}}>
+                            핸드폰으로 비밀번호 찾기
+                        </Typography><br/>
+                        <Divider color="#696969" sx={{height: 2, width: '350px'}}></Divider><br/>
+
+                        <FindPwPhoneService Email={Email} setEmail={setEmail} Phone={Phone} setPhone={setPhone}
+                                            signNum={signNum} setSignNum={setSignNum} setEmailMessage={setEmailMessage}
+                                            PhoneMessage={PhoneMessage} setPhoneMessage={setPhoneMessage} sign={sign}
+                                            setSign={setSign} isEmail={isEmail} setIsEmail={setIsEmail}
+                                            setIsPhone={setIsPhone} setRes={setRes}/>
+
+                    </Box>
+                </Tablet>
+
+                <Mobile>
+                    <Box
+                        sx={{
+                            marginTop: 10,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            backgroundColor: 'white',
+                            height: '600px',
+                            width: '350px',
+                            borderRadius: '0.5rem'
+                        }}
+                    ><br/>
+                        <img alt="No Images" src="images/img_logo_main.png"
+                             style={{
+                                 display: 'flex',
+                                 alignItems: "center",
+                                 width: "200px"
+                             }}/><br/>
+                        <Typography component="h3" variant="h7" sx={{paddingBottom:2}}>
+                            핸드폰으로 비밀번호 찾기
+                        </Typography><br/>
+                        <Divider color="#696969" sx={{height: 2, width: '300px'}}></Divider><br/>
+
+                        <FindPwPhoneService Email={Email} setEmail={setEmail} Phone={Phone} setPhone={setPhone}
+                                            signNum={signNum} setSignNum={setSignNum} setEmailMessage={setEmailMessage}
+                                            PhoneMessage={PhoneMessage} setPhoneMessage={setPhoneMessage} sign={sign}
+                                            setSign={setSign} isEmail={isEmail} setIsEmail={setIsEmail}
+                                            setIsPhone={setIsPhone} setRes={setRes}/>
+
+                    </Box>
+                </Mobile>
+
+
+            </div>
             </div>
         </>
     )

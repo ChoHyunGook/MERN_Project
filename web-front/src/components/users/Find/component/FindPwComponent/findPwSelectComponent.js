@@ -1,5 +1,4 @@
 import background from "../../../../../images/bg_yellow_flower_field.jpg";
-import {createTheme, ThemeProvider} from "@mui/material/styles";
 import {Box, Container, Grid, Typography} from "@mui/material";
 import React from "react";
 import FindPwSelectService from "../../service/FindPw/findPwSelectService";
@@ -24,8 +23,8 @@ export default function FindPwSelectComponent(props){
                             flexDirection: 'column',
                             alignItems: 'center',
                             backgroundColor: 'white',
-                            height: '500px',
-                            width: '600px',
+                            height: '550px',
+                            width: '700px',
                             borderRadius:'1rem'
                         }}>
                                 <img alt="No Images" src="images/img_logo_main.png"
@@ -33,18 +32,16 @@ export default function FindPwSelectComponent(props){
                                          marginTop: 20,
                                          display:'flex',
                                          alignItems: "center",
-                                         width:"250px"
-                                     }}/>
+                                         width:"350px"
+                                     }}/><br/>
                                 <Typography component="h3" variant="h7"
                                             style={{
                                                 marginTop:20}}>
                                     비밀번호 인증유형
                                 </Typography>
-                                <Container maxWidth="sm">
-                                    <Grid container spacing={2}>
-                                        <FindPwSelectService Email={Email} setEmail={setEmail} Phone={Phone} setPhone={setPhone}/>
-                                    </Grid>
-                                </Container>
+
+                            <FindPwSelectService Email={Email} setEmail={setEmail} Phone={Phone} setPhone={setPhone}/>
+
                         </Box>
                     </>
                 </Desktop>

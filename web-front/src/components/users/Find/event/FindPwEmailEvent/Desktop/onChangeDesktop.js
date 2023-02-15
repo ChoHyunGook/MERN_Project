@@ -2,7 +2,7 @@ import {Grid} from "@mui/material";
 import TextField from "@mui/material/TextField";
 
 
-export default function OnChangeService(props){
+export default function OnChangeDesktop(props){
 
     const { setName, Name, setIsName, setNameMessage, setUserid, setEmailMessage, setIsEmail, NameMessage,
             userid, EmailMessage } = props
@@ -39,13 +39,11 @@ export default function OnChangeService(props){
 
     return(
         <>
-            <Grid item xs={1}/>
-            <Grid item xs={10}>
                 <TextField
                     value={Name}
                     margin="normal"
                     required
-                    fullWidth
+                    sx={{width:380}}
                     label="이름"
                     name="Name"
                     autoComplete="Name"
@@ -53,23 +51,19 @@ export default function OnChangeService(props){
                     error={NameMessage === '올바른 이름을 입력해주세요!' || false}
                     onChange={onChangeName}
                 />
-            </Grid>
-            <Grid item xs={1}/>
 
-            <Grid item xs={1}/>
-            <Grid item xs={7.5}>
                 <TextField
                     value={userid}
                     margin="normal"
                     required
-                    fullWidth
+                    sx={{width:380}}
                     label="아이디(이메일)"
                     name="userid"
                     autoComplete="email"
                     error={EmailMessage === '올바른 형식이 아닙니다.' || false}
                     onChange={onEmailHandler}
                 />
-            </Grid>
+
         </>
     )
 

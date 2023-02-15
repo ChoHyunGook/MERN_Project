@@ -1,8 +1,13 @@
-import { Grid} from "@mui/material";
-import Box from "@mui/material/Box";
-import OnChangeService from "../../event/FindPwSMSEvent/onChangeService";
-import AuthNumService from "../../event/FindPwSMSEvent/authNumService";
-import OnSubmitService from "../../event/FindPwSMSEvent/onSubmitService";
+import OnChangeDesktop from "../../event/FindPwSMSEvent/Desktop/onChangeDesktop";
+import AuthNumDesktop from "../../event/FindPwSMSEvent/Desktop/authNumDesktop";
+import OnSubmitDesktop from "../../event/FindPwSMSEvent/Desktop/onSubmitDesktop";
+import {Desktop, Mobile, Tablet} from "../../../../../containers/Responsive/responsive";
+import OnChangeTablet from "../../event/FindPwSMSEvent/Tablet/onChangeTablet";
+import AuthNumTablet from "../../event/FindPwSMSEvent/Tablet/authNumTablet";
+import OnSubmitTablet from "../../event/FindPwSMSEvent/Tablet/onSubmitTablet";
+import OnChangeMobile from "../../event/FindPwSMSEvent/Mobile/onChangeMobile";
+import AuthNumMobile from "../../event/FindPwSMSEvent/Mobile/authNumMobile";
+import OnSubmitMobile from "../../event/FindPwSMSEvent/Mobile/onSubmitMobile";
 
 
 
@@ -20,21 +25,41 @@ export default function FindPwPhoneService(props){
 
     return(
         <>
-            <Box component="form" noValidate sx={{mt: 1}}>
+            <Desktop>
+                <OnChangeDesktop setEmail={setEmail} setEmailMessage={setEmailMessage} setIsEmail={setIsEmail}
+                                 setPhone={setPhone} setPhoneMessage={setPhoneMessage} setIsPhone={setIsPhone}
+                                 Email={Email} isEmail={isEmail} Phone={Phone} PhoneMessage={PhoneMessage}/>
 
-                <Grid container spacing={1}>
+                <AuthNumDesktop Email={Email} Phone={Phone} setSign={setSign} setSignNum={setSignNum} sign={sign}
+                                signNum={signNum}/>
 
-                    <OnChangeService setEmail={setEmail} setEmailMessage={setEmailMessage} setIsEmail={setIsEmail}
-                                     setPhone={setPhone} setPhoneMessage={setPhoneMessage} setIsPhone={setIsPhone}
-                                     Email={Email} isEmail={isEmail} Phone={Phone} PhoneMessage={PhoneMessage}/>
+                <OnSubmitDesktop Email={Email} signNum={signNum} setRes={setRes}/>
+            </Desktop>
 
-                    <AuthNumService Email={Email} Phone={Phone} setSign={setSign} setSignNum={setSignNum} sign={sign}
-                                    signNum={signNum}/>
+            <Tablet>
+                <OnChangeTablet setEmail={setEmail} setEmailMessage={setEmailMessage} setIsEmail={setIsEmail}
+                                 setPhone={setPhone} setPhoneMessage={setPhoneMessage} setIsPhone={setIsPhone}
+                                 Email={Email} isEmail={isEmail} Phone={Phone} PhoneMessage={PhoneMessage}/>
 
-                    <OnSubmitService Email={Email} signNum={signNum} setRes={setRes}/>
+                <AuthNumTablet Email={Email} Phone={Phone} setSign={setSign} setSignNum={setSignNum} sign={sign}
+                                signNum={signNum}/>
 
-                </Grid>
-            </Box>
+                <OnSubmitTablet Email={Email} signNum={signNum} setRes={setRes}/>
+            </Tablet>
+
+            <Mobile>
+                <OnChangeMobile setEmail={setEmail} setEmailMessage={setEmailMessage} setIsEmail={setIsEmail}
+                                setPhone={setPhone} setPhoneMessage={setPhoneMessage} setIsPhone={setIsPhone}
+                                Email={Email} isEmail={isEmail} Phone={Phone} PhoneMessage={PhoneMessage}/>
+
+                <AuthNumMobile Email={Email} Phone={Phone} setSign={setSign} setSignNum={setSignNum} sign={sign}
+                               signNum={signNum}/>
+
+                <OnSubmitMobile Email={Email} signNum={signNum} setRes={setRes}/>
+            </Mobile>
+
+
+
         </>
     )
 }

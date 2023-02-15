@@ -1,8 +1,7 @@
-import {Grid} from "@mui/material";
 import TextField from "@mui/material/TextField";
 
 
-export default function OnChangeService(props){
+export default function OnChangeTablet(props){
 
     const {setEmail, setEmailMessage, setIsEmail, setPhone ,setPhoneMessage,
         setIsPhone,Email,isEmail,Phone,PhoneMessage}= props
@@ -47,37 +46,32 @@ export default function OnChangeService(props){
 
     return(
         <>
-            <Grid item xs={1}/>
-            <Grid item xs={10}>
-                <TextField
-                    value={Email}
-                    margin="normal"
-                    required
-                    fullWidth
-                    label="아이디(이메일)"
-                    name="Email"
-                    autoComplete="email"
-                    autoFocus
-                    error={isEmail === false}
-                    onChange={onEmailHandler}
-                />
-            </Grid>
-            <Grid item xs={1}/>
+            <TextField
+                value={Email}
+                margin="normal"
+                required
+                sx={{width:320}}
+                label="아이디(이메일)"
+                name="Email"
+                autoComplete="email"
+                autoFocus
+                error={isEmail === false}
+                onChange={onEmailHandler}
+            />
 
-            <Grid item xs={1}/>
-            <Grid item xs={7.5}>
-                <TextField
-                    value={Phone}
-                    margin="normal"
-                    required
-                    fullWidth
-                    name="Phone"
-                    label="전화번호( - 빼고 기입)"
-                    type="text"
-                    error={PhoneMessage === '올바른 형식이 아닙니다.' || false}
-                    onChange={addHyphen}
-                />
-            </Grid>
+            <TextField
+                value={Phone}
+                margin="normal"
+                required
+                sx={{width:320}}
+                name="Phone"
+                label="전화번호( - 빼고 기입)"
+                type="text"
+                error={PhoneMessage === '올바른 형식이 아닙니다.' || false}
+                onChange={addHyphen}
+            />
+
         </>
     )
+
 }

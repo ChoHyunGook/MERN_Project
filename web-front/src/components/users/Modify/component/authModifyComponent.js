@@ -29,16 +29,11 @@ export default function AuthModifyComponent(props){
 
     return(
         <>
-            <body style={{
-                backgroundImage: `url(${background})`,
-                width:'100%',
-                height:'100%',
-                position:'fixed',
+        <div style={{backgroundImage: `url(${background})`,}}>
+            <div style={{
                 display: 'flex',
                 flexDirection:"column",
-                alignItems:"center",}}>
-                <ThemeProvider theme={theme}>
-                    <CssBaseline />
+                alignItems:"center"}}>
                     <Box
                         component='form'
                         sx={{
@@ -83,8 +78,8 @@ export default function AuthModifyComponent(props){
                         </div>
                         <AuthModifyService userData={userData}/>
                     </Box>
-                </ThemeProvider>
-            </body>
+            </div>
+            </div>
         </>
     )
 }

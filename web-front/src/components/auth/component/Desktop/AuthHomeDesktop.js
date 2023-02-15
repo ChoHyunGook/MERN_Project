@@ -27,7 +27,7 @@ export default function AuthHomeDesktop(props){
                                 alignItems: 'center',
                                 backgroundColor: 'white',
                                 height: '600px',
-                                width: '400px',
+                                width: '500px',
                                 borderRadius:'0.5rem',
                                 border:1,
                                 borderColor:'grey.500'
