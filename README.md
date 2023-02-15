@@ -29,6 +29,7 @@ ALL COMPLETE!!!!!!! 끝...<br><br>
 # 🔮 Modify & Update <br>
 2023-02-14 => React 반응형으로 Desktop, Tablet, Phone으로 나눠 media쿼리 사용=> Home 화면(로그인 전 후), NaviBar(로그인 전 후), Footer => 기본 구성들 작업완료(23:38)
 오늘은 일찍자야지...<br>
+2023-02-15 => React 반응형 수정중 Product, Customer, Register, ExclusiveRegister, RegisterAgree, Login 작업완료 , Nav에 로그인전 관리자 로그아웃 버튼 추가 <br>
 
 <br>
 
