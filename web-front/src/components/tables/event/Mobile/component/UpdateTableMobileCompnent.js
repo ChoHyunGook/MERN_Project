@@ -18,16 +18,6 @@ import {companyCheck, signCheck, tableEdit, userInfoCheck} from "../../../../../
 
 export default function UpdateTableMobileCompnent(){
 
-    let contractMap = editedData.map(item=>item.contract)
-    let terminalNumMap = editedData.map(item=>item.terminalNum)
-    let contractSortationMap = editedData.map(item=>item.contractSortation)
-    let idMap = editedData.map(item=>item.id)
-    let phoneNumMap = editedData.map(item=>item.phoneNum)
-    let communicationMap = editedData.map(item=>item.communication)
-    let serviceTypeMap = editedData.map(item=>item.serviceType)
-    let serviceRegitDateMap = editedData.map(item=>item.serviceRegitDate)
-    let serviceCloseDateMap = editedData.map(item=>item.serviceCloseDate)
-    let openMap = editedData.map(item=>item.open)
 
 
 
@@ -49,7 +39,7 @@ export default function UpdateTableMobileCompnent(){
 
     const handleClick = (e)=>{
         e.preventDefault()
-        tableEdit({contract:contractMap[0], terminalNum, contractName:CheckCompany, contractSortation, id, phoneNum,
+        tableEdit({contract:'contractMap[0]', terminalNum, contractName:CheckCompany, contractSortation, id, phoneNum,
             communication,serviceType, serviceRegitDate,serviceCloseDate,open})
             .then(res=>{
                 setRes(res.data)
@@ -110,7 +100,6 @@ export default function UpdateTableMobileCompnent(){
     //로그인 체크
     const [isLogin, setIsLogin]=useState(false)
     const [user,setUser]=useState({})
-    const [editedData,setEditedData]=useState('')
 
     useEffect(() => {
         try{
@@ -119,14 +108,6 @@ export default function UpdateTableMobileCompnent(){
                     if(res.status === 200){
                         setIsLogin(true);
                         setUser(res.data);
-                        userInfoCheck()
-                            .then((res)=>{
-                                if(res.status ===200){
-                                    setEditedData(res.data)
-                                    alert(JSON.stringify(res.data))
-                                    console.log(res.data)
-                                }
-                            })
                     }
                 })
                 .catch((err)=>{
@@ -204,7 +185,6 @@ export default function UpdateTableMobileCompnent(){
                                         sx={{width:280,paddingBottom:1}}
                                         type="text"
                                         name="contract"
-                                        value={contractMap}
                                         label="계약번호"
                                         onChange={handleChange}
                                         disabled
@@ -215,13 +195,11 @@ export default function UpdateTableMobileCompnent(){
                                         type="text"
                                         name="terminalNum"
                                         label="단말기번호"
-                                        defaultValue={terminalNumMap}
                                         onChange={handleChange}
                                     />
 
                                     <TextField
                                         sx={{width:280,paddingBottom:1}}
-                                        defaultValue={idMap}
                                         required
                                         type="text"
                                         name="id"
@@ -229,7 +207,6 @@ export default function UpdateTableMobileCompnent(){
                                         onChange={handleChange}
                                     />
                                     <TextField
-                                        defaultValue={phoneNumMap}
                                         required
                                         sx={{width:280,paddingBottom:1}}
                                         type="text"
@@ -244,7 +221,6 @@ export default function UpdateTableMobileCompnent(){
                                     <FormControl sx={{width:280,paddingBottom:1}}>
                                         <InputLabel>계약자 구분</InputLabel>
                                         <Select
-                                            defaultValue={contractSortationMap}
                                             rowsPerPageOptions
                                             name="contractSortation"
                                             type='text'
@@ -266,7 +242,6 @@ export default function UpdateTableMobileCompnent(){
                                     <FormControl sx={{width:280,paddingBottom:1}} >
                                         <InputLabel>통신</InputLabel>
                                         <Select
-                                            defaultValue={communicationMap}
                                             rowsPerPageOptions
                                             name="communication"
                                             type='text'
@@ -285,7 +260,6 @@ export default function UpdateTableMobileCompnent(){
                                     </FormControl>
 
                                     <TextField
-                                        defaultValue={serviceTypeMap}
                                         required
                                         sx={{width:280,paddingBottom:1}}
                                         type="text"
@@ -298,7 +272,6 @@ export default function UpdateTableMobileCompnent(){
                                     <FormControl sx={{width:280,paddingBottom:1}} >
                                         <InputLabel>개시</InputLabel>
                                         <Select
-                                            defaultValue={openMap}
                                             name="open"
                                             type='text'
                                             onChange={handleChange}
@@ -320,7 +293,6 @@ export default function UpdateTableMobileCompnent(){
 
 
                                     <TextField
-                                        defaultValue={serviceRegitDateMap}
                                         required
                                         sx={{width:280,paddingBottom:1}}
                                         type="text"
@@ -331,7 +303,6 @@ export default function UpdateTableMobileCompnent(){
 
 
                                     <TextField
-                                        defaultValue={serviceCloseDateMap}
                                         required
                                         sx={{width:280,paddingBottom:1}}
                                         fullWidth

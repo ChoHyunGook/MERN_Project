@@ -11,7 +11,9 @@ import React, {useEffect, useState} from "react";
 
 
 
-export default function TableService(){
+export default function TableService(props){
+
+    const {CheckCompany, srcAddress} =props
 
     const [selectedData,setSelectedData]=useState('')
     const [editedData,setEditData]=useState('')
@@ -23,9 +25,9 @@ export default function TableService(){
 
     return (
         <>
-                <CompanyHeaders/><br/><br/>
+                <CompanyHeaders srcAddress={srcAddress}/><br/><br/>
             <div style={{display:'flex', alignItems:'center',padding:10}}>
-                <SearchTable setData={setDbData}/>
+                <SearchTable setData={setDbData} CheckCompany={CheckCompany}/>
                 <div style={{width:50}}/>
                         <CreateModalMain/>
                         <div style={{width:10}}/>

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import background from "../../../images/bg_yellow_flower_field.jpg";
 import {createTheme} from "@mui/material/styles";
 import {Box} from "@mui/material";
-import { signCheck } from "../../../api";
+import {companyCheck, signCheck} from "../../../api";
 import RequiredLogin from "../../users/RequiredService/main/RequiredLogin";
 import TableService from "../service/Desktop/TableService";
 import {Desktop, Mobile, Tablet} from "../../../containers/Responsive/responsive";
@@ -32,6 +32,47 @@ export default function TableComponent(){
         }
     }, [])
 
+
+    const [srcAddress,setSrcAddress] =useState('')
+    const [CheckCompany,setCheckCompany] = useState('')
+
+    useEffect(() => {
+        companyCheck()
+            .then((res) => {
+                if (res.data === 'LG HelloVision') {
+                    setSrcAddress("../../../images/lg_hello.png")
+                    setCheckCompany('LG HelloVision')
+                }else if(res.data === 'Samsung S1'){
+                    setSrcAddress("../../../images/s1.png")
+                    setCheckCompany('Samsung S1')
+                }else if(res.data === 'LG U+'){
+                    setSrcAddress("../../../images/lgu.png")
+                    setCheckCompany('LG U+')
+                }else if(res.data === 'RAEMIAN'){
+                    setSrcAddress("../../../images/raemian.png")
+                    setCheckCompany('RAEMIAN')
+                }else if(res.data === 'THE WAVE'){
+                    setSrcAddress("../../../images/the_wave.png")
+                    setCheckCompany('THE WAVE')
+                }else if(res.data === 'ETCETRA'){
+                    setSrcAddress("../../../images/etcetra.png")
+                    setCheckCompany('ETCETRA')
+                }else if(res.data === 'Samsung C&T'){
+                    setSrcAddress("../../../images/samsung_mulsan.png")
+                    setCheckCompany('Samsung C&T')
+                }else if(res.data === 'Coway'){
+                    setSrcAddress("../../../images/coway.png")
+                    setCheckCompany('Coway')
+                }else{
+                    //블라우비트
+                    setSrcAddress("../../../images/new_blaubit.png")
+                    setCheckCompany('Blaubit')
+                }
+            })
+    }, [])
+
+
+
     return(
         <>
         {isLogin ? (
@@ -54,7 +95,7 @@ export default function TableComponent(){
                                 borderRadius:'2rem'
                             }}
                         >
-                            <TableService />
+                            <TableService srcAddress={srcAddress} CheckCompany={CheckCompany}/>
                         </Box>
                     </Desktop>
 
@@ -72,7 +113,7 @@ export default function TableComponent(){
                                 borderRadius:'2rem'
                             }}
                         >
-                            <TableServiceTablet />
+                            <TableServiceTablet srcAddress={srcAddress} CheckCompany={CheckCompany} />
                         </Box>
                     </Tablet>
 
@@ -90,7 +131,7 @@ export default function TableComponent(){
                                 borderRadius:'2rem'
                             }}
                         >
-                            <TableServiceMobile />
+                            <TableServiceMobile srcAddress={srcAddress} CheckCompany={CheckCompany}/>
                         </Box>
                     </Mobile>
 

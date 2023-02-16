@@ -8,7 +8,7 @@ import React,{useState} from "react";
 
 const TabletSearchTable = (props)=>{
 
-    const {setData} = props
+    const {setData, CheckCompany} = props
 
     const selectList = ['계약번호','단말기번호','계약자명','ID','연락처','서비스종류']
 
@@ -44,7 +44,7 @@ const TabletSearchTable = (props)=>{
         let data ={
             selectBox:changeSelect,
             searchText:search,
-            company:'LG HelloVision'
+            company:CheckCompany
         }
         findOneTable(data)
             .then(res=>{

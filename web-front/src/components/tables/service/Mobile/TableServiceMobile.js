@@ -9,7 +9,9 @@ import UpdateTableMobile from "../../event/Mobile/Main/UpdateTableMobile";
 
 
 
-export default function TableServiceMobile(){
+export default function TableServiceMobile(props){
+
+    const {CheckCompany, srcAddress} =props
 
     const [selectedData,setSelectedData]=useState('')
     const [editedData,setEditData]=useState('')
@@ -20,16 +22,14 @@ export default function TableServiceMobile(){
 
     return (
         <>
-                <CompanyHeaders/><br/>
+                <CompanyHeaders srcAddress={srcAddress}/><br/>
             <div style={{display:'flex',alignItems:'center'}}>
-                <CreateTableMobile/>
+                <CreateTableMobile />
                 <div style={{width:10}}/>
-                여기서부터 하면됨
                 <UpdateTableMobile editedData={editedData}/>
                 <div style={{width:10}}/>
                 <DeleteTable selectedRowsData={selectedData}/>
             </div>
-
                 <SearchTable setData={setDbData}/>
 
             <br/>

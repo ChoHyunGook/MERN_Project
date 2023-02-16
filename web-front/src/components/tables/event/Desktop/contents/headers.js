@@ -4,35 +4,10 @@ import {companyCheck} from "../../../../../api";
 
 
 
-export default function Headers(){
+export default function Headers(props){
 
-    const [srcAddress,setSrcAddress] =useState('')
+    const { srcAddress } =props
 
-    useEffect(() => {
-        companyCheck()
-            .then((res) => {
-                if (res.data === 'LG HelloVision') {
-                    setSrcAddress("../../../../images/lg_hello.png")
-                }else if(res.data === 'Samsung S1'){
-                    setSrcAddress("../../../../images/s1.png")
-                }else if(res.data === 'LG U+'){
-                    setSrcAddress("../../../../images/lgu.png")
-                }else if(res.data === 'RAEMIAN'){
-                    setSrcAddress("../../../../images/raemian.png")
-                }else if(res.data === 'THE WAVE'){
-                    setSrcAddress("../../../../images/the_wave.png")
-                }else if(res.data === 'ETCETRA'){
-                    setSrcAddress("../../../../images/etcetra.png")
-                }else if(res.data === 'Samsung C&T'){
-                    setSrcAddress("../../../../images/samsung_mulsan.png")
-                }else if(res.data === 'Coway'){
-                    setSrcAddress("../../../../images/coway.png")
-                }else{
-                    //블라우비트
-                    setSrcAddress("../../../../images/new_blaubit.png")
-                }
-            })
-    }, [])
 
     return (
         <>

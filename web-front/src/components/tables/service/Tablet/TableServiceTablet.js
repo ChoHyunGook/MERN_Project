@@ -12,7 +12,9 @@ import TabletCreateModalMain from "../../modals/Create/Tablet/main/TabletCreateM
 
 
 
-export default function TableServiceTablet(){
+export default function TableServiceTablet(props){
+
+    const {CheckCompany, srcAddress} =props
 
     const [selectedData,setSelectedData]=useState('')
     const [editedData,setEditData]=useState('')
@@ -24,9 +26,9 @@ export default function TableServiceTablet(){
 
     return (
         <>
-            <CompanyHeaders/><br/>
+            <CompanyHeaders srcAddress={srcAddress}/><br/>
 
-            <TabletSearchTable setData={setDbData}/>
+            <TabletSearchTable setData={setDbData} CheckCompany={CheckCompany}/>
 
             <div style={{alignItems: 'center', display: 'flex', padding: 10}}>
                 <TabletCreateModalMain/>
