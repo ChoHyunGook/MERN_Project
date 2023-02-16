@@ -22,6 +22,8 @@ import Modify from "./components/users/Modify/main/modify"
 
 //테이블
 import Table from "./components/tables/main/Table"
+import MobileCreateTable from "./components/tables/event/Mobile/component/CreateTableMobileCompnent"
+import MobileUpdateTable from "./components/tables/event/Mobile/component/UpdateTableMobileCompnent"
 
 //etc
 import Product from "./components/product/main/Product";
@@ -56,11 +58,17 @@ export default function App() {
       //Table
     {path:"table",element:<Table />},
 
+      //Table-Mobile
+    {path:"mobileCreateTable",element:<MobileCreateTable />},
+    {path:"mobileUpdateTable",element:<MobileUpdateTable />},
+
       //product-Page
     {path:"product",element:<Product />},
 
       //Customer-Page
-    {path:"customer",element:<Customer />}
+    {path:"customer",element:<Customer />},
+
+
 
 
   ]);

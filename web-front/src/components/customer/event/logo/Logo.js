@@ -1,10 +1,27 @@
 import * as React from "react";
 import {Desktop, Mobile, Tablet} from "../../../../containers/Responsive/responsive";
+import {useEffect, useState} from "react";
 
 
 export default function Logo(props){
 
-    const { isLogin,srcAddress }=props
+    const { isLogin,srcAddress,CheckCompany }=props
+
+
+    const [isMarginTopsSet, setIsMarginTopSet] =useState(false)
+
+    useEffect(()=>{
+        if(CheckCompany === 'LG HelloVision'){
+            setIsMarginTopSet(true)
+        }else if(CheckCompany === 'LG U+'){
+            setIsMarginTopSet(true)
+        }else if(CheckCompany === 'Blaubit'){
+            setIsMarginTopSet(true)
+        }else {
+            setIsMarginTopSet(false)
+        }
+    },[])
+
 
 
     return(
@@ -25,35 +42,66 @@ export default function Logo(props){
                                  }}/>
                         </div>
                     </Desktop>
+
                     <Tablet>
-                        <div style={{alignItems: "center", display: "flex", flexDirection: "column",paddingLeft:40}}>
-                            <img alt="No Images" src={srcAddress}
-                                 style={{
-                                     marginTop: 30,
-                                     width:250
-                                 }}/>
+                        {isMarginTopsSet ? (
+                            <div style={{alignItems: "center", display: "flex", flexDirection: "column",paddingLeft:40}}>
+                                <img alt="No Images" src={srcAddress}
+                                     style={{
+                                         marginTop: 30
+                                     }}/>
 
-                            <img alt="No Images" src="images/question.png"
-                                 style={{
-                                     width: 70,
-                                     paddingTop: 20
-                                 }}/>
-                        </div>
+                                <img alt="No Images" src="images/question.png"
+                                     style={{
+                                         width: 70,
+                                         paddingTop: 20
+                                     }}/>
+                            </div>
+                        ):(
+                            <div style={{alignItems: "center", display: "flex", flexDirection: "column",paddingLeft:40}}>
+                                <img alt="No Images" src={srcAddress}
+                                     style={{
+                                         marginTop: 30,
+                                     }}/>
+
+                                <img alt="No Images" src="images/question.png"
+                                     style={{
+                                         width: 70,
+                                         paddingTop: 20
+                                     }}/>
+                            </div>
+                            )}
+
                     </Tablet>
-                    <Mobile>
-                        <div style={{alignItems: "center", display: "flex", flexDirection: "column",paddingLeft:40}}>
-                            <img alt="No Images" src={srcAddress}
-                                 style={{
-                                     width:250,
-                                     marginTop: 30
-                                 }}/>
 
-                            <img alt="No Images" src="images/question.png"
-                                 style={{
-                                     width: 70,
-                                     paddingTop: 20
-                                 }}/>
-                        </div>
+                    <Mobile>
+                        {isMarginTopsSet ? (
+                            <div style={{alignItems: "center", display: "flex", flexDirection: "column",paddingLeft:40}}>
+                                <img alt="No Images" src={srcAddress}
+                                     style={{
+                                         marginTop: 30
+                                     }}/>
+
+                                <img alt="No Images" src="images/question.png"
+                                     style={{
+                                         width: 70,
+                                         paddingTop: 20
+                                     }}/>
+                            </div>
+                        ):(
+                            <div style={{alignItems: "center", display: "flex", flexDirection: "column",paddingLeft:40}}>
+                                <img alt="No Images" src={srcAddress}
+                                     style={{
+                                         marginTop: 30
+                                     }}/>
+
+                                <img alt="No Images" src="images/question.png"
+                                     style={{
+                                         width: 70,
+                                         paddingTop: 20
+                                     }}/>
+                            </div>
+                        )}
                     </Mobile>
 
                 </>

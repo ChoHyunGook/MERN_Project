@@ -18,7 +18,7 @@ export default function ProductMobile(){
                          }}/>
                     <img alt="No Images" src="images/doorbell_point.png"
                          style={{
-                             width:500
+                             width:400
                          }}/>
                 </div>
             </div>

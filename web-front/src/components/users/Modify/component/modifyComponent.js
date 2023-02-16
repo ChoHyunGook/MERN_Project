@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import background from "../../../../images/bg_yellow_flower_field.jpg";
 import {createTheme, ThemeProvider} from "@mui/material/styles";
-import {Box} from "@mui/material";
-import ModifyService from "../service/ModifyService";
+import {Box, Typography} from "@mui/material";
+import ModifyService from "../service/ModifyService/ModifyService";
 import {authModifySignCheck} from "../../../../api";
 import RequiredAuthModify from "../../RequiredService/main/RequiredAuthModify";
+import {Desktop, Mobile, Tablet} from "../../../../containers/Responsive/responsive";
 
 
 
@@ -45,73 +46,221 @@ export default function ModifyComponent(props){
     return(
         <>
             {isAuthModify ? (
-                <body style={{
+                <div style={{
                     backgroundImage: `url(${background})`,
-                    display: 'flex',
-                    flexDirection:"column",
-                    alignItems:"center",
-                    width:"100%",
-                    height:"100%",
-                    paddingBottom:350
+                    paddingBottom:300
                 }}><br/>
-                <ThemeProvider theme={theme}>
-                    {isMarginTop ? (
-                        <Box
-                            sx={{
-                                marginTop: 3,
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'center',
-                                backgroundColor: 'white',
-                                height: '700px',
-                                width: '550px',
-                                borderRadius:'0.5rem'
-                            }}
-                        ><br/>
-                            <img alt="No Images" src={srcAddress}
-                                 style={{
-                                     marginTop: 1,
-                                     paddingBottom:30
-                                 }}/>
-                            <img alt="No Images" src="images/img_logo_main.png"
-                                 style={{
-                                     display:'flex',
-                                     alignItems: "center",
-                                     width:"250px",
-                                     paddingBottom:30
-                                 }}/>
-                            <ModifyService userData={userData} srcAddress={srcAddress} CheckCompany={CheckCompany}/>
-                        </Box>
-                        ):(
-                        <Box
-                            sx={{
-                                marginTop: 3,
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'center',
-                                backgroundColor: 'white',
-                                height: '650px',
-                                width: '550px',
-                                borderRadius:'0.5rem'
-                            }}
-                        ><br/>
-                            <img alt="No Images" src={srcAddress}
-                                 style={{
-                                     marginTop: 1,
-                                     paddingBottom:30
-                                 }}/>
-                            <img alt="No Images" src="images/img_logo_main.png"
-                                 style={{
-                                     display:'flex',
-                                     alignItems: "center",
-                                     width:"250px",
-                                     paddingBottom:30
-                                 }}/>
-                            <ModifyService userData={userData} srcAddress={srcAddress} CheckCompany={CheckCompany}/>
-                        </Box>
-                        )}
-                </ThemeProvider>
-                </body>
+                    <div style={{ display: 'flex',
+                        flexDirection:"column",
+                        alignItems:"center",}}>
+            <Desktop>
+                {isMarginTop ? (
+                    <Box
+                        sx={{
+                            marginTop: 3,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            backgroundColor: 'white',
+                            height: '700px',
+                            width: '500px',
+                            borderRadius:'0.5rem'
+                        }}
+                    ><br/>
+                        <img alt="No Images" src={srcAddress}
+                             style={{
+                                 marginTop: 1,
+                                 paddingBottom:30
+                             }}/>
+                        <img alt="No Images" src="images/img_logo_main.png"
+                             style={{
+                                 display:'flex',
+                                 alignItems: "center",
+                                 width:"250px",
+                                 paddingBottom:30
+                             }}/>
+                        <div style={{paddingBottom:30}}>
+                            <Typography component="h3" variant="h7">
+                                계약자 정보 수정 / 회원 탈퇴
+                            </Typography>
+                        </div>
+                        <ModifyService userData={userData} srcAddress={srcAddress} CheckCompany={CheckCompany}/>
+                    </Box>
+                ):(
+                    <Box
+                        sx={{
+                            marginTop: 3,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            backgroundColor: 'white',
+                            height: '700px',
+                            width: '500px',
+                            borderRadius:'0.5rem'
+                        }}
+                    ><br/>
+                        <img alt="No Images" src={srcAddress}
+                             style={{
+                                 marginTop: 1,
+                                 paddingBottom:30
+                             }}/>
+                        <img alt="No Images" src="images/img_logo_main.png"
+                             style={{
+                                 display:'flex',
+                                 alignItems: "center",
+                                 width:"250px",
+                                 paddingBottom:30
+                             }}/>
+                        <div style={{paddingBottom:30}}>
+                            <Typography component="h3" variant="h7">
+                                계약자 정보 수정 / 회원 탈퇴
+                            </Typography>
+                        </div>
+                        <ModifyService userData={userData} srcAddress={srcAddress} CheckCompany={CheckCompany}/>
+                    </Box>
+                )}
+            </Desktop>
+
+                        <Tablet>
+                            {isMarginTop ? (
+                                <Box
+                                    sx={{
+                                        marginTop: 3,
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        alignItems: 'center',
+                                        backgroundColor: 'white',
+                                        height: '700px',
+                                        width: '450px',
+                                        borderRadius:'0.5rem'
+                                    }}
+                                ><br/>
+                                    <img alt="No Images" src={srcAddress}
+                                         style={{
+                                             marginTop: 1,
+                                             paddingBottom:30
+                                         }}/>
+                                    <img alt="No Images" src="images/img_logo_main.png"
+                                         style={{
+                                             display:'flex',
+                                             alignItems: "center",
+                                             width:"200px",
+                                             paddingBottom:30
+                                         }}/>
+                                    <div style={{paddingBottom:30}}>
+                                        <Typography component="h4" variant="h8">
+                                            계약자 정보 수정 / 회원 탈퇴
+                                        </Typography>
+                                    </div>
+                                    <ModifyService userData={userData} srcAddress={srcAddress} CheckCompany={CheckCompany}/>
+                                </Box>
+                            ):(
+                                <Box
+                                    sx={{
+                                        marginTop: 3,
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        alignItems: 'center',
+                                        backgroundColor: 'white',
+                                        height: '700px',
+                                        width: '450px',
+                                        borderRadius:'0.5rem'
+                                    }}
+                                ><br/>
+                                    <img alt="No Images" src={srcAddress}
+                                         style={{
+                                             marginTop: 1,
+                                             paddingBottom:30
+                                         }}/>
+                                    <img alt="No Images" src="images/img_logo_main.png"
+                                         style={{
+                                             display:'flex',
+                                             alignItems: "center",
+                                             width:"200px",
+                                             paddingBottom:30
+                                         }}/>
+                                    <div style={{paddingBottom:30}}>
+                                        <Typography component="h4" variant="h8">
+                                            계약자 정보 수정 / 회원 탈퇴
+                                        </Typography>
+                                    </div>
+                                    <ModifyService userData={userData} srcAddress={srcAddress} CheckCompany={CheckCompany}/>
+                                </Box>
+                            )}
+                        </Tablet>
+
+
+                        <Mobile>
+                            {isMarginTop ? (
+                                <Box
+                                    sx={{
+                                        marginTop: 3,
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        alignItems: 'center',
+                                        backgroundColor: 'white',
+                                        height: '900px',
+                                        width: '350px',
+                                        borderRadius:'0.5rem'
+                                    }}
+                                ><br/>
+                                    <img alt="No Images" src={srcAddress}
+                                         style={{
+                                             marginTop: 1,
+                                             paddingBottom:30
+                                         }}/>
+                                    <img alt="No Images" src="images/img_logo_main.png"
+                                         style={{
+                                             display:'flex',
+                                             alignItems: "center",
+                                             width:"200px",
+                                             paddingBottom:30
+                                         }}/>
+                                    <div style={{paddingBottom:30}}>
+                                        <Typography component="h5" variant="h8">
+                                            계약자 정보 수정 / 회원 탈퇴
+                                        </Typography>
+                                    </div>
+                                    <ModifyService userData={userData} srcAddress={srcAddress} CheckCompany={CheckCompany}/>
+                                </Box>
+                            ):(
+                                <Box
+                                    sx={{
+                                        marginTop: 3,
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        alignItems: 'center',
+                                        backgroundColor: 'white',
+                                        height: '900px',
+                                        width: '350px',
+                                        borderRadius:'0.5rem'
+                                    }}
+                                ><br/>
+                                    <img alt="No Images" src={srcAddress}
+                                         style={{
+                                             marginTop: 1,
+                                             paddingBottom:30
+                                         }}/>
+                                    <img alt="No Images" src="images/img_logo_main.png"
+                                         style={{
+                                             display:'flex',
+                                             alignItems: "center",
+                                             width:"250px",
+                                             paddingBottom:30
+                                         }}/>
+                                    <div style={{paddingBottom:30}}>
+                                        <Typography component="h5" variant="h8">
+                                            계약자 정보 수정 / 회원 탈퇴
+                                        </Typography>
+                                    </div>
+                                    <ModifyService userData={userData} srcAddress={srcAddress} CheckCompany={CheckCompany}/>
+                                </Box>
+                            )}
+                        </Mobile>
+
+
+                    </div>
+                </div>
             ):(
                 <RequiredAuthModify />
             )}

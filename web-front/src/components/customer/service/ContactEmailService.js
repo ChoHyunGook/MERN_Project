@@ -353,7 +353,7 @@ export default function ContactEmailService(){
                                      isContact={isContact} isCompany={isCompany}/>
             </Desktop>
             <Tablet>
-                <ContactEmailTablet isLogin={isLogin} srcAddress={srcAddress} onChangeContact={onChangeContact}
+                <ContactEmailTablet  isLogin={isLogin} srcAddress={srcAddress} onChangeContact={onChangeContact}
                                     contact={contact} onChangeCompanyContact={onChangeCompanyContact} contactList={contactList}
                                     answerList={answerList} answer={answer} onChangeAnswer={onChangeAnswer} company={company}
                                     onChangeCompany={onChangeCompany} CompanyList={CompanyList} CheckCompany={CheckCompany}
@@ -364,7 +364,7 @@ export default function ContactEmailService(){
                                     isContact={isContact} isCompany={isCompany}/>
             </Tablet>
             <Mobile>
-                <ContactEmailMobile isLogin={isLogin} srcAddress={srcAddress} onChangeContact={onChangeContact}
+                <ContactEmailMobile  isLogin={isLogin} srcAddress={srcAddress} onChangeContact={onChangeContact}
                                     contact={contact} onChangeCompanyContact={onChangeCompanyContact} contactList={contactList}
                                     answerList={answerList} answer={answer} onChangeAnswer={onChangeAnswer} company={company}
                                     onChangeCompany={onChangeCompany} CompanyList={CompanyList} CheckCompany={CheckCompany}

@@ -75,7 +75,7 @@ export default function AuthHomeMobile(props){
                                     alignItems: 'center',
                                 }}
                             >
-                                관리자 로그인(핸드폰)
+                                관리자 로그인
                             </Button>
                         </Box>
                     </div>

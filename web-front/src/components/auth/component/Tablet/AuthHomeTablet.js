@@ -75,7 +75,7 @@ export default function AuthHomeTablet(props){
                                     alignItems: 'center',
                                 }}
                             >
-                                관리자 로그인(테블릿)
+                                관리자 로그인
                             </Button>
                         </Box>
                     </div>

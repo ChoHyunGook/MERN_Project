@@ -3,8 +3,9 @@ import {createTheme, ThemeProvider} from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import {Box, Typography} from "@mui/material";
 import * as React from "react";
-import AuthModifyService from "../service/AuthModifyService";
+import AuthModifyService from "../service/AuthModifyService/AuthModifyService";
 import {useEffect, useState} from "react";
+import {Desktop, Mobile, Tablet} from "../../../../containers/Responsive/responsive";
 
 
 export default function AuthModifyComponent(props){
@@ -29,11 +30,10 @@ export default function AuthModifyComponent(props){
 
     return(
         <>
-        <div style={{backgroundImage: `url(${background})`,}}>
-            <div style={{
-                display: 'flex',
-                flexDirection:"column",
-                alignItems:"center"}}>
+        <div style={{backgroundImage: `url(${background})`,paddingTop:10,paddingBottom:250}}>
+            <div style={{display: 'flex', flexDirection:"column", alignItems:"center"}}>
+
+                <Desktop>
                     <Box
                         component='form'
                         sx={{
@@ -43,7 +43,7 @@ export default function AuthModifyComponent(props){
                             alignItems: 'center',
                             backgroundColor: 'white',
                             height: '500px',
-                            width: '500px',
+                            width: '450px',
                             borderRadius:'0.5rem',
                             border:1,
                             borderColor:'grey.500'
@@ -62,13 +62,13 @@ export default function AuthModifyComponent(props){
                                      marginTop: 30,
                                      paddingBottom:40
                                  }}/>
-                            )}
+                        )}
 
                         <img alt="No Images" src="images/img_logo_main.png"
                              style={{
                                  display:'flex',
                                  alignItems: "center",
-                                 width:"250px",
+                                 width:"300px",
                                  paddingBottom:30
                              }}/>
                         <div style={{paddingBottom:40}}>
@@ -78,6 +78,104 @@ export default function AuthModifyComponent(props){
                         </div>
                         <AuthModifyService userData={userData}/>
                     </Box>
+                </Desktop>
+
+                <Tablet>
+                    <Box
+                        component='form'
+                        sx={{
+                            marginTop: 12,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            backgroundColor: 'white',
+                            height: '500px',
+                            width: '400px',
+                            borderRadius:'0.5rem',
+                            border:1,
+                            borderColor:'grey.500'
+
+                        }}
+                    ><br/>
+                        {isMarginTopsSet ? (
+                            <img alt="No Images" src={srcAddress}
+                                 style={{
+                                     marginTop: 5,
+                                     paddingBottom:30
+                                 }}/>
+                        ):(
+                            <img alt="No Images" src={srcAddress}
+                                 style={{
+                                     marginTop: 30,
+                                     paddingBottom:40
+                                 }}/>
+                        )}
+
+                        <img alt="No Images" src="images/img_logo_main.png"
+                             style={{
+                                 display:'flex',
+                                 alignItems: "center",
+                                 width:"250px",
+                                 paddingBottom:30
+                             }}/>
+                        <div style={{paddingBottom:40}}>
+                            <Typography component="h4" variant="h8">
+                                고객정보 수정 전 비밀번호를 입력해주세요.
+                            </Typography>
+                        </div>
+                        <AuthModifyService userData={userData}/>
+                    </Box>
+                </Tablet>
+
+                <Mobile>
+                    <Box
+                        component='form'
+                        sx={{
+                            marginTop: 12,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            backgroundColor: 'white',
+                            height: '500px',
+                            width: '350px',
+                            borderRadius:'0.5rem',
+                            border:1,
+                            borderColor:'grey.500'
+
+                        }}
+                    ><br/>
+                        {isMarginTopsSet ? (
+                            <img alt="No Images" src={srcAddress}
+                                 style={{
+                                     marginTop: 5,
+                                     paddingBottom:30
+                                 }}/>
+                        ):(
+                            <img alt="No Images" src={srcAddress}
+                                 style={{
+                                     marginTop: 30,
+                                     paddingBottom:40
+                                 }}/>
+                        )}
+
+                        <img alt="No Images" src="images/img_logo_main.png"
+                             style={{
+                                 display:'flex',
+                                 alignItems: "center",
+                                 width:"200px",
+                                 paddingBottom:30
+                             }}/>
+                        <div style={{paddingBottom:40}}>
+                            <Typography component="h5" variant="h8">
+                                고객정보 수정 전 비밀번호를 입력해주세요.
+                            </Typography>
+                        </div>
+                        <AuthModifyService userData={userData}/>
+                    </Box>
+                </Mobile>
+
+
+
             </div>
             </div>
         </>

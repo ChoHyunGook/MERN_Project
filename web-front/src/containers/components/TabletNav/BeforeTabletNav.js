@@ -25,7 +25,7 @@ export default function BeforeTabletNav(props){
             {toggleMenu &&
                 <List sx={styles} component="nav" aria-label="mailbox folders">
                     <ListItemButton components='a' href='/product'>
-                        <ListItemText primary="제품설명(테블)" />
+                        <ListItemText primary="제품설명" />
                     </ListItemButton>
                     <Divider />
                     <ListItemButton components='a' href='/customer'>

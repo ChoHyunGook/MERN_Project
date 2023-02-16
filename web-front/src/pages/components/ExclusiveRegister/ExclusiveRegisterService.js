@@ -1,10 +1,10 @@
 import {createTheme, ThemeProvider} from "@mui/material/styles";
 import { Typography} from "@mui/material";
-import LgHelloService from "../../services/lgHelloService";
-import LgUService from "../../services/lgUService";
-import S1Service from "../../services/s1Service";
-import RaemianService from "../../services/raemianService";
-import CowayService from "../../services/cowayService";
+import LgHelloService from "../../services/Desktop&Tablet/lgHelloService";
+import LgUService from "../../services/Desktop&Tablet/lgUService";
+import S1Service from "../../services/Desktop&Tablet/s1Service";
+import RaemianService from "../../services/Desktop&Tablet/raemianService";
+import CowayService from "../../services/Desktop&Tablet/cowayService";
 import React from "react";
 
 

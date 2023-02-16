@@ -33,7 +33,7 @@ export default function ContactEmailTablet(props){
                         marginTop:-4
                     }}>
 
-                    <Logo isLogin={isLogin} srcAddress={srcAddress}/>
+                    <Logo isLogin={isLogin} srcAddress={srcAddress} CheckCompany={CheckCompany}/>
 
                     <Typography  color='grey' component="h4" variant="h7" sx={{marginTop:1}}>
                         1:1 문의하기 서비스 입니다.

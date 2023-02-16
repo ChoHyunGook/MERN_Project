@@ -11,14 +11,15 @@ export default function RequiredAuthModifyService(){
                     marginTop:2,
                     fontStyle:"inherit",
                     fontSize:'18px',
-                    width:'250px',
+                    width:'200px',
                     height:'60px',
                     borderColor:"white"
                 }}>
                 <Typography color="whitesmoke" component="h2" variant="h5" align="left" sx={{
                     marginTop:0.5,
-                    display: 'flex',
-                    float: 'left'
+                    alignItems:'center',
+                    display:'flex',
+                    flexDirection:'column'
                 }}>
                     홈으로
                 </Typography>

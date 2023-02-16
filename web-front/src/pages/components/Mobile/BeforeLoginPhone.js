@@ -1,12 +1,17 @@
 import background from "../../../images/bg_index.png";
 import {ThemeProvider} from "@mui/material/styles";
 import {Typography} from "@mui/material";
-import LgHelloService from "../../services/lgHelloService";
-import LgUService from "../../services/lgUService";
-import S1Service from "../../services/s1Service";
-import RaemianService from "../../services/raemianService";
-import CowayService from "../../services/cowayService";
+import LgHelloService from "../../services/Desktop&Tablet/lgHelloService";
+import LgUService from "../../services/Desktop&Tablet/lgUService";
+import S1Service from "../../services/Desktop&Tablet/s1Service";
+import RaemianService from "../../services/Desktop&Tablet/raemianService";
+import CowayService from "../../services/Desktop&Tablet/cowayService";
 import React from "react";
+import PhoneLgHelloService from "../../services/Phone/PhoneLgHelloService";
+import PhoneLgUService from "../../services/Phone/PhoneLgUService";
+import PhoneS1Service from "../../services/Phone/PhoneS1Service";
+import PhoneRaemianService from "../../services/Phone/PhoneRaemianService";
+import PhoneCowayService from "../../services/Phone/PhoneCowayService";
 
 
 
@@ -19,15 +24,14 @@ export default function BeforeLoginPhone(props){
             <div style={{backgroundImage:`url(${background})`,
                 width:'100%',height:'100%'}}>
                 <div style={{display: 'flex',
-                    alignItems: "center",paddingLeft:50,flexDirection:"column"}}>
-                    <div className="jumbotron">
-                        <div className="font-background">
+                    alignItems: "center",flexDirection:"column"}}>
+
                             <img alt="No images" src="images/text_slogan.png" style={{
                                 marginTop:40,
                                 display: 'flex',
                                 alignItems:"center",
-                                width:'420px',
-                                height:'80px',
+                                width:'350px',
+                                height:'70px',
                                 paddingBottom:'10px'
                             }} />
                             <div style={{display: 'flex',
@@ -39,29 +43,29 @@ export default function BeforeLoginPhone(props){
                                         고객사 전용 회원가입 서비스입니다.
                                     </Typography>
                                     <div style={{alignItems: "center", display: "flex", marginTop:5}}>
-                                        <LgHelloService/>
+                                        <PhoneLgHelloService/>
                                         <div style={{width: 15}}></div>
-                                        <LgUService/>
+                                        <PhoneLgUService/>
                                         <div style={{width: 15}}></div>
                                     </div>
 
                                     <div style={{alignItems: "center", display: "flex", marginTop:5}}>
-                                        <S1Service/>
+                                        <PhoneS1Service/>
                                         <div style={{width: 15}}></div>
-                                        <RaemianService/>
+                                        <PhoneRaemianService/>
                                         <div style={{width: 15}}></div>
                                     </div>
                                     <div style={{alignItems: "center", display: "flex", marginTop:5}}>
-                                        <CowayService/>
+                                        <PhoneCowayService/>
                                         <div style={{width: 15}}></div>
                                     </div>
 
                                     <div style={{height:100}}></div>
                                 </ThemeProvider>
                             </div>
-                        </div>
+
                     </div>
-                </div>
+
             </div>
         </>
     )
