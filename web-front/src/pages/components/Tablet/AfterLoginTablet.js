@@ -9,9 +9,9 @@ export default function AfterLoginTablet(props){
 
     return(
         <>
-            <div style={{backgroundImage:`url(${background})`,padding:300 }}>
+            <div style={{backgroundImage:`url(${background})`,paddingTop:150,paddingBottom:500 }}>
                 <ThemeProvider theme={theme}>
-                    <div style={{ marginTop:-80,alignItems:"center",display:'flex',flexDirection:"column"}}>
+                    <div style={{ marginTop:50,alignItems:"center",display:'flex',flexDirection:"column"}}>
                         <img alt="No Images" src="images/img_splash_title.png"
                              style={{
                                  display:'flex',

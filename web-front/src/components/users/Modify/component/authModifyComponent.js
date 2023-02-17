@@ -30,10 +30,11 @@ export default function AuthModifyComponent(props){
 
     return(
         <>
-        <div style={{backgroundImage: `url(${background})`,paddingTop:10,paddingBottom:250}}>
-            <div style={{display: 'flex', flexDirection:"column", alignItems:"center"}}>
+
 
                 <Desktop>
+                    <div style={{backgroundImage: `url(${background})`,paddingTop:10,paddingBottom:250}}>
+                        <div style={{display: 'flex', flexDirection:"column", alignItems:"center"}}>
                     <Box
                         component='form'
                         sx={{
@@ -78,9 +79,12 @@ export default function AuthModifyComponent(props){
                         </div>
                         <AuthModifyService userData={userData}/>
                     </Box>
+                        </div></div>
                 </Desktop>
 
                 <Tablet>
+                    <div style={{backgroundImage: `url(${background})`,paddingTop:10,paddingBottom:450}}>
+                        <div style={{display: 'flex', flexDirection:"column", alignItems:"center"}}>
                     <Box
                         component='form'
                         sx={{
@@ -125,9 +129,12 @@ export default function AuthModifyComponent(props){
                         </div>
                         <AuthModifyService userData={userData}/>
                     </Box>
+                        </div></div>
                 </Tablet>
 
                 <Mobile>
+                    <div style={{backgroundImage: `url(${background})`,paddingTop:10,paddingBottom:250}}>
+                        <div style={{display: 'flex', flexDirection:"column", alignItems:"center"}}>
                     <Box
                         component='form'
                         sx={{
@@ -172,12 +179,9 @@ export default function AuthModifyComponent(props){
                         </div>
                         <AuthModifyService userData={userData}/>
                     </Box>
+                        </div></div>
                 </Mobile>
 
-
-
-            </div>
-            </div>
         </>
     )
 }

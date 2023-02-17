@@ -15,14 +15,13 @@ export default function BeforeLoginTablet(props){
 
     return(
         <>
-            <div style={{backgroundImage:`url(${background})`,
-                width:'100%',height:'100%'}}>
+            <div style={{backgroundImage:`url(${background})`, paddingBottom:250 }}>
                 <div style={{display: 'flex',
                     alignItems: "center",paddingLeft:50,flexDirection:"column"}}>
                     <div className="jumbotron">
                         <div className="font-background">
                             <img alt="No images" src="images/text_slogan.png" style={{
-                                marginTop:40,
+                                marginTop:120,
                                 display: 'flex',
                                 alignItems:"center",
                                 width:'620px',

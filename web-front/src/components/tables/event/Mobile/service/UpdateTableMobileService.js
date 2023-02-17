@@ -4,12 +4,13 @@ import React from "react";
 
 export default function UpdateTableMobileService(props){
 
-    const { handleClick }=props
+    const { isInput, handleClick }=props
 
     return(
         <>
             <Button
                 onClick={handleClick}
+                disabled={isInput === false}
                 type="submit"
                 variant="outlined"
                 sx={{ mt: 1, mb: 3 ,

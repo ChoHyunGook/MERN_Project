@@ -7,6 +7,7 @@ export default function RequiredLoginService(){
         <>
             <Desktop>
                 <Button
+                    autoFocus
                     variant="outlined"
                     href="/login"
                     sx={{
@@ -28,13 +29,14 @@ export default function RequiredLoginService(){
             </Desktop>
             <Tablet>
                 <Button
+                    autoFocus
                     variant="outlined"
                     href="/login"
                     sx={{
                         marginTop:2,
                         fontStyle:"inherit",
                         fontSize:'18px',
-                        width:'230px',
+                        width:'220px',
                         height:'50px',
                         borderColor:"white"
                     }}>
@@ -49,13 +51,14 @@ export default function RequiredLoginService(){
             </Tablet>
             <Mobile>
             <Button
+                autoFocus
                 variant="outlined"
                 href="/login"
                 sx={{
                     marginTop:2,
                     fontStyle:"inherit",
                     fontSize:'18px',
-                    width:'210px',
+                    width:'200px',
                     height:'40px',
                     borderColor:"white"
                 }}>

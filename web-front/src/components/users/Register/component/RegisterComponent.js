@@ -60,9 +60,10 @@ export default function RegisterComponent(props){
 
     return (
         <>
-            <div style={{backgroundImage:`url(${background})`, width:'auto', height:'auto',paddingBottom:140}}>
+
                 <Desktop>
                     {isTerms ? (
+                        <div style={{backgroundImage:`url(${background})`, width:'auto', height:'auto',paddingBottom:140}}>
                         <div style={{
                             display: 'flex',
                             flexDirection: "column",
@@ -131,19 +132,23 @@ export default function RegisterComponent(props){
                                                 <RegisterService CheckCompany={CheckCompany} isExclusive={isExclusive}/>
 
                                             </Box>
+
                                         )}
                                     </Container>
                                 </ThemeProvider>
                             </div>
                         </div>
+                        </div>
                     ):(
                         <RequiredTerms />
                     )}
+
                 </Desktop>
 
 
                 <Tablet>
                     {isTerms ? (
+                        <div style={{backgroundImage:`url(${background})`, width:'auto', height:'auto',paddingBottom:140}}>
                         <div style={{
                             display: 'flex',
                             flexDirection: "column",
@@ -217,12 +222,14 @@ export default function RegisterComponent(props){
                                 </ThemeProvider>
                             </div>
                         </div>
+                        </div>
                     ):(
                         <RequiredTerms />
                     )}
                 </Tablet>
                 <Mobile>
                     {isTerms ? (
+                        <div style={{backgroundImage:`url(${background})`, width:'auto', height:'auto',paddingBottom:140}}>
                         <div style={{
                             display: 'flex',
                             flexDirection: "column",
@@ -298,11 +305,11 @@ export default function RegisterComponent(props){
                                 </ThemeProvider>
                             </div>
                         </div>
+                        </div>
                     ):(
                         <RequiredTerms />
                     )}
                 </Mobile>
-            </div>
         </>
 
     )

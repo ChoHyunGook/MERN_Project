@@ -18,9 +18,10 @@ export default function LoginComponent(props){
 
     return(
         <>
-            <div style={{backgroundImage:`url(${background})`,paddingTop:10,paddingBottom:250}}>
-                <div style={{alignItems:'center',display:'flex',flexDirection:'column'}}>
+
                     <Desktop>
+                        <div style={{backgroundImage:`url(${background})`,paddingTop:10,paddingBottom:250}}>
+                            <div style={{alignItems:'center',display:'flex',flexDirection:'column'}}>
                         <Box
                             sx={{
                                 marginTop: 5,
@@ -60,13 +61,16 @@ export default function LoginComponent(props){
                                 </Container>
                             </Box>
                         </Box>
+                            </div></div>
                     </Desktop>
 
                     <Tablet>
+                        <div style={{backgroundImage:`url(${background})`,paddingTop:10,paddingBottom:450}}>
+                            <div style={{alignItems:'center',display:'flex',flexDirection:'column'}}>
                         <Box
                             component='form'
                             sx={{
-                                marginTop: 5,
+                                marginTop: 20,
                                 display: 'flex',
                                 flexDirection: 'column',
                                 alignItems: 'center',
@@ -98,10 +102,14 @@ export default function LoginComponent(props){
 
                                     <FooterFindRegister />
                         </Box>
+                            </div>
+                        </div>
 
                     </Tablet>
 
                     <Mobile>
+                        <div style={{backgroundImage:`url(${background})`,paddingTop:10,paddingBottom:250}}>
+                            <div style={{alignItems:'center',display:'flex',flexDirection:'column'}}>
                         <Box
                             component='form'
                             sx={{
@@ -138,9 +146,10 @@ export default function LoginComponent(props){
                             <FooterFindRegister />
 
                         </Box>
+                            </div>
+                        </div>
                     </Mobile>
-                </div>
-            </div>
+
         </>
     )
 }

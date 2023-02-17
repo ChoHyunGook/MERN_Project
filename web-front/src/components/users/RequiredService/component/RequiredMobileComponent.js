@@ -13,7 +13,7 @@ export default function RequiredMobileComponent(){
                     display: 'flex',
                     float: 'left'
                 }}>
-                    Desktop 사용 중... 현재 페이지는 모바일 전용 서비스 페이지입니다.
+                    Desktop 사용 중... 현재 페이지는 모바일 세로 전용 서비스 페이지입니다.
                 </Typography><br/>
                 <RequiredMobileService />
             </Desktop>
@@ -23,7 +23,7 @@ export default function RequiredMobileComponent(){
                     display: 'flex',
                     float: 'left'
                 }}>
-                    Tablet 사용중... 현재 페이지는 모바일 전용 서비스 페이지입니다.
+                    Tablet 또는 Mobile 가로모드 사용중... 현재 페이지는 모바일 세로 전용 서비스 페이지입니다.
                 </Typography><br/>
                 <RequiredMobileService />
             </Tablet>

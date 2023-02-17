@@ -4,7 +4,7 @@
 export default function ProductTablet(){
     return(
         <>
-            <div style={{paddingTop:30 ,paddingBottom:100,backgroundColor:'white'}}>
+            <div style={{paddingTop:30 ,paddingBottom:150,backgroundColor:'white'}}>
                 <div style={{display: 'flex',
                     flexDirection: "column",
                     alignItems: "center",}}>

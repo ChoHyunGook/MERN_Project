@@ -13,10 +13,11 @@ export default function FindPwSelectComponent(props){
 
     return(
         <>
-            <div style={{backgroundImage: `url(${background})`, paddingBottom:280}}>
-                <div style={{alignItems:'center',display:'flex',flexDirection:'column'}}>
+
                 <Desktop>
                     <>
+                        <div style={{backgroundImage: `url(${background})`, paddingBottom:280}}>
+                            <div style={{alignItems:'center',display:'flex',flexDirection:'column'}}>
                         <Box style={{
                             marginTop:70,
                             display: 'flex',
@@ -43,11 +44,14 @@ export default function FindPwSelectComponent(props){
                             <FindPwSelectService Email={Email} setEmail={setEmail} Phone={Phone} setPhone={setPhone}/>
 
                         </Box>
+                            </div></div>
                     </>
                 </Desktop>
                 <Tablet>
+                    <div style={{backgroundImage: `url(${background})`, paddingBottom:350}}>
+                        <div style={{alignItems:'center',display:'flex',flexDirection:'column'}}>
                         <Box style={{
-                            marginTop:70,
+                            marginTop:150,
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
@@ -71,8 +75,11 @@ export default function FindPwSelectComponent(props){
                             <FindPwSelectService Email={Email} setEmail={setEmail} Phone={Phone} setPhone={setPhone}/>
 
                         </Box>
+                        </div></div>
                 </Tablet>
                 <Mobile>
+                    <div style={{backgroundImage: `url(${background})`, paddingBottom:280}}>
+                        <div style={{alignItems:'center',display:'flex',flexDirection:'column'}}>
                         <Box style={{
                             marginTop:100,
                             display: 'flex',
@@ -99,9 +106,9 @@ export default function FindPwSelectComponent(props){
                             <FindPwSelectService Email={Email} setEmail={setEmail} Phone={Phone} setPhone={setPhone}/>
                             </>
                         </Box>
+                        </div></div>
                 </Mobile>
-                </div>
-            </div>
+
         </>
     )
 }

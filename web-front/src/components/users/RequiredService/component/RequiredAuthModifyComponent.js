@@ -17,7 +17,7 @@ export default function RequiredAuthModifyComponent(){
                 <RequiredAuthModifyService />
             </Desktop>
             <Tablet>
-                <Typography color="white" component="h3" variant="h7" align="left" sx={{
+                <Typography color="white" component="h3" variant="h8" align="left" sx={{
                     marginTop:40,
                     display: 'flex',
                     float: 'left'
@@ -26,9 +26,10 @@ export default function RequiredAuthModifyComponent(){
                 </Typography><br/>
                 <RequiredAuthModifyService />
             </Tablet>
+
             <Mobile>
                 <Typography color="white" component="h3" variant="h7" align="left" sx={{
-                    marginTop:20,
+                    marginTop:18,
                     width:350,
                     alignItems:'center',
                     display:'flex',

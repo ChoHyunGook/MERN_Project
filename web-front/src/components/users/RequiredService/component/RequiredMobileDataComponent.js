@@ -1,9 +1,10 @@
-import { Typography} from "@mui/material";
-import RequiredLoginService from "../service/RequiredLoginService";
 import {Desktop, Mobile, Tablet} from "../../../../containers/Responsive/responsive";
+import {Typography} from "@mui/material";
+import RequiredMobileDataService from "../service/RequiredMobileDataService";
 
 
-export default function RequiredLoginComponent(){
+export default function RequiredMobileDataComponent(){
+
     return(
         <>
             <Desktop>
@@ -12,9 +13,9 @@ export default function RequiredLoginComponent(){
                     display: 'flex',
                     float: 'left'
                 }}>
-                    로그인 후 사용 가능합니다.
+                    잘못된 경로입니다.
                 </Typography><br/>
-                <RequiredLoginService />
+                <RequiredMobileDataService />
             </Desktop>
             <Tablet>
                 <Typography color="white" component="h3" variant="h8" align="left" sx={{
@@ -22,21 +23,20 @@ export default function RequiredLoginComponent(){
                     display: 'flex',
                     float: 'left'
                 }}>
-                    로그인 후 사용 가능합니다.
+                    잘못된 경로입니다.
                 </Typography><br/>
-                <RequiredLoginService />
+                <RequiredMobileDataService />
             </Tablet>
             <Mobile>
-                <Typography color="white" component="h4" variant="h8" align="left" sx={{
+                <Typography color="white" component="h3" variant="h8" align="left" sx={{
                     marginTop:18,
                     display: 'flex',
                     float: 'left'
                 }}>
-                    로그인 후 사용 가능합니다.
+                    잘못된 경로입니다.
                 </Typography><br/>
-                <RequiredLoginService />
+                <RequiredMobileDataService />
             </Mobile>
-
         </>
     )
 }

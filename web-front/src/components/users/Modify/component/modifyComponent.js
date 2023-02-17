@@ -48,7 +48,7 @@ export default function ModifyComponent(props){
             {isAuthModify ? (
                 <div style={{
                     backgroundImage: `url(${background})`,
-                    paddingBottom:300
+                    paddingBottom:350
                 }}><br/>
                     <div style={{ display: 'flex',
                         flexDirection:"column",
@@ -125,7 +125,7 @@ export default function ModifyComponent(props){
                             {isMarginTop ? (
                                 <Box
                                     sx={{
-                                        marginTop: 3,
+                                        marginTop: 15,
                                         display: 'flex',
                                         flexDirection: 'column',
                                         alignItems: 'center',
@@ -157,7 +157,7 @@ export default function ModifyComponent(props){
                             ):(
                                 <Box
                                     sx={{
-                                        marginTop: 3,
+                                        marginTop: 15,
                                         display: 'flex',
                                         flexDirection: 'column',
                                         alignItems: 'center',
@@ -199,7 +199,7 @@ export default function ModifyComponent(props){
                                         flexDirection: 'column',
                                         alignItems: 'center',
                                         backgroundColor: 'white',
-                                        height: '730px',
+                                        height: '750px',
                                         width: '350px',
                                         borderRadius:'0.5rem'
                                     }}

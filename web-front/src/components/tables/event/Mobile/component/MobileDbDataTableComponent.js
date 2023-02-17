@@ -11,6 +11,9 @@ import DeleteTableMobileService from "../service/DeleteTableMobileService";
 import UpdateTableMobileService from "../service/UpdateTableMobileService";
 import MobileDataService from "../service/MobileDataService";
 import BackMobileService from "../service/BackMobileService";
+import {Desktop, Mobile, Tablet} from "../../../../../containers/Responsive/responsive";
+import RequiredMobile from "../../../../users/RequiredService/main/RequiredMobile";
+import RequiredMobileData from "../../../../users/RequiredService/main/RequiredMobileData";
 
 
 
@@ -28,6 +31,7 @@ export default function MobileDbDataTableComponent(){
         serviceRegitDate,serviceCloseDate,open } =inputs;
     const contractSortationList = ['주계약자','부계약자']
     const communicationOpenList = ['O','X']
+    const [isInput,setIsInput]=useState(false)
 
     const[res,setRes]=useState('')
 
@@ -37,6 +41,7 @@ export default function MobileDbDataTableComponent(){
         setInputs({
             ...inputs,[name]:value
         })
+        setIsInput(true)
     }
 
 
@@ -104,12 +109,15 @@ export default function MobileDbDataTableComponent(){
         window.location.replace('/table')
     }
 
+    const [isSearch,setIsSearch]=useState(false)
+
 
     useEffect(()=>{
         try {
             searchDataCheck()
                 .then((res)=>{
                     setUserData(res.data)
+                    setIsSearch(true)
                 })
             companyCheck()
                 .then((res) => {
@@ -169,52 +177,70 @@ export default function MobileDbDataTableComponent(){
 
 
 
-
     return(
        <>
            <Layout>
                {isLogin ? (
-                   <div style={{
-                       backgroundImage: `url(${background})`,
-                       paddingBottom: 100
-                   }}>
-                       <div style={{
-                           display: 'flex',
-                           flexDirection: "column",
-                           alignItems: "center",
-                       }}>
-                           <Box
-                               sx={{
-                                   marginTop:6,
-                                   flexDirection: 'column',
-                                   alignItems: 'center',
-                                   display: 'flex',
-                                   backgroundColor: 'white',
-                                   height: '1000px',
-                                   width: '350px',
-                                   borderRadius: '2rem'
-                               }}
-                           >
-                               <img alt="No Images" src={srcAddress}
-                                 style={{
-                                     marginTop: 30
-                                 }}/><br/>
-                               <Typography component="h4" variant="h0">
-                                   데이터 수정 및 삭제
-                               </Typography>
+                   <>
+                       {isSearch ? (
+                           <>
+                               <Desktop>
+                                   <RequiredMobile />
+                               </Desktop>
 
-                               <BackMobileService onBackClick={onBackClick}/>
-                               <div>
-                                   <UpdateTableMobileService handleClick={handleClick}/>
-                                   <DeleteTableMobileService confirmDelete={confirmDelete}/>
-                               </div>
+                               <Tablet>
+                                   <RequiredMobile />
+                               </Tablet>
+                               <Mobile>
+                                   <div style={{
+                                       backgroundImage: `url(${background})`,
+                                       paddingBottom: 100
+                                   }}>
+                                       <div style={{
+                                           display: 'flex',
+                                           flexDirection: "column",
+                                           alignItems: "center",
+                                       }}>
+                                           <Box
+                                               sx={{
+                                                   marginTop:6,
+                                                   flexDirection: 'column',
+                                                   alignItems: 'center',
+                                                   display: 'flex',
+                                                   backgroundColor: 'white',
+                                                   height: '1000px',
+                                                   width: '350px',
+                                                   borderRadius: '2rem'
+                                               }}
+                                           >
+                                               <img alt="No Images" src={srcAddress}
+                                                    style={{
+                                                        marginTop: 30
+                                                    }}/><br/>
+                                               <Typography component="h4" variant="h0">
+                                                   데이터 수정 및 삭제
+                                               </Typography>
 
-                               <MobileDataService CheckCompany={CheckCompany} handleChange={handleChange}
-                                                  userData={userData} contractSortationList={contractSortationList}
-                                                  communicationOpenList={communicationOpenList} handleClick={handleClick}/>
-                           </Box>
-                       </div>
-                   </div>
+                                               <BackMobileService onBackClick={onBackClick}/>
+                                               <div>
+                                                   <UpdateTableMobileService isInput={isInput} handleClick={handleClick}/>
+                                                   <DeleteTableMobileService confirmDelete={confirmDelete}/>
+                                               </div>
+
+                                               <MobileDataService CheckCompany={CheckCompany} handleChange={handleChange}
+                                                                  userData={userData} contractSortationList={contractSortationList}
+                                                                  communicationOpenList={communicationOpenList} handleClick={handleClick}/>
+                                           </Box>
+                                       </div>
+                                   </div>
+                               </Mobile>
+                           </>
+                       ):(
+                           <>
+                               <RequiredMobileData />
+                           </>
+                       )}
+                   </>
                ):(
                    <RequiredLogin />
                    )}

@@ -107,7 +107,7 @@ export default function TableComponent() {
                     <Tablet>
                         <div style={{
                             backgroundImage: `url(${background})`,
-                            paddingBottom: 40
+                            paddingBottom: 100
                         }}>
                             <div style={{
                                 display: 'flex',

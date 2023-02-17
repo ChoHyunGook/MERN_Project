@@ -9,9 +9,6 @@ export default function TableServiceMobile(props){
 
     const {CheckCompany, srcAddress} =props
 
-    const [selectedData,setSelectedData]=useState('')
-    const [editedData,setEditData]=useState('')
-    const [downloadData, setDownloadData] = useState('')
     const [dbData,setDbData] = useState([])
 
 

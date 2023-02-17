@@ -1,11 +1,11 @@
-import React from 'react'
 import background from "../../../../images/bg_index.png";
-import RequiredLoginComponent from "../component/RequiredLoginComponent";
+import RequiredMobileDataComponent from "../component/RequiredMobileDataComponent";
 import {Desktop, Mobile, Tablet} from "../../../../containers/Responsive/responsive";
 
 
-export default function RequiredLogin(){
-    return (
+export default function RequiredMobileData(){
+
+    return(
         <>
             <Desktop>
                 <div style={{
@@ -14,7 +14,7 @@ export default function RequiredLogin(){
                     <div style={{display: 'flex',
                         flexDirection:"column",
                         alignItems:"center"}}>
-                        <RequiredLoginComponent />
+                        <RequiredMobileDataComponent />
                     </div>
                 </div>
             </Desktop>
@@ -25,7 +25,7 @@ export default function RequiredLogin(){
                     <div style={{display: 'flex',
                         flexDirection:"column",
                         alignItems:"center"}}>
-                        <RequiredLoginComponent />
+                        <RequiredMobileDataComponent />
                     </div>
                 </div>
             </Tablet>
@@ -36,7 +36,7 @@ export default function RequiredLogin(){
                     <div style={{display: 'flex',
                         flexDirection:"column",
                         alignItems:"center"}}>
-                        <RequiredLoginComponent />
+                        <RequiredMobileDataComponent />
                     </div>
                 </div>
             </Mobile>

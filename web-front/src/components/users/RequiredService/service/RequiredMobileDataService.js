@@ -1,8 +1,8 @@
-import {Desktop, Tablet} from "../../../../containers/Responsive/responsive";
+import {Desktop, Mobile, Tablet} from "../../../../containers/Responsive/responsive";
 import {Button, Typography} from "@mui/material";
 
 
-export default function RequiredMobileService(){
+export default function RequiredMobileDataService(){
 
     return(
         <>
@@ -10,7 +10,7 @@ export default function RequiredMobileService(){
                 <Button
                     autoFocus
                     variant="outlined"
-                    href="/table"
+                    href="/"
                     sx={{
                         marginTop:2,
                         fontStyle:"inherit",
@@ -24,7 +24,7 @@ export default function RequiredMobileService(){
                         display: 'flex',
                         float: 'left'
                     }}>
-                        테이블 페이지로
+                        홈으로
                     </Typography>
                 </Button>
             </Desktop>
@@ -32,7 +32,7 @@ export default function RequiredMobileService(){
                 <Button
                     autoFocus
                     variant="outlined"
-                    href="/table"
+                    href="/"
                     sx={{
                         marginTop:2,
                         fontStyle:"inherit",
@@ -46,10 +46,32 @@ export default function RequiredMobileService(){
                         display: 'flex',
                         float: 'left'
                     }}>
-                        테이블 페이지로
+                        홈으로
                     </Typography>
                 </Button>
             </Tablet>
+            <Mobile>
+                <Button
+                    autoFocus
+                    variant="outlined"
+                    href="/"
+                    sx={{
+                        marginTop:2,
+                        fontStyle:"inherit",
+                        fontSize:'18px',
+                        width:'200px',
+                        height:'40px',
+                        borderColor:"white"
+                    }}>
+                    <Typography color="whitesmoke" component="h2" variant="h5" align="left" sx={{
+                        marginTop:0.5,
+                        display: 'flex',
+                        float: 'left'
+                    }}>
+                        홈으로
+                    </Typography>
+                </Button>
+            </Mobile>
         </>
     )
 }
