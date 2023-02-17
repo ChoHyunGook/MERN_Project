@@ -70,6 +70,7 @@ export default function SendInfo(props){
                             <TextField
                                 value={userId}
                                 disabled
+                                size='small'
                                 margin="normal"
                                 sx={{marginTop:1,width:300}}
                                 label="답변 받으실 이메일 또는 전화번호"
@@ -82,6 +83,7 @@ export default function SendInfo(props){
                             <TextField
                                 value={phone}
                                 disabled
+                                size='small'
                                 margin="normal"
                                 sx={{marginTop:1,width:300}}
                                 label="답변 받으실 이메일 또는 전화번호"
@@ -128,6 +130,7 @@ export default function SendInfo(props){
                         <TextField
                             value={sendInfo}
                             margin="normal"
+                            size='small'
                             sx={{marginTop:1,width:300}}
                             label="답변 받으실 이메일 또는 전화번호"
                             name="sendInfo"

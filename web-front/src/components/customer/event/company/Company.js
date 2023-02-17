@@ -57,6 +57,7 @@ export default function Company(props){
                         <FormControl sx={{width:300}}>
                             <InputLabel>소속 회사</InputLabel>
                             <Select
+                                size='small'
                                 value={CheckCompany}
                                 disabled
                                 name="company"
@@ -123,6 +124,7 @@ export default function Company(props){
                         <FormControl sx={{width:300}}>
                             <InputLabel>소속 회사</InputLabel>
                             <Select
+                                size='small'
                                 value={company}
                                 name="company"
                                 onChange={onChangeCompany}

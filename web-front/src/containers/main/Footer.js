@@ -1,7 +1,7 @@
 import React from "react";
 import {Typography} from "@mui/material";
 import styled from "styled-components";
-import {Desktop, Mobile, Tablet} from "../Responsive/responsive";
+import {Desktop, Mobile, MobileLandscape, Tablet} from "../Responsive/responsive";
 
 
 const Common = styled.div`

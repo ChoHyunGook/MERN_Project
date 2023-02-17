@@ -22,8 +22,9 @@ export default function ModifyNameMobile(props){
 
     return(
         <>
-            <div style={{alignItems:'center',display:'flex',flexDirection:'column',paddingBottom:30}}>
+            <div style={{alignItems:'center',display:'flex',flexDirection:'column',paddingBottom:25}}>
                 <TextField
+                    size='small'
                     required
                     fullWidth
                     type="text"
@@ -32,16 +33,16 @@ export default function ModifyNameMobile(props){
                     defaultValue={nameMap}
                     disabled
                     sx={{width:280}}
-                /><br/>
+                />
                 <Button
                     onClick={openModal}
                     variant="outlined"
                     type="submit"
                     size="medium"
                     sx={{
-                        marginTop:0,
+                        marginTop:1,
                         width:'280px',
-                        height:'40px',
+                        height:'35px',
                         border:3,
                         "&.MuiButton-root:hover":{
                             color:'#008DDC',

@@ -53,6 +53,7 @@ export default function Answer(props){
                 <FormControl sx={{marginTop:3,width:300}}>
                     <InputLabel>답변유형</InputLabel>
                     <Select
+                        size='small'
                         value={answer}
                         name="answer"
                         onChange={onChangeAnswer}

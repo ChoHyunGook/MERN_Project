@@ -58,6 +58,7 @@ export default function Contact(props){
                         <FormControl sx={{marginTop:3,width:300}}>
                             <InputLabel>문의유형</InputLabel>
                             <Select
+                                size='small'
                                 autoFocus
                                 value={contact}
                                 name="contact"
@@ -124,6 +125,7 @@ export default function Contact(props){
                         <FormControl sx={{marginTop:3,width:300}}>
                             <InputLabel>문의유형</InputLabel>
                             <Select
+                                size='small'
                                 autoFocus
                                 value={contact}
                                 name="contact"

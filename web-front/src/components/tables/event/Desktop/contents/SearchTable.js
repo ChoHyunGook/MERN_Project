@@ -53,7 +53,6 @@ const SearchTable = (props)=>{
             .catch(function (err){
                 alert(JSON.stringify(err.response.data))
             })
-        alert(`선택: ${selectSearch} , 변경된 선택: ${changeSelect} 검색어: ${search}`)
     }
     return(
         <form style={{display: 'flex', padding: '3px'}}>

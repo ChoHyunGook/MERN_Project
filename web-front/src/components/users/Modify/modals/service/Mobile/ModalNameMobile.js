@@ -24,7 +24,7 @@ export default function ModalNameMobile(props){
 
     return(
         <>
-            <div style={{height: 550, width: '100%'}}>
+            <div style={{height: 480, width: '100%'}}>
                 <Box
                     component="form"
                     sx={{
@@ -32,7 +32,7 @@ export default function ModalNameMobile(props){
                         flexDirection: 'column',
                         alignItems: 'center',
                         backgroundColor: 'white',
-                        height: '500px',
+                        height: '480px',
                         borderRadius: '1rem',
                     }}
                 >
@@ -71,6 +71,7 @@ export default function ModalNameMobile(props){
                         <Grid item xs={1}/>
                         <Grid item xs={10}>
                             <TextField
+                                size='small'
                                 autoFocus
                                 fullWidth
                                 type="text"
@@ -85,6 +86,7 @@ export default function ModalNameMobile(props){
                         <Grid item xs={1}/>
                         <Grid item xs={10}>
                             <TextField
+                                size='small'
                                 autoFocus
                                 required
                                 fullWidth
@@ -107,6 +109,7 @@ export default function ModalNameMobile(props){
                         <Grid item xs={1}/>
                         <Grid item xs={10}>
                             <TextField
+                                size='small'
                                 required
                                 fullWidth
                                 type="text"
@@ -128,7 +131,7 @@ export default function ModalNameMobile(props){
                                 fullWidth
                                 sx={{
                                     marginTop:2,
-                                    height:'45px',
+                                    height:'35px',
                                     border:3,
                                     "&.MuiButton-root:hover":{
                                         color:'#008DDC',
@@ -147,6 +150,7 @@ export default function ModalNameMobile(props){
                         <Grid item xs={1}/>
                         <Grid item xs={10}>
                             <TextField
+                                size='small'
                                 fullWidth
                                 label="인증번호"
                                 value={signNum}
@@ -172,7 +176,7 @@ export default function ModalNameMobile(props){
                                 fullWidth
                                 sx={{
                                     marginTop: 1,
-                                    height: '45px',
+                                    height: '35px',
                                     border: 3,
                                     "&.MuiButton-root:hover": {
                                         color: '#008DDC',

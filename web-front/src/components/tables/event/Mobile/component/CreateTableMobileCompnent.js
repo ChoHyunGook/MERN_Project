@@ -5,20 +5,14 @@ import background from "../../../../../images/bg_yellow_flower_field.jpg";
 import Layout from "../../../../../containers/main/Layout";
 import {
     Box,
-    Button,
-    FormControl,
-    InputLabel,
-    MenuItem,
-    OutlinedInput,
-    Select,
-    TextField,
     Typography
 } from "@mui/material";
+import CreateTableMobileService from "../service/CreateTableMobileService";
+import {Desktop, Mobile, Tablet} from "../../../../../containers/Responsive/responsive";
+import RequiredMobile from "../../../../users/RequiredService/main/RequiredMobile";
 
 
 export default function CreateTableMobileCompnent(){
-
-
 
     const [inputs, setInputs] = useState({})
     const {contract, terminalNum, contractName, contractSortation, id, phoneNum,
@@ -59,6 +53,8 @@ export default function CreateTableMobileCompnent(){
 
     const [srcAddress,setSrcAddress] =useState('')
     const [CheckCompany, setCheckCompany] = useState('')
+
+
 
     useEffect(() => {
         companyCheck()
@@ -115,12 +111,21 @@ export default function CreateTableMobileCompnent(){
         }
     }, [])
 
+
     return(
         <>
             <Layout>
             {isLogin ? (
                 <>
+                    <Desktop>
+                        <RequiredMobile />
+                    </Desktop>
 
+                    <Tablet>
+                        <RequiredMobile />
+                    </Tablet>
+
+                    <Mobile>
                     <div style={{
                         backgroundImage: `url(${background})`,
                         paddingBottom:150
@@ -136,7 +141,7 @@ export default function CreateTableMobileCompnent(){
                                     alignItems: 'center',
                                     backgroundColor: 'white',
                                     width:350,
-                                    height:1050,
+                                    height:950,
                                     borderRadius:'2rem'
                                 }}
                             >
@@ -148,193 +153,17 @@ export default function CreateTableMobileCompnent(){
                                     신규생성
                                 </Typography>
 
-                                <Button
-                                    onClick={onBackClick}
-                                    type="submit"
-                                    variant="contained"
-                                    sx={{ mt: 2, mb: 4 ,
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        width:200,
-                                    height:30}}
-                                    size="large"
-                                >
-                                    뒤로가기
-                                </Button>
-
-
-
-                                    <TextField
-                                        required
-                                        sx={{width:280,paddingBottom:1}}
-                                        type="text"
-                                        name="contractName"
-                                        label="계약자명"
-                                        value={CheckCompany}
-                                        onChange={handleChange}
-                                        disabled
-                                    />
-
-
-                                    <TextField
-                                        autoFocus
-                                        required
-                                        sx={{width:280,paddingBottom:1}}
-                                        type="text"
-                                        name="contract"
-                                        label="계약번호"
-                                        onChange={handleChange}
-                                    />
-                                    <TextField
-                                        required
-                                        sx={{width:280,paddingBottom:1}}
-                                        type="text"
-                                        name="terminalNum"
-                                        label="단말기번호"
-                                        onChange={handleChange}
-                                    />
-
-
-
-                                    <TextField
-                                        sx={{width:280,paddingBottom:1}}
-                                        required
-                                        type="text"
-                                        name="id"
-                                        label="ID"
-                                        onChange={handleChange}
-                                    />
-                                    <TextField
-                                        required
-                                        sx={{width:280,paddingBottom:1}}
-                                        type="text"
-                                        name="phoneNum"
-                                        label="연락처"
-                                        onChange={handleChange}
-                                    />
-
-
-
-
-                                    <FormControl sx={{width:280,paddingBottom:1}}>
-                                        <InputLabel>계약자 구분</InputLabel>
-                                        <Select
-                                            value={contractSortation}
-                                            rowsPerPageOptions
-                                            name="contractSortation"
-                                            type='text'
-                                            onChange={handleChange}
-                                            input={<OutlinedInput label="name" />}
-                                        >
-                                            {contractSortationList.map((item) => (
-                                                <MenuItem
-                                                    key={item}
-                                                    value={item}
-                                                >
-                                                    {item}
-                                                </MenuItem>
-                                            ))}
-                                        </Select>
-                                    </FormControl>
-
-
-                                    <FormControl sx={{width:280,paddingBottom:1}} >
-                                        <InputLabel>통신</InputLabel>
-                                        <Select
-                                            value={communication}
-                                            rowsPerPageOptions
-                                            name="communication"
-                                            type='text'
-                                            onChange={handleChange}
-                                            input={<OutlinedInput label="name" />}
-                                        >
-                                            {communicationOpenList.map((item) => (
-                                                <MenuItem
-                                                    key={item}
-                                                    value={item}
-                                                >
-                                                    {item}
-                                                </MenuItem>
-                                            ))}
-                                        </Select>
-                                    </FormControl>
-
-                                    <TextField
-                                        required
-                                        sx={{width:280,paddingBottom:1}}
-                                        type="text"
-                                        name="serviceType"
-                                        label="서비스종류"
-                                        onChange={handleChange}
-                                    />
-
-
-                                    <FormControl sx={{width:280,paddingBottom:1}} >
-                                        <InputLabel>개시</InputLabel>
-                                        <Select
-                                            value={open}
-                                            name="open"
-                                            type='text'
-                                            onChange={handleChange}
-                                            input={<OutlinedInput label="name" />}
-                                        >
-                                            {communicationOpenList.map((item) => (
-                                                <MenuItem
-                                                    key={item}
-                                                    value={item}
-                                                >
-                                                    {item}
-                                                </MenuItem>
-                                            ))}
-                                        </Select>
-                                    </FormControl>
-
-
-
-
-
-                                    <TextField
-                                        required
-                                        sx={{width:280,paddingBottom:1}}
-                                        type="text"
-                                        name="serviceRegitDate"
-                                        label="서비스등록일자"
-                                        onChange={handleChange}
-                                    />
-
-
-                                    <TextField
-                                        required
-                                        sx={{width:280,paddingBottom:1}}
-                                        fullWidth
-                                        type="text"
-                                        name="serviceCloseDate"
-                                        label="서비스해지일자"
-                                        onChange={handleChange}
-                                    />
-
-
-
-                                    <Button
-                                        onClick={handleClick}
-                                        type="submit"
-                                        variant="contained"
-                                        sx={{ mt: 2, mb: 1 ,
-                                            justifyContent: 'center',
-                                            alignItems: 'center',
-                                        width:280}}
-                                        size="large"
-                                    >
-                                        추가하기
-                                    </Button>
-
-                                    <br/>
-
+                                <CreateTableMobileService onBackClick={onBackClick} CheckCompany={CheckCompany}
+                                                          handleChange={handleChange} contractSortation={contractSortation}
+                                                          contractSortationList={contractSortationList}
+                                communication={communication} communicationOpenList={communicationOpenList} open={open}
+                                                          handleClick={handleClick}/>
 
                             </Box>
 
                         </div>
                     </div>
+                    </Mobile>
                 </>
             ):(
                 <RequiredLogin />

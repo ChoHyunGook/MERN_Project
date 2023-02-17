@@ -182,7 +182,7 @@ export default function AgreeRegisterComponent(props){
                                         flexDirection: 'column',
                                         alignItems: 'center',
                                         backgroundColor: 'white',
-                                        height: '500px',
+                                        height: '480px',
                                         width: '350px',
                                         borderRadius:'0.5rem'
                                     }}

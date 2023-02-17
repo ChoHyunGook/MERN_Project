@@ -22,7 +22,7 @@ export default function ModalUserIdMobile(props){
 
     return(
         <>
-            <div style={{height: 550, width: '100%'}}>
+            <div style={{height: 460, width: '100%'}}>
                 <Box
                     component="form"
                     sx={{
@@ -30,7 +30,7 @@ export default function ModalUserIdMobile(props){
                         flexDirection: 'column',
                         alignItems: 'center',
                         backgroundColor: 'white',
-                        height: '520px',
+                        height: '460px',
                         borderRadius: '1rem',
                     }}
                 ><br/>
@@ -67,6 +67,7 @@ export default function ModalUserIdMobile(props){
                         <Grid item xs={1}/>
                         <Grid item xs={10}>
                             <TextField
+                                size='small'
                                 required
                                 fullWidth
                                 type="text"
@@ -82,6 +83,7 @@ export default function ModalUserIdMobile(props){
                         <Grid item xs={1}/>
                         <Grid item xs={10}>
                             <TextField
+                                size='small'
                                 autoFocus
                                 required
                                 fullWidth
@@ -107,7 +109,7 @@ export default function ModalUserIdMobile(props){
                                 size="medium"
                                 sx={{
                                     marginTop:0,
-                                    height:'45px',
+                                    height:'35px',
                                     border:3,
                                     "&.MuiButton-root:hover":{
                                         color:'#008DDC',
@@ -131,6 +133,7 @@ export default function ModalUserIdMobile(props){
                         <Grid item xs={1}/>
                         <Grid item xs={10}>
                             <TextField
+                                size='small'
                                 required
                                 fullWidth
                                 type="text"
@@ -153,7 +156,7 @@ export default function ModalUserIdMobile(props){
                                 fullWidth
                                 sx={{
                                     marginTop: 1,
-                                    height: '45px',
+                                    height: '35px',
                                     border: 3,
                                     "&.MuiButton-root:hover": {
                                         color: '#008DDC',

@@ -5,10 +5,11 @@ export const Desktop = ({ children }) => {
     return isDesktop ? children : null
 }
 export const Tablet = ({ children }) => {
-    const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 })
+    const isTablet = useMediaQuery({ minWidth: 600, maxWidth: 991 })
     return isTablet ? children : null
 }
 export const Mobile = ({ children }) => {
-    const isMobile = useMediaQuery({ maxWidth: 767 })
+    const isMobile = useMediaQuery({ maxWidth: 599 })
     return isMobile ? children : null
 }
+

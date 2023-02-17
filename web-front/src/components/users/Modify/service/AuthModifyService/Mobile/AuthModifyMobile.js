@@ -11,6 +11,7 @@ export default function AuthModifyMobile(props){
             <TextField
                 required
                 sx={{width:250}}
+                size='small'
                 type="password"
                 name="password"
                 label='비밀번호'
@@ -21,7 +22,7 @@ export default function AuthModifyMobile(props){
             <div style={{paddingTop:20}}>
                 <FormHelperTextsRED>{PwMessage}</FormHelperTextsRED>
             </div>
-            <div style={{paddingTop:20,width:250}}>
+            <div style={{paddingTop:10,width:250}}>
                 <Button
                     onClick={onSubmitHandler}
                     variant="contained"
@@ -29,7 +30,6 @@ export default function AuthModifyMobile(props){
                     size="medium"
                     fullWidth
                     sx={{
-                        marginTop: 1,
                         height: '45px',
                         border: 1,
                         "&.MuiButton-root:hover": {

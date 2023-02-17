@@ -58,6 +58,9 @@ app.get('/signAllCheck',cors(corsOptions),(req,res)=>{
 app.get('/authModifySignCheck',cors(corsOptions),(req,res)=>{
     CheckService().authModifySignCheck(req,res)
 })
+app.get('/searchDataCheck',cors(corsOptions),(req,res)=>{
+    CheckService().searchDataCheck(req,res)
+})
 
 
 

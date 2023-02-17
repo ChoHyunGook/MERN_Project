@@ -136,7 +136,7 @@ export default function AuthModifyComponent(props){
                             flexDirection: 'column',
                             alignItems: 'center',
                             backgroundColor: 'white',
-                            height: '500px',
+                            height: '400px',
                             width: '350px',
                             borderRadius:'0.5rem',
                             border:1,
@@ -165,7 +165,7 @@ export default function AuthModifyComponent(props){
                                  width:"200px",
                                  paddingBottom:30
                              }}/>
-                        <div style={{paddingBottom:40}}>
+                        <div style={{paddingBottom:30}}>
                             <Typography component="h5" variant="h8">
                                 고객정보 수정 전 비밀번호를 입력해주세요.
                             </Typography>

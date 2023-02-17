@@ -14,7 +14,7 @@ export default function CreateTableMobile(){
                 size="medium"
                 sx={{
                     marginTop:1,
-                    width:'98px',
+                    width:'150px',
                     height:'40px',
                     border:3,
                     "&.MuiButton-root:hover":{
@@ -23,7 +23,7 @@ export default function CreateTableMobile(){
                         borderColor:'#008DDC'
                     }
                 }}>
-                신규
+                신규 생성
             </Button>
         </>
     )

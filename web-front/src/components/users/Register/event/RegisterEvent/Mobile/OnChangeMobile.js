@@ -132,6 +132,7 @@ export default function OnChangeMobile(props){
         <>
                 <TextField
                     autoFocus
+                    size='small'
                     value={name}
                     required
                     sx={{width:300, margin:1}}
@@ -146,6 +147,7 @@ export default function OnChangeMobile(props){
 
                 <TextField
                     required
+                    size='small'
                     value={userid}
                     sx={{width:300, margin:1}}
                     type="email"
@@ -158,6 +160,7 @@ export default function OnChangeMobile(props){
                 <FormHelperTextsRED>{EmailMessage}</FormHelperTextsRED>
 
                 <TextField
+                    size='small'
                     required
                     sx={{width:300, margin:1}}
                     type="password"
@@ -172,6 +175,7 @@ export default function OnChangeMobile(props){
 
 
                 <TextField
+                    size='small'
                     required
                     sx={{width:300, margin:1}}
                     value={PwConfirm}
@@ -185,6 +189,7 @@ export default function OnChangeMobile(props){
                 <FormHelperTextsRED>{PwConfirmMessage}</FormHelperTextsRED>
 
                 <TextField
+                    size='small'
                     required
                     value={phone}
                     sx={{width:300, margin:1}}
@@ -203,7 +208,7 @@ export default function OnChangeMobile(props){
                     sx={{
                         marginTop:1,
                         width: 300,
-                        height:'50px',
+                        height:'35px',
                         border:3,
                         "&.MuiButton-root:hover":{
                             color:'#008DDC',
@@ -222,6 +227,7 @@ export default function OnChangeMobile(props){
                 <FormHelperTextsRED>{PhoneMessage}</FormHelperTextsRED>
 
                 <TextField
+                    size='small'
                     disabled={isSendAuth === false}
                     value={authNum}
                     required

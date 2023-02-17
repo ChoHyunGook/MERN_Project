@@ -50,6 +50,7 @@ const DbTable =(props)=>{
             })
             .catch((err)=>{
                 alert(err.response.data)
+                window.location.replace('/login')
             })
     }
 

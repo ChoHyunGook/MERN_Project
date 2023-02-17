@@ -4,7 +4,7 @@ import { useRoutes } from "react-router-dom"
 //일반
 import Home from "./pages/Home"
 
-//UserService-Main
+//UserService-main
 import Login from "./components/users/Login/main/Login"
 import JoinAgree from "./components/users/Register/main/JoinAgree"
 import Join from "./components/users/Register/main/Join"
@@ -23,7 +23,7 @@ import Modify from "./components/users/Modify/main/modify"
 //테이블
 import Table from "./components/tables/main/Table"
 import MobileCreateTable from "./components/tables/event/Mobile/component/CreateTableMobileCompnent"
-import MobileUpdateTable from "./components/tables/event/Mobile/component/UpdateTableMobileCompnent"
+import MobileDbDataTableComponent from "./components/tables/event/Mobile/component/MobileDbDataTableComponent";
 
 //etc
 import Product from "./components/product/main/Product";
@@ -34,12 +34,13 @@ import Customer from "./components/customer/main/Customer"
 
 
 
+
 export default function App() {
   return useRoutes([
-      //Main
+      //main
     {path:"/",element:<Home />},
 
-      //UserService-Main
+      //UserService-main
     {path:"login",element:<Login />},
     {path:"agreeRegister",element:<JoinAgree />},
     {path:"register",element:<Join/>},
@@ -60,7 +61,7 @@ export default function App() {
 
       //Table-Mobile
     {path:"mobileCreateTable",element:<MobileCreateTable />},
-    {path:"mobileUpdateTable",element:<MobileUpdateTable />},
+    {path:"mobileTable",element:<MobileDbDataTableComponent/>},
 
       //product-Page
     {path:"product",element:<Product />},

@@ -21,7 +21,7 @@ export default function ModalDeleteUserMobile(props){
 
     return(
         <>
-            <div style={{height: 400, width: '100%'}}>
+            <div style={{height: 300, width: '100%'}}>
                 <Box
                     component="form"
                     sx={{
@@ -59,11 +59,12 @@ export default function ModalDeleteUserMobile(props){
                             )}
                         </>
                     )}
-                    <Typography component="h4" variant="h0" sx={{paddingBottom:3}}>
+                    <Typography component="h4" variant="h0" sx={{paddingBottom:1}}>
                         회원 탈퇴 전 비밀번호를 재입력 해주세요.
-                    </Typography><br/><br/>
+                    </Typography><br/>
                     <div style={{width:280}}>
                         <TextField
+                            size='small'
                             autoFocus
                             required
                             fullWidth
@@ -76,7 +77,7 @@ export default function ModalDeleteUserMobile(props){
                         />
 
                         <FormHelperTextsRED>{PwMessage}</FormHelperTextsRED>
-                        <br/><br/>
+                        <br/>
                         <Button
                             onClick={onSubmitHandler}
                             variant="contained"
@@ -84,8 +85,7 @@ export default function ModalDeleteUserMobile(props){
                             size="medium"
                             fullWidth
                             sx={{
-                                marginTop: 1,
-                                height: '45px',
+                                height: '35px',
                                 border: 3,
                                 "&.MuiButton-root:hover": {
                                     color: '#008DDC',

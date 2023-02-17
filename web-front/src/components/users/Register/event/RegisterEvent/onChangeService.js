@@ -116,6 +116,7 @@ export default function OnChangeService(props){
                             value = {CheckCompany}
                             required
                             sx={{width:300, margin:1}}
+                            size='small'
                             id="company"
                             name="company"
                             label="소속 회사"
@@ -125,8 +126,10 @@ export default function OnChangeService(props){
                         <FormControl sx={{width:300, margin:1}}>
                             <InputLabel>소속(회사) *</InputLabel>
                             <Select
+                                autoFocus
                                 value={company}
                                 name="company"
+                                size='small'
                                 onChange={onChangeCompany}
                                 input={<OutlinedInput label="name" />}
                             >

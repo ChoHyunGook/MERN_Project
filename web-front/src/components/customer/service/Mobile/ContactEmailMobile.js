@@ -26,7 +26,7 @@ export default function ContactEmailMobile(props){
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
-                        height: '800px',
+                        height: '750px',
                         width: '350px',
                         backgroundColor:'white',
                         borderRadius:'0.5rem',
