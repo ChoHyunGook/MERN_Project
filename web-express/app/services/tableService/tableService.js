@@ -7,7 +7,7 @@ dotenv.config()
 
 export default function TableService(){
 
-    const {mongoUri ,port, db_name, access_jwt_secret, refresh_jwt_secret } = applyDotenv(dotenv)
+    const { access_jwt_secret } = applyDotenv(dotenv)
 
     const Table = db.Table
     const dbo = getDatabase()

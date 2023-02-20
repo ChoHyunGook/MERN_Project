@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { editEmailAdress, logout, sendModifyEmail, signCheck} from "../../../../../api";
 import MustLogin from "../../../../../modals/contents/RequiredLoginModal";
-import {Box, Button, FormHelperText, Grid, TextField, Typography} from "@mui/material";
+import {FormHelperText} from "@mui/material";
 import styled from "styled-components";
 import {Desktop, Mobile, Tablet} from "../../../../../containers/Responsive/responsive";
 import ModalUserIdDesktop from "../service/Desktop/ModalUserIdDesktop";

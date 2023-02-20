@@ -1,14 +1,12 @@
 import React, {useEffect, useState} from 'react'
 import background from "../../../images/bg_yellow_flower_field.jpg";
-import {createTheme} from "@mui/material/styles";
 import {Box} from "@mui/material";
 import {companyCheck, signCheck} from "../../../api";
 import RequiredLogin from "../../users/RequiredService/main/RequiredLogin";
 import TableService from "../service/Desktop/TableService";
-import {Desktop, Mobile, MobileLandscape, Tablet} from "../../../containers/Responsive/responsive";
+import {Desktop, Mobile, Tablet} from "../../../containers/Responsive/responsive";
 import TableServiceTablet from "../service/Tablet/TableServiceTablet";
 import TableServiceMobile from "../service/Mobile/TableServiceMobile";
-import Layout from "../../../containers/main/Layout";
 
 
 export default function TableComponent() {

@@ -11,7 +11,7 @@ dotenv.config()
 
 export default function SmsService(){
     const {
-        access_jwt_secret, refresh_jwt_secret,
+        access_jwt_secret,
         SMS_service_id,SMS_secret_key,SMS_access_key,SMS_PHONE
     } = applyDotenv(dotenv)
 
@@ -22,8 +22,6 @@ export default function SmsService(){
     return {
 
         findIdSendSMS (req,res){
-            const data = req.body
-            let ck = true;
 
             User.findOne({name:req.body.name, phone:req.body.phoneNum},function (err,user) {
                 if (err) throw err
@@ -108,8 +106,6 @@ export default function SmsService(){
 
         //비밀번호찾기-문자인증
         sendFindPwSMS(req,res){
-            const data = req.body
-            let ck = true;
 
             User.findOne({userid:req.body.userid, phone:req.body.phone},function (err,user) {
                 if (err) throw err
@@ -189,8 +185,6 @@ export default function SmsService(){
 
         //프로필-이름변경-문자인증
         sendEditNameSMS(req,res){
-            const data = req.body
-            let ck = true;
 
             User.findOne({userid:req.body.userid, phone:req.body.phoneNum},function (err,user) {
                 if (err) throw err
@@ -271,8 +265,6 @@ export default function SmsService(){
 
         //프로필-전화번호변경-문자인증
         sendEditPhoneSMS(req,res){
-
-            const data = req.body
 
 
             User.findOne({userid:req.body.userid, phone:req.body.phoneNum},function (err,user) {

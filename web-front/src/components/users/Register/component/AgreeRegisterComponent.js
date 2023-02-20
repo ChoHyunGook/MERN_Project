@@ -1,11 +1,7 @@
-
 import AgreeRegisterService from "../service/AgreeRegisterService";
 import React, {useEffect, useState} from "react";
-import CssBaseline from "@mui/material/CssBaseline";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
-import {createTheme, ThemeProvider} from "@mui/material/styles";
-import {Container} from "@mui/material";
 import {Box} from "@mui/material/";
 import AgreeLogo from "./Logo/AgreeLogo";
 import {exclusiveTokenCheck} from "../../../../api";
@@ -13,7 +9,6 @@ import background from "../../../../images/bg_yellow_flower_field.jpg";
 import {Desktop, Mobile, Tablet} from "../../../../containers/Responsive/responsive";
 
 
-const theme = createTheme();
 
 export default function AgreeRegisterComponent(props){
 

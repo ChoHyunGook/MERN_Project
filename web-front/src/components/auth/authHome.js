@@ -1,10 +1,5 @@
-import background from "../../images/bg_yellow_flower_field.jpg";
-import {Box, Typography} from "@mui/material";
-import {createTheme, ThemeProvider} from "@mui/material/styles";
-import Divider from "@mui/material/Divider";
-import TextField from "@mui/material/TextField";
+import {createTheme} from "@mui/material/styles";
 import {useState} from "react";
-import Button from "@mui/material/Button";
 import {authLogin} from "../../api";
 import {Desktop,Tablet,Mobile} from "../../containers/Responsive/responsive";
 import AuthHomeDesktop from "./component/Desktop/AuthHomeDesktop";

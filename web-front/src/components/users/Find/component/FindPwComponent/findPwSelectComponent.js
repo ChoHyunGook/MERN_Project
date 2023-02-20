@@ -1,5 +1,5 @@
 import background from "../../../../../images/bg_yellow_flower_field.jpg";
-import {Box, Container, Grid, Typography} from "@mui/material";
+import {Box, Typography} from "@mui/material";
 import React from "react";
 import FindPwSelectService from "../../service/FindPw/findPwSelectService";
 import {Desktop, Mobile, Tablet} from "../../../../../containers/Responsive/responsive";

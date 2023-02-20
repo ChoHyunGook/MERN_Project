@@ -1,4 +1,3 @@
-
 import RegisterService from "../service/RegisterService";
 import React, {useEffect, useState} from "react";
 import {createTheme, ThemeProvider} from "@mui/material/styles";

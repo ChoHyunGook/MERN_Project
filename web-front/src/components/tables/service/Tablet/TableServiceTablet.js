@@ -1,7 +1,6 @@
 import CompanyHeaders from "../../event/Desktop/contents/headers";
 import React, {useState} from "react";
 import TabletSearchTable from "../../event/Tablet/contents/TabletSearchTable";
-import TabletCreateModal from "../../modals/Create/Tablet/component/TabletCreateModal";
 import TabletUpdateModalMain from "../../modals/Update/Tablet/main/TabletUpdateModalMain";
 import TabletDeleteTable from "../../event/Tablet/contents/TabletDeleteTable";
 import TabletReload from "../../event/Tablet/contents/TabletReload";

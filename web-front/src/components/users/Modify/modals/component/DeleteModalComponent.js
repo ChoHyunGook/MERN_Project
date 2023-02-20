@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {signCheck, withdrawUser,logout} from "../../../../../api";
 import RequiredLoginModal from "../../../../../modals/contents/RequiredLoginModal";
-import {Box, Button, FormHelperText, TextField, Typography} from "@mui/material";
+import {FormHelperText} from "@mui/material";
 import styled from "styled-components";
 import {Desktop, Mobile, Tablet} from "../../../../../containers/Responsive/responsive";
 import ModalDeleteUserDesktop from "../service/Desktop/ModalDeleteUserDesktop";

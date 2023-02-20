@@ -1,4 +1,4 @@
-import {Button, Grid, TextField, Typography} from "@mui/material";
+import {Button, TextField, Typography} from "@mui/material";
 import UpdateNameModal from "../../../modals/main/updateNameModal";
 import {useState} from "react";
 

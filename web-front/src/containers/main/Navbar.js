@@ -3,12 +3,11 @@ import {authLogout, logout, signAllCheck, signCheck} from "../../api";
 import React, {useEffect, useState} from "react"
 import AfterDesktopNav from "../components/DesktopNav/AfterDesktopNav";
 import BeforeDesktopNav from "../components/DesktopNav/BeforeDesktopNav";
-import { useMediaQuery } from 'react-responsive'
 import BeforeTabletNav from "../components/TabletNav/BeforeTabletNav";
 import AfterTabletNav from "../components/TabletNav/AfterTabletNav";
 import BeforePhoneNav from "../components/PhoneNav/BeforePhoneNav";
 import AfterPhoneNav from "../components/PhoneNav/AfterPhoneNav";
-import {Desktop, Tablet, Mobile, MobileLandscape} from "../Responsive/responsive";
+import {Desktop, Tablet, Mobile} from "../Responsive/responsive";
 
 const Common = styled.div`
     display: flex;

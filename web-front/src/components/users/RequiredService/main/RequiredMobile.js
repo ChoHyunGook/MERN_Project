@@ -1,6 +1,6 @@
 import background from "../../../../images/bg_index.png";
 import RequiredMobileComponent from "../component/RequiredMobileComponent";
-import {Desktop, Mobile, Tablet} from "../../../../containers/Responsive/responsive";
+import {Desktop, Tablet} from "../../../../containers/Responsive/responsive";
 
 
 export default function RequiredMobile(){

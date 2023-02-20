@@ -3,7 +3,6 @@ import cors from "cors"
 import dotenv from "dotenv"
 import EmailService from "../../services/sendService/emailService.js";
 import SMSService from "../../services/sendService/smsService.js"
-import UserService from "../../services/userService/userService.js";
 
 dotenv.config()
 

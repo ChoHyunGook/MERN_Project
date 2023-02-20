@@ -70,8 +70,6 @@ export default function App() {
     {path:"customer",element:<Customer />},
 
 
-
-
   ]);
 }
 

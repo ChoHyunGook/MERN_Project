@@ -20,14 +20,6 @@ const theme = createTheme({
     },
 });
 
-const Common = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: auto;
-  background-color: whitesmoke;
-  flex-direction: column;
-`
 
 
 export default function Home(){

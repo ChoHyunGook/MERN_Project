@@ -1,6 +1,4 @@
 import background from "../../../../images/bg_yellow_flower_field.jpg";
-import {createTheme, ThemeProvider} from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
 import {Box, Typography} from "@mui/material";
 import * as React from "react";
 import AuthModifyService from "../service/AuthModifyService/AuthModifyService";
@@ -10,7 +8,6 @@ import {Desktop, Mobile, Tablet} from "../../../../containers/Responsive/respons
 
 export default function AuthModifyComponent(props){
 
-    const theme = createTheme();
     const { userData, srcAddress, CheckCompany } = props;
 
     const [isMarginTopsSet, setIsMarginTopSet] =useState(false)

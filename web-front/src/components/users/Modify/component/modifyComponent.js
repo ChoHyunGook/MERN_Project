@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import background from "../../../../images/bg_yellow_flower_field.jpg";
-import {createTheme, ThemeProvider} from "@mui/material/styles";
 import {Box, Typography} from "@mui/material";
 import ModifyService from "../service/ModifyService/ModifyService";
 import {authModifySignCheck} from "../../../../api";
@@ -10,7 +9,6 @@ import {Desktop, Mobile, Tablet} from "../../../../containers/Responsive/respons
 
 
 
-const theme = createTheme();
 export default function ModifyComponent(props){
 
     const { userData, srcAddress, CheckCompany } = props;

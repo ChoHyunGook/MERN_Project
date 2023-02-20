@@ -1,7 +1,5 @@
 import background from "../../../../../images/bg_yellow_flower_field.jpg";
-import {createTheme, ThemeProvider} from "@mui/material/styles";
-import Container from "@mui/material/Container";
-import CssBaseline from "@mui/material/CssBaseline";
+import {createTheme} from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import * as React from "react";
 import ChangePwService from "../../service/FindPw/changePwService";
