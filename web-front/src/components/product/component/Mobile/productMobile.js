@@ -10,7 +10,7 @@ export default function ProductMobile(){
                     alignItems: "center",}}>
                 <img alt="No Images" src="images/doorbell_hard.png"
                      style={{
-                         width:450,paddingBottom:20
+                         width:350,paddingBottom:20
                      }}/>
                     <img alt="No Images" src="images/doorbell_text.png"
                          style={{
@@ -18,7 +18,7 @@ export default function ProductMobile(){
                          }}/>
                     <img alt="No Images" src="images/doorbell_point.png"
                          style={{
-                             width:400
+                             width:350
                          }}/>
                 </div>
             </div>

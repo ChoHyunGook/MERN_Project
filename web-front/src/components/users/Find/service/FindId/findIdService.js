@@ -9,6 +9,9 @@ import OnSubmitTablet from "../../event/FindIdEvent/Tablet/onSubmitTablet";
 import OnChangeMobile from "../../event/FindIdEvent/Mobile/onChangeMobile";
 import AuthNumMobile from "../../event/FindIdEvent/Mobile/authNumMobile";
 import OnSubmitMobile from "../../event/FindIdEvent/Mobile/onSubmitMobile";
+import BackOnSubmitDesktop from "../../event/OnBackSubmitEvent/BackLogin/Desktop/backOnSubmitDesktop";
+import BackOnSubmitTablet from "../../event/OnBackSubmitEvent/BackLogin/Tablet/backOnSubmitTablet";
+import BackOnSubmitMobile from "../../event/OnBackSubmitEvent/BackLogin/Mobile/backOnSubmitMobile";
 
 
 export default function FindIdService(props){
@@ -27,6 +30,7 @@ export default function FindIdService(props){
                 <AuthNumDesktop Phone={Phone} Name={Name} setSign={setSign} setSignNum={setSignNum} sign={sign}
                                 signNum={signNum}/>
                 <OnSubmitDesktop Name={Name} Phone={Phone} signNum={signNum} setRes={setRes}/>
+                <BackOnSubmitDesktop />
             </Desktop>
 
 
@@ -37,6 +41,7 @@ export default function FindIdService(props){
                 <AuthNumTablet Phone={Phone} Name={Name} setSign={setSign} setSignNum={setSignNum} sign={sign}
                                 signNum={signNum}/>
                 <OnSubmitTablet Name={Name} Phone={Phone} signNum={signNum} setRes={setRes}/>
+                <BackOnSubmitTablet />
             </Tablet>
 
 
@@ -47,6 +52,7 @@ export default function FindIdService(props){
                 <AuthNumMobile Phone={Phone} Name={Name} setSign={setSign} setSignNum={setSignNum} sign={sign}
                                signNum={signNum}/>
                 <OnSubmitMobile Name={Name} Phone={Phone} signNum={signNum} setRes={setRes}/>
+                <BackOnSubmitMobile />
             </Mobile>
 
 

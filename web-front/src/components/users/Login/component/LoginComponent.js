@@ -20,16 +20,16 @@ export default function LoginComponent(props){
         <>
 
                     <Desktop>
-                        <div style={{backgroundImage:`url(${background})`,paddingTop:10,paddingBottom:250}}>
+                        <div style={{backgroundImage:`url(${background})`,paddingTop:10,paddingBottom:400}}>
                             <div style={{alignItems:'center',display:'flex',flexDirection:'column'}}>
                         <Box
                             sx={{
-                                marginTop: 5,
+                                marginTop: 10,
                                 display: 'flex',
                                 flexDirection: 'column',
                                 alignItems: 'center',
                                 backgroundColor: 'white',
-                                height: '620px',
+                                height: '580px',
                                 width: '500px',
                                 borderRadius:'0.5rem',
                                 border:1,
@@ -65,7 +65,7 @@ export default function LoginComponent(props){
                     </Desktop>
 
                     <Tablet>
-                        <div style={{backgroundImage:`url(${background})`,paddingTop:10,paddingBottom:450}}>
+                        <div style={{backgroundImage:`url(${background})`,paddingTop:10,paddingBottom:700, backgroundSize:'cover'}}>
                             <div style={{alignItems:'center',display:'flex',flexDirection:'column'}}>
                         <Box
                             component='form'

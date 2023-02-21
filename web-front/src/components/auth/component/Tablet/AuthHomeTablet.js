@@ -13,14 +13,12 @@ export default function AuthHomeTablet(props){
     return(
         <>
             <div style={{
-                backgroundImage: `url(${background})`,
-                width:'100%',height:'100%', position:'fixed'}}>
-                <ThemeProvider theme={theme}>
+                backgroundImage: `url(${background})`,backgroundSize:"cover",height:'100%',width:'100%',paddingBottom:1000,position:'fixed'}}>
                     <div style={{display:'flex',alignItems:'center',flexDirection:"column"}}>
                         <Box
                             component="form"
                             sx={{
-                                marginTop: 10,
+                                marginTop: 30,
                                 display: 'flex',
                                 flexDirection: 'column',
                                 alignItems: 'center',
@@ -79,7 +77,6 @@ export default function AuthHomeTablet(props){
                             </Button>
                         </Box>
                     </div>
-                </ThemeProvider>
             </div>
         </>
     )

@@ -48,7 +48,7 @@ export default function AuthNumMobile(props){
                     sx={{
                         marginTop: 2,
                         width: '250px',
-                        height: '45px',
+                        height: '35px',
                         border: 3,
                         "&.MuiButton-root:hover": {
                             color: '#008DDC',
@@ -66,6 +66,7 @@ export default function AuthNumMobile(props){
                 <TextField
                     sx={{width:250, marginTop:2}}
                     label="인증번호"
+                    size='small'
                     value={signNum}
                     type="text"
                     onChange={onChangeSignHandler}

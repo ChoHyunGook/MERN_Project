@@ -55,7 +55,7 @@ const SearchTable = (props)=>{
             })
     }
     return(
-        <form style={{display: 'flex', padding: '3px'}}>
+        <form style={{display: 'flex', padding: '1px'}}>
 
             <FormControl sx={{marginTop: 0.1, minWidth: 100,paddingRight:2}} variant="standard">
                 <InputLabel id="demo-simple-select-label">Select</InputLabel>
@@ -91,7 +91,7 @@ const SearchTable = (props)=>{
 
             <IconButton
                 type="submit"
-                sx={{marginTop: 0.5, borderRadius: '0.2rem'}}
+                sx={{marginTop: 0.5, borderRadius: '0.2rem',paddingRight:'150px'}}
                 onClick={onClickSearch}
             >
                 <SearchIcon sx={{height: '30px', width: '30px'}}/>

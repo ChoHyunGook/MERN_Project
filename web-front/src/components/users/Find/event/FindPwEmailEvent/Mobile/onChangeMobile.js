@@ -44,6 +44,7 @@ export default function OnChangeMobile(props){
                 required
                 sx={{width:280}}
                 label="이름"
+                size='small'
                 name="Name"
                 autoComplete="Name"
                 autoFocus
@@ -55,6 +56,7 @@ export default function OnChangeMobile(props){
                 value={userid}
                 margin="normal"
                 required
+                size='small'
                 sx={{width:280}}
                 label="아이디(이메일)"
                 name="userid"

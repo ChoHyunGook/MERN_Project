@@ -1,7 +1,7 @@
 import CompanyHeaders from "../../event/Desktop/contents/headers";
 import React, { useState} from "react";
-import CreateTableMobile from "../../event/Mobile/Main/CreateTableMobile";
-import SearchTableMobile from "../../event/Mobile/Main/SearchTableMobile";
+import CreatedTablesMobile from "../../event/Mobile/main/CreatedTablesMobile";
+import SearchTablesMobile from "../../event/Mobile/main/SearchTablesMobile";
 
 
 
@@ -17,9 +17,9 @@ export default function TableServiceMobile(props){
         <>
             <CompanyHeaders srcAddress={srcAddress}/><br/>
             <div style={{display: 'flex', alignItems: 'center', paddingBottom: 10}}>
-                <CreateTableMobile/>
+                <CreatedTablesMobile/>
             </div>
-                <SearchTableMobile setData={setDbData}/>
+                <SearchTablesMobile setData={setDbData}/>
             <br/>
         </>
     )

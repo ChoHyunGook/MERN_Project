@@ -80,12 +80,12 @@ export default function AuthModifyComponent(props){
                 </Desktop>
 
                 <Tablet>
-                    <div style={{backgroundImage: `url(${background})`,paddingTop:10,paddingBottom:450}}>
+                    <div style={{backgroundImage: `url(${background})`,backgroundSize:'cover', paddingTop:10,paddingBottom:800}}>
                         <div style={{display: 'flex', flexDirection:"column", alignItems:"center"}}>
                     <Box
                         component='form'
                         sx={{
-                            marginTop: 12,
+                            marginTop: 20,
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',

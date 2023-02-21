@@ -18,7 +18,7 @@ export default function ContactEmailDesktop(props){
 
     return(
         <>
-            <div style={{paddingTop: 60, paddingBottom: 200}}>
+            <div style={{paddingTop: 10, paddingBottom: 200}}>
                 <Box
                     sx={{
                         display: 'flex',

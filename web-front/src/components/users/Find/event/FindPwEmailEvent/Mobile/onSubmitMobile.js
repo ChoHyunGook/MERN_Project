@@ -27,7 +27,7 @@ export default function OnSubmitMobile(props){
     return(
         <>
             <Button
-                sx={{height:45,width:280,marginTop:2}}
+                sx={{height:35,width:280,marginTop:2}}
                 type="submit"
                 variant="contained"
                 disabled={signNum.length<6 || false}

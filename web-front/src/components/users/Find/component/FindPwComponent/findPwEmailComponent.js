@@ -14,15 +14,17 @@ export default function FindPwEmailComponent(props){
 
     return(
         <>
-            <div style={{backgroundImage: `url(${background})`,}}>
-                <div style={{
-                    display: 'flex',
-                    flexDirection:"column",
-                    alignItems:"center",
-                    paddingBottom:300
 
-                }}><br/>
                     <Desktop>
+                        <div style={{backgroundImage: `url(${background})`,}}>
+                            <div style={{
+                                display: 'flex',
+                                flexDirection:"column",
+                                alignItems:"center",
+                                backgroundSize:'cover',
+                                paddingBottom:300
+
+                            }}><br/>
                         <Box
                             component="form"
                             sx={{
@@ -31,7 +33,7 @@ export default function FindPwEmailComponent(props){
                                 flexDirection: 'column',
                                 alignItems: 'center',
                                 backgroundColor: 'white',
-                                height: '620px',
+                                height: '670px',
                                 width: '520px',
                                 borderRadius:'0.5rem'
                             }}
@@ -56,9 +58,19 @@ export default function FindPwEmailComponent(props){
                                                 setEmailMessage={setEmailMessage} EmailMessage={EmailMessage}/>
 
                         </Box>
+                            </div></div>
                     </Desktop>
 
                     <Tablet>
+                        <div style={{backgroundImage: `url(${background})`,backgroundSize:'cover',}}>
+                            <div style={{
+                                display: 'flex',
+                                flexDirection:"column",
+                                alignItems:"center",
+                                backgroundSize:'cover',
+                                paddingBottom:800
+
+                            }}><br/>
                         <Box
                             component="form"
                             sx={{
@@ -67,7 +79,7 @@ export default function FindPwEmailComponent(props){
                                 flexDirection: 'column',
                                 alignItems: 'center',
                                 backgroundColor: 'white',
-                                height: '580px',
+                                height: '620px',
                                 width: '400px',
                                 borderRadius:'0.5rem'
                             }}
@@ -92,9 +104,19 @@ export default function FindPwEmailComponent(props){
 
 
                         </Box>
+                            </div></div>
                     </Tablet>
 
                     <Mobile>
+                        <div style={{backgroundImage: `url(${background})`,}}>
+                            <div style={{
+                                display: 'flex',
+                                flexDirection:"column",
+                                alignItems:"center",
+                                backgroundSize:'cover',
+                                paddingBottom:500
+
+                            }}><br/>
                         <Box
                             component="form"
                             sx={{
@@ -103,7 +125,7 @@ export default function FindPwEmailComponent(props){
                                 flexDirection: 'column',
                                 alignItems: 'center',
                                 backgroundColor: 'white',
-                                height: '550px',
+                                height: '520px',
                                 width: '350px',
                                 borderRadius:'0.5rem'
                             }}
@@ -128,10 +150,11 @@ export default function FindPwEmailComponent(props){
 
 
                         </Box>
+                            </div>
+                        </div>
                     </Mobile>
 
-                </div>
-            </div>
+
         </>
 
 

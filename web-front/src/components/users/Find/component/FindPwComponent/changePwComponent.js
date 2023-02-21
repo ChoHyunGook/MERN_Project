@@ -19,14 +19,15 @@ export default function ChangePwComponent(props){
 
     return(
         <>
-            <div style={{backgroundImage: `url(${background})`,}}>
-            <div style={{
-                display: 'flex',
-                flexDirection:"column",
-                alignItems:"center",
-                paddingBottom:300
-            }}><br/>
+
                 <Desktop>
+                    <div style={{backgroundImage: `url(${background})`,}}>
+                        <div style={{
+                            display: 'flex',
+                            flexDirection:"column",
+                            alignItems:"center",
+                            paddingBottom:300
+                        }}><br/>
                     <Box
                         sx={{
                             marginTop: 10,
@@ -59,9 +60,17 @@ export default function ChangePwComponent(props){
                                          isPw={isPw} isPwConfirm={isPwConfirm}/>
 
                     </Box>
+                        </div></div>
                 </Desktop>
 
                 <Tablet>
+                    <div style={{backgroundImage: `url(${background})`,backgroundSize:'cover',}}>
+                        <div style={{
+                            display: 'flex',
+                            flexDirection:"column",
+                            alignItems:"center",
+                            paddingBottom:800
+                        }}><br/>
                     <Box
                         sx={{
                             marginTop: 10,
@@ -93,9 +102,17 @@ export default function ChangePwComponent(props){
                                          isPw={isPw} isPwConfirm={isPwConfirm}/>
 
                     </Box>
+                        </div></div>
                 </Tablet>
 
                 <Mobile>
+                    <div style={{backgroundImage: `url(${background})`,}}>
+                        <div style={{
+                            display: 'flex',
+                            flexDirection:"column",
+                            alignItems:"center",
+                            paddingBottom:500
+                        }}><br/>
                     <Box
                         sx={{
                             marginTop: 10,
@@ -127,10 +144,9 @@ export default function ChangePwComponent(props){
                                          isPw={isPw} isPwConfirm={isPwConfirm}/>
 
                     </Box>
+                        </div></div>
                 </Mobile>
 
-            </div>
-            </div>
         </>
     )
 }

@@ -6,7 +6,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import React,{useState} from "react";
 
 
-const SearchTableMobile = (props)=>{
+const SearchTablesMobile = (props)=>{
 
     const {setData, CheckCompany} = props
 
@@ -104,4 +104,4 @@ const SearchTableMobile = (props)=>{
     )
 }
 
-export default SearchTableMobile
+export default SearchTablesMobile

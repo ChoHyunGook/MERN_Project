@@ -50,6 +50,7 @@ export default function OnChangeMobile(props){
                 value={Email}
                 margin="normal"
                 required
+                size='small'
                 sx={{width:280}}
                 label="아이디(이메일)"
                 name="Email"
@@ -62,6 +63,7 @@ export default function OnChangeMobile(props){
             <TextField
                 value={Phone}
                 margin="normal"
+                size='small'
                 required
                 sx={{width:280}}
                 name="Phone"

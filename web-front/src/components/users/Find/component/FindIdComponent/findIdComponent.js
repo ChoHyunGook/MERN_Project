@@ -20,15 +20,16 @@ export default function FindIdComponent(props){
 
     return(
         <>
-            <div style={{
-                backgroundImage: `url(${background})`,
-                width:'auto',
-                paddingBottom:300
-            }}><br/>
-                <div style={{display: 'flex',
-                    flexDirection: "column",
-                    alignItems: "center",}}>
+
             <Desktop>
+                <div style={{
+                    backgroundImage: `url(${background})`,
+                    width:'auto',
+                    paddingBottom:300
+                }}><br/>
+                    <div style={{display: 'flex',
+                        flexDirection: "column",
+                        alignItems: "center",}}>
                 <Box
                     component='form'
                     sx={{
@@ -37,7 +38,7 @@ export default function FindIdComponent(props){
                         flexDirection: 'column',
                         alignItems: 'center',
                         backgroundColor: 'white',
-                        height: '600px',
+                        height: '650px',
                         width: '500px',
                         borderRadius:'0.5rem'
                     }}
@@ -62,9 +63,19 @@ export default function FindIdComponent(props){
 
 
                 </Box>
+                    </div></div>
             </Desktop>
 
             <Tablet>
+                <div style={{
+                    backgroundImage: `url(${background})`,
+                    width:'auto',
+                    backgroundSize:'cover',
+                    paddingBottom:800
+                }}><br/>
+                    <div style={{display: 'flex',
+                        flexDirection: "column",
+                        alignItems: "center",}}>
                 <Box
                     sx={{
                         marginTop: 10,
@@ -72,7 +83,7 @@ export default function FindIdComponent(props){
                         flexDirection: 'column',
                         alignItems: 'center',
                         backgroundColor: 'white',
-                        height: '580px',
+                        height: '620px',
                         width: '400px',
                         borderRadius:'0.5rem'
                     }}
@@ -96,9 +107,18 @@ export default function FindIdComponent(props){
 
 
                 </Box>
+                    </div></div>
             </Tablet>
 
             <Mobile>
+                <div style={{
+                    backgroundImage: `url(${background})`,
+                    width:'auto',
+                    paddingBottom:500
+                }}><br/>
+                    <div style={{display: 'flex',
+                        flexDirection: "column",
+                        alignItems: "center",}}>
                 <Box
                     sx={{
                         marginTop: 10,
@@ -106,7 +126,7 @@ export default function FindIdComponent(props){
                         flexDirection: 'column',
                         alignItems: 'center',
                         backgroundColor: 'white',
-                        height: '580px',
+                        height: '550px',
                         width: '350px',
                         borderRadius:'0.5rem'
                     }}
@@ -131,9 +151,9 @@ export default function FindIdComponent(props){
 
 
                 </Box>
-            </Mobile>
+                    </div>
                 </div>
-            </div>
+            </Mobile>
         </>
     )
 }

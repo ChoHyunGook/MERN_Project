@@ -24,7 +24,7 @@ export default function FindPwSelectComponent(props){
                             flexDirection: 'column',
                             alignItems: 'center',
                             backgroundColor: 'white',
-                            height: '550px',
+                            height: '620px',
                             width: '700px',
                             borderRadius:'1rem'
                         }}>
@@ -48,7 +48,7 @@ export default function FindPwSelectComponent(props){
                     </>
                 </Desktop>
                 <Tablet>
-                    <div style={{backgroundImage: `url(${background})`, paddingBottom:350}}>
+                    <div style={{backgroundImage: `url(${background})`,backgroundSize:'cover', paddingBottom:750}}>
                         <div style={{alignItems:'center',display:'flex',flexDirection:'column'}}>
                         <Box style={{
                             marginTop:150,
@@ -56,7 +56,7 @@ export default function FindPwSelectComponent(props){
                             flexDirection: 'column',
                             alignItems: 'center',
                             backgroundColor: 'white',
-                            height: '500px',
+                            height: '530px',
                             width: '600px',
                             borderRadius:'1rem'
                         }}>
@@ -78,7 +78,7 @@ export default function FindPwSelectComponent(props){
                         </div></div>
                 </Tablet>
                 <Mobile>
-                    <div style={{backgroundImage: `url(${background})`, paddingBottom:280}}>
+                    <div style={{backgroundImage: `url(${background})`, paddingBottom:500}}>
                         <div style={{alignItems:'center',display:'flex',flexDirection:'column'}}>
                         <Box style={{
                             marginTop:100,
@@ -86,7 +86,7 @@ export default function FindPwSelectComponent(props){
                             flexDirection: 'column',
                             alignItems: 'center',
                             backgroundColor: 'white',
-                            height: '500px',
+                            height: '530px',
                             width: '350px',
                             borderRadius:'1rem'
                         }}>

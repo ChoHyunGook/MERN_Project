@@ -57,7 +57,7 @@ const TabletDbTable =(props)=>{
     useEffect(inputData,[])
 
     return(
-        <div style={{ height: 500, width: '100%' }}>
+        <div style={{ height: 850, width: '100%' }}>
             <DataGrid
                 rows={dbData}
                 columns={columns}

@@ -15,14 +15,14 @@ export default function FindPwPhoneComponent(props){
 
     return(
         <>
-            <div style={{backgroundImage: `url(${background})`,}}>
-            <div style={{
-                display: 'flex',
-                flexDirection: "column",
-                alignItems: "center",
-                paddingBottom:300
-            }}><br/>
                 <Desktop>
+                    <div style={{backgroundImage: `url(${background})`,backgroundSize:'cover'}}>
+                        <div style={{
+                            display: 'flex',
+                            flexDirection: "column",
+                            alignItems: "center",
+                            paddingBottom:300
+                        }}><br/>
                     <Box
                         sx={{
                             marginTop: 10,
@@ -30,7 +30,7 @@ export default function FindPwPhoneComponent(props){
                             flexDirection: 'column',
                             alignItems: 'center',
                             backgroundColor: 'white',
-                            height: '620px',
+                            height: '680px',
                             width: '520px',
                             borderRadius: '0.5rem'
                         }}
@@ -53,9 +53,17 @@ export default function FindPwPhoneComponent(props){
                                             setIsPhone={setIsPhone} setRes={setRes}/>
 
                     </Box>
+                        </div></div>
                 </Desktop>
 
                 <Tablet>
+                    <div style={{backgroundImage: `url(${background})`,backgroundSize:'cover'}}>
+                        <div style={{
+                            display: 'flex',
+                            flexDirection: "column",
+                            alignItems: "center",
+                            paddingBottom:800
+                        }}><br/>
                     <Box
                         sx={{
                             marginTop: 10,
@@ -63,7 +71,7 @@ export default function FindPwPhoneComponent(props){
                             flexDirection: 'column',
                             alignItems: 'center',
                             backgroundColor: 'white',
-                            height: '600px',
+                            height: '650px',
                             width: '400px',
                             borderRadius: '0.5rem'
                         }}
@@ -87,9 +95,17 @@ export default function FindPwPhoneComponent(props){
                                             setIsPhone={setIsPhone} setRes={setRes}/>
 
                     </Box>
+                        </div></div>
                 </Tablet>
 
                 <Mobile>
+                    <div style={{backgroundImage: `url(${background})`,backgroundSize:'cover'}}>
+                        <div style={{
+                            display: 'flex',
+                            flexDirection: "column",
+                            alignItems: "center",
+                            paddingBottom:500
+                        }}><br/>
                     <Box
                         sx={{
                             marginTop: 10,
@@ -97,7 +113,7 @@ export default function FindPwPhoneComponent(props){
                             flexDirection: 'column',
                             alignItems: 'center',
                             backgroundColor: 'white',
-                            height: '600px',
+                            height: '550px',
                             width: '350px',
                             borderRadius: '0.5rem'
                         }}
@@ -120,11 +136,12 @@ export default function FindPwPhoneComponent(props){
                                             setIsPhone={setIsPhone} setRes={setRes}/>
 
                     </Box>
+                        </div>
+                    </div>
                 </Mobile>
 
 
-            </div>
-            </div>
+
         </>
     )
 

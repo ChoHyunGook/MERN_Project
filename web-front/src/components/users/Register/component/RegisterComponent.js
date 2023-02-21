@@ -147,7 +147,7 @@ export default function RegisterComponent(props){
 
                 <Tablet>
                     {isTerms ? (
-                        <div style={{backgroundImage:`url(${background})`, width:'auto', height:'auto',paddingBottom:140}}>
+                        <div style={{backgroundImage:`url(${background})`, backgroundSize:'cover', width:'auto', height:'auto',paddingBottom:500}}>
                         <div style={{
                             display: 'flex',
                             flexDirection: "column",
@@ -160,6 +160,7 @@ export default function RegisterComponent(props){
                                         {isExclusive ? (
                                             <Box
                                                 sx={{
+                                                    marginTop:15,
                                                     display: 'flex',
                                                     flexDirection: 'column',
                                                     alignItems: 'center',
@@ -181,7 +182,7 @@ export default function RegisterComponent(props){
                                                 <Typography component="h3" variant="h7">
                                                     회원가입
                                                 </Typography>
-                                                <Divider color="#696969" sx={{height: 2, width: '420px',marginTop:1}}></Divider><br/>
+                                                <Divider color="#696969" sx={{height: 2, width: '350px',marginTop:1}}></Divider><br/>
 
                                                 <RegisterService CheckCompany={CheckCompany} isExclusive={isExclusive}/>
 
@@ -190,7 +191,7 @@ export default function RegisterComponent(props){
                                         ):(
                                             <Box
                                                 sx={{
-                                                    marginTop: 1,
+                                                    marginTop: 15,
                                                     display: 'flex',
                                                     flexDirection: 'column',
                                                     alignItems: 'center',

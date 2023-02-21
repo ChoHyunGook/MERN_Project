@@ -41,6 +41,7 @@ export default function OnChangeMobile(props){
                     required
                     sx={{width:250, marginTop:2}}
                     label="이름"
+                    size='small'
                     name="name"
                     autoComplete="name"
                     autoFocus
@@ -51,6 +52,7 @@ export default function OnChangeMobile(props){
                     sx={{width:250, marginTop:2}}
                     value={Phone}
                     margin="normal"
+                    size='small'
                     required
                     name="Phone"
                     label="전화번호( - 빼고 기입)"

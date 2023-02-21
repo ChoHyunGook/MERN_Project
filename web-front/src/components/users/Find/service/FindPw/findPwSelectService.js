@@ -15,10 +15,15 @@ export default function FindPwSelectService(props){
         setPhone(e.target.value)
         window.location.replace("/findPwPhone")
     }
+    const onSubmitHandler = (e)=>{
+        e.preventDefault()
+        window.location.replace('/login')
+    }
 
     return(
         <>
             <Desktop>
+                <>
                 <div style={{display:'flex',alignItems:'center'}}>
                     <Button
                         variant="outlined"
@@ -91,9 +96,19 @@ export default function FindPwSelectService(props){
                              }/>
                     </Button>
                 </div>
+                    <Button
+                        style={{height:40,width:350,marginTop:20}}
+                        type="submit"
+                        variant="contained"
+                        onClick={onSubmitHandler}
+                    >
+                        뒤로가기
+                    </Button>
+                </>
             </Desktop>
 
             <Tablet>
+                <>
                 <div style={{display:'flex',alignItems:'center',padding:2}}>
                 <Button
                     variant="outlined"
@@ -165,9 +180,20 @@ export default function FindPwSelectService(props){
                          }/>
                 </Button>
                 </div>
+                    <Button
+                        style={{height:40,width:300,marginTop:20}}
+                        type="submit"
+                        variant="contained"
+                        onClick={onSubmitHandler}
+                    >
+                        뒤로가기
+                    </Button>
+
+                </>
             </Tablet>
 
             <Mobile>
+                <>
                 <Button
                     variant="outlined"
                     value={Email}
@@ -235,6 +261,17 @@ export default function FindPwSelectService(props){
                              height:'80px'}
                          }/>
                 </Button>
+
+                    <Button
+                        style={{height:35,width:250,marginTop:20}}
+                        type="submit"
+                        variant="contained"
+                        onClick={onSubmitHandler}
+                    >
+                        뒤로가기
+                    </Button>
+
+                </>
             </Mobile>
 
 

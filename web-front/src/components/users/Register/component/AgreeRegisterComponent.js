@@ -35,10 +35,11 @@ export default function AgreeRegisterComponent(props){
     return(
         <>
                     <Desktop>
+                        <div style={{backgroundImage:`url(${background})`, paddingBottom:280 }}><br/>
+                            <div style={{alignItems:"center",display:"flex",flexDirection:'column'}}>
                         {isExclusive ? (
                             <>
-                                <div style={{backgroundImage:`url(${background})`, paddingBottom:280 }}><br/>
-                                    <div style={{alignItems:"center",display:"flex",flexDirection:'column'}}>
+
                                 <Box
                                     sx={{
                                         marginTop: 8,
@@ -66,8 +67,7 @@ export default function AgreeRegisterComponent(props){
                                     <br/>
                                     <AgreeRegisterService checkList={checkList} setCheckList={setCheckList} />
                                 </Box><br/>
-                                    </div>
-                                </div>
+
                             </>
 
                         ):(
@@ -102,16 +102,19 @@ export default function AgreeRegisterComponent(props){
                                 </Box><br/>
                             </>
                         )}
+                            </div>
+                        </div>
                     </Desktop>
 
                     <Tablet>
+                        <div style={{backgroundImage:`url(${background})`, paddingBottom:850, backgroundSize:'cover' }}><br/>
+                            <div style={{alignItems:"center",display:"flex",flexDirection:'column'}}>
                         {isExclusive ? (
                             <>
-                                <div style={{backgroundImage:`url(${background})`, paddingBottom:450 }}><br/>
-                                    <div style={{alignItems:"center",display:"flex",flexDirection:'column'}}>
+
                                 <Box
                                     sx={{
-                                        marginTop: 8,
+                                        marginTop: 15,
                                         display: 'flex',
                                         flexDirection: 'column',
                                         alignItems: 'center',
@@ -136,13 +139,12 @@ export default function AgreeRegisterComponent(props){
                                     <br/>
                                     <AgreeRegisterService checkList={checkList} setCheckList={setCheckList} />
                                 </Box><br/>
-                                    </div></div>
+
                             </>
 
                         ):(
                             <>
-                                <div style={{backgroundImage:`url(${background})`, paddingBottom:450 }}><br/>
-                                    <div style={{alignItems:"center",display:"flex",flexDirection:'column'}}>
+
                                 <Box
                                     sx={{
                                         marginTop: 15,
@@ -171,16 +173,18 @@ export default function AgreeRegisterComponent(props){
                                     <br/>
                                     <AgreeRegisterService checkList={checkList} setCheckList={setCheckList} />
                                 </Box><br/>
-                                    </div></div>
+
                             </>
                         )}
+                            </div></div>
                     </Tablet>
 
                     <Mobile>
+                        <div style={{backgroundImage:`url(${background})`, paddingBottom:280 }}><br/>
+                            <div style={{alignItems:"center",display:"flex",flexDirection:'column'}}>
                         {isExclusive ? (
                             <>
-                                <div style={{backgroundImage:`url(${background})`, paddingBottom:280 }}><br/>
-                                    <div style={{alignItems:"center",display:"flex",flexDirection:'column'}}>
+
                                 <Box
                                     sx={{
                                         marginTop: 8,
@@ -208,13 +212,11 @@ export default function AgreeRegisterComponent(props){
                                     <br/>
                                     <AgreeRegisterService checkList={checkList} setCheckList={setCheckList} />
                                 </Box><br/>
-                                    </div></div>
                             </>
 
                         ):(
                             <>
-                                <div style={{backgroundImage:`url(${background})`, paddingBottom:280 }}><br/>
-                                    <div style={{alignItems:"center",display:"flex",flexDirection:'column'}}>
+
                                 <Box
                                     sx={{
                                         marginTop: 15,
@@ -243,9 +245,9 @@ export default function AgreeRegisterComponent(props){
                                     <br/>
                                     <AgreeRegisterService checkList={checkList} setCheckList={setCheckList} />
                                 </Box><br/>
-                                    </div></div>
                             </>
                         )}
+                            </div></div>
                     </Mobile>
 
         </>

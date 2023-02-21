@@ -91,7 +91,7 @@ export default function TableComponent() {
                                         flexDirection: 'column',
                                         alignItems: 'center',
                                         backgroundColor: 'white',
-                                        height: '850px',
+                                        height: '1150px',
                                         borderRadius: '2rem'
                                     }}
                                 >
@@ -105,7 +105,8 @@ export default function TableComponent() {
                     <Tablet>
                         <div style={{
                             backgroundImage: `url(${background})`,
-                            paddingBottom: 100
+                            backgroundSize:'cover',
+                            paddingBottom: 500
                         }}>
                             <div style={{
                                 display: 'flex',
@@ -119,7 +120,7 @@ export default function TableComponent() {
                                         flexDirection: 'column',
                                         alignItems: 'center',
                                         backgroundColor: 'white',
-                                        height: '950px',
+                                        height: '1300px',
                                         width: '550px',
                                         borderRadius: '2rem'
                                     }}

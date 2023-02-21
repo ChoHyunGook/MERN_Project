@@ -9,6 +9,10 @@ import OnChangeMobile from "../../event/FindPwSMSEvent/Mobile/onChangeMobile";
 import AuthNumMobile from "../../event/FindPwSMSEvent/Mobile/authNumMobile";
 import OnSubmitMobile from "../../event/FindPwSMSEvent/Mobile/onSubmitMobile";
 import React from 'react'
+import BackOnSubmitSelectDesktop
+    from "../../event/OnBackSubmitEvent/BackFindPwSelect/Desktop/backOnSubmitSelectDesktop";
+import BackOnSubmitSelectTablet from "../../event/OnBackSubmitEvent/BackFindPwSelect/Tablet/backOnSubmitSelectTablet";
+import BackOnSubmitSelectMobile from "../../event/OnBackSubmitEvent/BackFindPwSelect/Mobile/backOnSubmitSelectMobile";
 
 
 
@@ -35,6 +39,9 @@ export default function FindPwPhoneService(props){
                                 signNum={signNum}/>
 
                 <OnSubmitDesktop Email={Email} signNum={signNum} setRes={setRes}/>
+
+                <BackOnSubmitSelectDesktop />
+
             </Desktop>
 
             <Tablet>
@@ -46,6 +53,7 @@ export default function FindPwPhoneService(props){
                                 signNum={signNum}/>
 
                 <OnSubmitTablet Email={Email} signNum={signNum} setRes={setRes}/>
+                <BackOnSubmitSelectTablet />
             </Tablet>
 
             <Mobile>
@@ -57,6 +65,7 @@ export default function FindPwPhoneService(props){
                                signNum={signNum}/>
 
                 <OnSubmitMobile Email={Email} signNum={signNum} setRes={setRes}/>
+                <BackOnSubmitSelectMobile />
             </Mobile>
 
 
