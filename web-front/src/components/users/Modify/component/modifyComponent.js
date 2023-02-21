@@ -269,7 +269,7 @@ export default function ModifyComponent(props){
                                             flexDirection: 'column',
                                             alignItems: 'center',
                                             backgroundColor: 'white',
-                                            height: '700px',
+                                            height: '750px',
                                             width: '350px',
                                             borderRadius: '0.5rem'
                                         }}

@@ -37,7 +37,7 @@ export default function OnCheckService(props){
                                    onChange={checkAll}
                                    checked={checkList.length === 2 ? true : false}
                                    color="primary"/>}
-                label={<Typography variant='body2' >이용약관 동의</Typography>}
+                label={<Typography variant='body2' >이용약관 전체동의</Typography>}
              /><br/>
             </div>
             <FormControlLabel

@@ -76,7 +76,7 @@ export default function Logo(props){
 
                     <Mobile>
                         {isMarginTopsSet ? (
-                            <div style={{alignItems: "center", display: "flex", flexDirection: "column",paddingLeft:40}}>
+                            <div style={{alignItems: "center", display: "flex", flexDirection: "column"}}>
                                 <img alt="No Images" src={srcAddress}
                                      style={{
                                          marginTop: 30
@@ -89,7 +89,7 @@ export default function Logo(props){
                                      }}/>
                             </div>
                         ):(
-                            <div style={{alignItems: "center", display: "flex", flexDirection: "column",paddingLeft:40}}>
+                            <div style={{alignItems: "center", display: "flex", flexDirection: "column"}}>
                                 <img alt="No Images" src={srcAddress}
                                      style={{
                                          marginTop: 30

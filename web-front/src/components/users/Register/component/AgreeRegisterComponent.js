@@ -176,7 +176,8 @@ export default function AgreeRegisterComponent(props){
 
                             </>
                         )}
-                            </div></div>
+                            </div>
+                        </div>
                     </Tablet>
 
                     <Mobile>
