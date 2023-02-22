@@ -5,6 +5,8 @@
 
 # 💎React 또는 Express Console에서 <br> npm run dev로 Express와 React 동시실행 가능<br>
 
+# 📱Portfolio PowerPoint DownLoadLink => https://github.com/ChoHyunGook/MERN_Project/blob/main/DoorbellSquare%20AdminSite%20Portfolio.pptx
+
 # 🪧 변경사항<br>
 2023-01-31 => Table CRUD 완성(엑셀 업로드, 다운로드포함)<br>
 2023-02-01 => 예전 리액트 함수들 한페이지에 코딩한 것들 component 및 service로 컴포넌트화 시킴<br>
@@ -33,7 +35,7 @@ ALL COMPLETE!!!!!!! 끝...<br><br>
 2023-02-16 => 로그인 전 반응형 페이지들 모두 작업완료!! 로그인 후 authModify, Modify, Table 작업시작하면 됨!(00:14)- Table 외 반응형 페이지 완료 <br>
 2023-02-17 => Table 반응형페이지 완료 핸드폰 가로 세로모드 useMedia 조정 세로모드 시 단일데이터만 조작가능 - 작업완료 <br>
 2023-02-20 => 안쓰는 code 정리, 포트폴리오 정리 중... , 포트폴리오 정리 후 git Readme에 캡쳐사진 올릴예정 <br>
-2023-02-22 => Portfolio PPT Update 완료 // DynamoDB 연결 및 Find 완료
+2023-02-22 => Portfolio PPT Update 완료 // DynamoDB 연결 및 Find 완료 <br>
 <br>
 
 
