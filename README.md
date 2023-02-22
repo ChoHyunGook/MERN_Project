@@ -33,6 +33,7 @@ ALL COMPLETE!!!!!!! 끝...<br><br>
 2023-02-16 => 로그인 전 반응형 페이지들 모두 작업완료!! 로그인 후 authModify, Modify, Table 작업시작하면 됨!(00:14)- Table 외 반응형 페이지 완료 <br>
 2023-02-17 => Table 반응형페이지 완료 핸드폰 가로 세로모드 useMedia 조정 세로모드 시 단일데이터만 조작가능 - 작업완료 <br>
 2023-02-20 => 안쓰는 code 정리, 포트폴리오 정리 중... , 포트폴리오 정리 후 git Readme에 캡쳐사진 올릴예정 <br>
+2023-02-22 => Portfolio PPT Update 완료 // DynamoDB 연결 및 Find 완료
 <br>
 
 
