@@ -1,11 +1,12 @@
 import {DataGrid} from "@mui/x-data-grid";
-import {tableFind} from "../../../../../api";
+import {dynamoData, tableFind} from "../../../../../api";
 import React,{useEffect} from "react";
 
 const columns = [
     { field: 'contract', headerName: '계약번호', width: 100 },
     { field: 'terminalNum', headerName: '단말기번호', width: 160 },
-    { field: 'contractName', headerName: '계약자명', width: 120 },
+    { field: 'contractName', headerName: '계약회사', width: 120 },
+    { field: 'name', headerName: '계약자명', width: 120},
     { field: 'contractSortation', headerName: '계약자구분', width: 100 },
     { field: 'id', headerName: 'ID', width: 130 },
     { field: 'phoneNum', headerName: '연락처', width: 130 },
@@ -30,6 +31,17 @@ const DbTable =(props)=>{
     };
 
     const inputData = () =>{
+        dynamoData()
+            .then((res)=>{
+                const inputData = res.data.map((rowData)=>({
+                    id:rowData.user_id,
+                    phoneNum:rowData.tel,
+                    name:rowData.name,
+                }))
+            })
+
+
+
         tableFind()
             .then((res)=>{
                 const inputData = res.data.map((rowData)=>({

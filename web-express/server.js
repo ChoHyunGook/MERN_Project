@@ -14,6 +14,7 @@ import findInfo from "./app/routes/user/findInfo.js"
 import table from "./app/routes/table/table.js";
 import profile from "./app/routes/user/profile.js"
 import sendService from "./app/routes/send/sendEmailSMS.js"
+import dynamo from './app/routes/table/dynamo/DynamoUserTable.js'
 
 
 import auth from "./app/routes/auth/authHome.js"
@@ -61,6 +62,8 @@ async function startServer() {
     app.use("/profiles", profile)
     //이메일,SMS 보내기
     app.use('/sendService',sendService)
+    //DYNAMO
+    app.use('/dynamoTable',dynamo)
 
 
     app.use(morgan('dev'))
